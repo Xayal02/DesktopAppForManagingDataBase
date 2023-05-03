@@ -87,7 +87,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(848, 584);
+            this.dataGridView1.Size = new System.Drawing.Size(825, 584);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -97,7 +97,7 @@
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShow.Location = new System.Drawing.Point(903, 427);
+            this.btnShow.Location = new System.Drawing.Point(880, 427);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(124, 48);
             this.btnShow.TabIndex = 1;
@@ -109,7 +109,7 @@
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.Location = new System.Drawing.Point(903, 481);
+            this.btnSend.Location = new System.Drawing.Point(880, 481);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(124, 48);
             this.btnSend.TabIndex = 2;
@@ -121,7 +121,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1033, 497);
+            this.label1.Location = new System.Drawing.Point(1010, 497);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 16);
             this.label1.TabIndex = 5;
@@ -130,7 +130,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskedTextBox1.Location = new System.Drawing.Point(1074, 494);
+            this.maskedTextBox1.Location = new System.Drawing.Point(1051, 494);
             this.maskedTextBox1.Mask = "(00)0000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(200, 22);
@@ -144,9 +144,9 @@
             this.groupBox1.Controls.Add(this.frozenRBtn);
             this.groupBox1.Controls.Add(this.otherRBtn);
             this.groupBox1.Controls.Add(this.freshRBtn);
-            this.groupBox1.Location = new System.Drawing.Point(893, 113);
+            this.groupBox1.Location = new System.Drawing.Point(870, 113);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 156);
+            this.groupBox1.Size = new System.Drawing.Size(175, 156);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вид:";
@@ -154,6 +154,7 @@
             // allRBtn
             // 
             this.allRBtn.AutoSize = true;
+            this.allRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.allRBtn.Location = new System.Drawing.Point(6, 23);
             this.allRBtn.Name = "allRBtn";
             this.allRBtn.Size = new System.Drawing.Size(52, 20);
@@ -166,6 +167,7 @@
             // smokedRBtn
             // 
             this.smokedRBtn.AutoSize = true;
+            this.smokedRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.smokedRBtn.Location = new System.Drawing.Point(6, 101);
             this.smokedRBtn.Name = "smokedRBtn";
             this.smokedRBtn.Size = new System.Drawing.Size(93, 20);
@@ -178,6 +180,7 @@
             // frozenRBtn
             // 
             this.frozenRBtn.AutoSize = true;
+            this.frozenRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frozenRBtn.Location = new System.Drawing.Point(6, 75);
             this.frozenRBtn.Name = "frozenRBtn";
             this.frozenRBtn.Size = new System.Drawing.Size(128, 20);
@@ -190,6 +193,7 @@
             // otherRBtn
             // 
             this.otherRBtn.AutoSize = true;
+            this.otherRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otherRBtn.Location = new System.Drawing.Point(6, 127);
             this.otherRBtn.Name = "otherRBtn";
             this.otherRBtn.Size = new System.Drawing.Size(75, 20);
@@ -202,6 +206,7 @@
             // freshRBtn
             // 
             this.freshRBtn.AutoSize = true;
+            this.freshRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.freshRBtn.Location = new System.Drawing.Point(6, 49);
             this.freshRBtn.Name = "freshRBtn";
             this.freshRBtn.Size = new System.Drawing.Size(78, 20);
@@ -215,7 +220,8 @@
             // 
             this.chCurrent.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chCurrent.AutoSize = true;
-            this.chCurrent.Location = new System.Drawing.Point(1173, 300);
+            this.chCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chCurrent.Location = new System.Drawing.Point(1057, 300);
             this.chCurrent.Name = "chCurrent";
             this.chCurrent.Size = new System.Drawing.Size(175, 20);
             this.chCurrent.TabIndex = 9;
@@ -231,7 +237,7 @@
             this.ценаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1457, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1260, 30);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -241,7 +247,7 @@
             this.добавитьToolStripMenuItem,
             this.списокНедоступныхToolStripMenuItem});
             this.продуктToolStripMenuItem.Name = "продуктToolStripMenuItem";
-            this.продуктToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.продуктToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.продуктToolStripMenuItem.Text = "Продукт";
             // 
             // добавитьToolStripMenuItem
@@ -261,7 +267,7 @@
             // ценаToolStripMenuItem
             // 
             this.ценаToolStripMenuItem.Name = "ценаToolStripMenuItem";
-            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.ценаToolStripMenuItem.Text = "Цена";
             // 
             // nmbrMin
@@ -298,7 +304,7 @@
             this.Цена.Controls.Add(this.label2);
             this.Цена.Controls.Add(this.nmbrMin);
             this.Цена.Controls.Add(this.nmbrMax);
-            this.Цена.Location = new System.Drawing.Point(893, 282);
+            this.Цена.Location = new System.Drawing.Point(870, 282);
             this.Цена.Name = "Цена";
             this.Цена.Size = new System.Drawing.Size(163, 109);
             this.Цена.TabIndex = 13;
@@ -329,17 +335,19 @@
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.groupBox2.Controls.Add(this.optomRBtn);
             this.groupBox2.Controls.Add(this.saleRBtn);
-            this.groupBox2.Location = new System.Drawing.Point(1165, 124);
+            this.groupBox2.Location = new System.Drawing.Point(1057, 133);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(201, 75);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Продажа";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // optomRBtn
             // 
             this.optomRBtn.AutoSize = true;
-            this.optomRBtn.Location = new System.Drawing.Point(8, 21);
+            this.optomRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.optomRBtn.Location = new System.Drawing.Point(6, 21);
             this.optomRBtn.Name = "optomRBtn";
             this.optomRBtn.Size = new System.Drawing.Size(84, 20);
             this.optomRBtn.TabIndex = 15;
@@ -351,6 +359,7 @@
             // saleRBtn
             // 
             this.saleRBtn.AutoSize = true;
+            this.saleRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saleRBtn.Location = new System.Drawing.Point(8, 45);
             this.saleRBtn.Name = "saleRBtn";
             this.saleRBtn.Size = new System.Drawing.Size(100, 20);
@@ -363,7 +372,8 @@
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnReset.Location = new System.Drawing.Point(1165, 214);
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.Location = new System.Drawing.Point(1063, 219);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(157, 50);
             this.btnReset.TabIndex = 17;
@@ -376,7 +386,8 @@
             this.chOverall.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chOverall.AutoSize = true;
             this.chOverall.Enabled = false;
-            this.chOverall.Location = new System.Drawing.Point(1175, 345);
+            this.chOverall.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chOverall.Location = new System.Drawing.Point(1057, 342);
             this.chOverall.Name = "chOverall";
             this.chOverall.Size = new System.Drawing.Size(72, 20);
             this.chOverall.TabIndex = 18;
@@ -419,7 +430,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1457, 641);
+            this.ClientSize = new System.Drawing.Size(1260, 641);
             this.Controls.Add(this.chOverall);
             this.Controls.Add(this.chCurrent);
             this.Controls.Add(this.btnReset);
@@ -432,6 +443,7 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SelectProducts";

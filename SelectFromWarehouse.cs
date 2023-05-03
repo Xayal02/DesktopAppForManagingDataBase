@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using static ColumnDeterminer.WarehouseList;
+using static LogForm.SpeechRecognizer;
 using static LogForm.Program;
 
 namespace LogForm
@@ -180,6 +181,7 @@ namespace LogForm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             SelectProducts selectProducts = new SelectProducts();
             selectProducts.Show();
         }
@@ -224,7 +226,8 @@ namespace LogForm
 
         private void SelectFromWarehouse_Load(object sender, EventArgs e)
         {
-
+            SpeechRecognizerOn();
+            Default_SpeechRecognized(this, default);
         }
     }
 }

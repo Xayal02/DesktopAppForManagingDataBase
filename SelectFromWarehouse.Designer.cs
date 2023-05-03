@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectFromWarehouse));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cntxtAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -55,6 +56,8 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -69,7 +72,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(977, 539);
+            this.dataGridView1.Size = new System.Drawing.Size(927, 539);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -93,20 +96,22 @@
             // btnShow
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnShow.Location = new System.Drawing.Point(1029, 346);
+            this.btnShow.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShow.Location = new System.Drawing.Point(986, 349);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(138, 44);
+            this.btnShow.Size = new System.Drawing.Size(137, 44);
             this.btnShow.TabIndex = 5;
             this.btnShow.Text = "Амбар";
             this.toolTip1.SetToolTip(this.btnShow, "Показывает что в данное время хранится в амбаре");
-            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // chOverall
             // 
             this.chOverall.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chOverall.AutoSize = true;
-            this.chOverall.Location = new System.Drawing.Point(1211, 496);
+            this.chOverall.Location = new System.Drawing.Point(1183, 441);
             this.chOverall.Name = "chOverall";
             this.chOverall.Size = new System.Drawing.Size(120, 20);
             this.chOverall.TabIndex = 6;
@@ -121,13 +126,15 @@
             // btnShowExpired
             // 
             this.btnShowExpired.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnShowExpired.Location = new System.Drawing.Point(1194, 349);
+            this.btnShowExpired.BackColor = System.Drawing.Color.LightCoral;
+            this.btnShowExpired.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowExpired.Location = new System.Drawing.Point(1151, 353);
             this.btnShowExpired.Name = "btnShowExpired";
-            this.btnShowExpired.Size = new System.Drawing.Size(126, 36);
+            this.btnShowExpired.Size = new System.Drawing.Size(127, 36);
             this.btnShowExpired.TabIndex = 7;
             this.btnShowExpired.Text = "Показать список просроченных продуктов";
             this.toolTip1.SetToolTip(this.btnShowExpired, "Показывает, какие продукты не подлежат хранению");
-            this.btnShowExpired.UseVisualStyleBackColor = true;
+            this.btnShowExpired.UseVisualStyleBackColor = false;
             this.btnShowExpired.Click += new System.EventHandler(this.btnShowExpired_Click_1);
             // 
             // errorProvider1
@@ -140,7 +147,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1358, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1331, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -148,7 +156,7 @@
             // 
             this.cmbStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(1194, 400);
+            this.cmbStaff.Location = new System.Drawing.Point(1151, 400);
             this.cmbStaff.Name = "cmbStaff";
             this.cmbStaff.Size = new System.Drawing.Size(152, 24);
             this.cmbStaff.TabIndex = 9;
@@ -156,18 +164,20 @@
             // btnSend
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSend.Location = new System.Drawing.Point(1029, 396);
+            this.btnSend.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSend.Location = new System.Drawing.Point(986, 400);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(148, 30);
+            this.btnSend.Size = new System.Drawing.Size(148, 31);
             this.btnSend.TabIndex = 10;
             this.btnSend.Text = "Отправить список:";
-            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click_1);
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button2.Location = new System.Drawing.Point(1057, 113);
+            this.button2.Location = new System.Drawing.Point(1105, 113);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 24);
             this.button2.TabIndex = 11;
@@ -178,9 +188,10 @@
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button5.Location = new System.Drawing.Point(1056, 178);
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Location = new System.Drawing.Point(1059, 192);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(198, 68);
+            this.button5.Size = new System.Drawing.Size(199, 68);
             this.button5.TabIndex = 12;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -221,7 +232,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 597);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1331, 597);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSend);
@@ -231,9 +243,10 @@
             this.Controls.Add(this.chOverall);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SelectFromWarehouse";
-            this.Text = "Form2";
+            this.Text = "Амбар";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.SelectFromWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

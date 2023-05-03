@@ -8,7 +8,10 @@ using System.Windows.Forms;
 using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
 using static LogForm.InnerFunctions;
+using static LogForm.SpeechRecognizer;
 using System.Configuration;
+using System.Windows.Forms.VisualStyles;
+using Microsoft.Speech.Recognition;
 
 namespace LogForm
 {
@@ -21,11 +24,14 @@ namespace LogForm
         string selection = "";
 
         string conditionPrice = "";
+
        
 
         public SelectProducts()
         {
+           
             InitializeComponent();
+
 
         }
 
@@ -63,10 +69,7 @@ namespace LogForm
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            const string path = "D:\\VisualStudio\\Projects\\LogForm";
-
-            
-            SaveToFile(path, this.dataGridView1);
+            SaveToFile(pathToProductList, this.dataGridView1);
           
 
             string number = "994" + Fixer(maskedTextBox1.Text);
@@ -137,9 +140,11 @@ namespace LogForm
 
         private void SelectProducts_Load(object sender, EventArgs e)
         {
-            
-           // allRBtn.Checked = true;
-            if(optomRBtn.Checked || saleRBtn.Checked)
+            SpeechRecognizerOn();
+            Default_SpeechRecognized(this, default);
+
+            // allRBtn.Checked = true;
+            if (optomRBtn.Checked || saleRBtn.Checked)
             {
                 chOverall.Enabled= true;
             }
@@ -405,6 +410,11 @@ namespace LogForm
 
 
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

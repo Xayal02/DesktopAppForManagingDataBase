@@ -48,6 +48,7 @@
     <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.PowerShell.5.ReferenceAssemblies.1.1.0\lib\net4\System.Management.Automation.dll</HintPath>
     </Reference>
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +94,12 @@
     <Compile Include="MakeSize2.Designer.cs">
       <DependentUpon>MakeSize2.cs</DependentUpon>
     </Compile>
+    <Compile Include="RusSpeechRecognizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RusSpeechRecognizer.Designer.cs">
+      <DependentUpon>RusSpeechRecognizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectFromWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,25 +120,14 @@
     <Compile Include="SelectProducts.Designer.cs">
       <DependentUpon>SelectProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpeechReconizer.cs" />
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tabcontrol.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tabcontrol.Designer.cs">
-      <DependentUpon>Tabcontrol.cs</DependentUpon>
-    </Compile>
     <Compile Include="ColumDeterminer.cs" />
-    <Compile Include="TryMakeSize.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TryMakeSize.Designer.cs">
-      <DependentUpon>TryMakeSize.cs</DependentUpon>
-    </Compile>
     <Compile Include="UnavailableProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MakeSize2.resx">
       <DependentUpon>MakeSize2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RusSpeechRecognizer.resx">
+      <DependentUpon>RusSpeechRecognizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromWarehouse.resx">
       <DependentUpon>SelectFromWarehouse.cs</DependentUpon>
@@ -172,12 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tabcontrol.resx">
-      <DependentUpon>Tabcontrol.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TryMakeSize.resx">
-      <DependentUpon>TryMakeSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnavailableProducts.resx">
       <DependentUpon>UnavailableProducts.cs</DependentUpon>

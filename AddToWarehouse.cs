@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using static LogForm.Program;
 using static LogForm.InnerFunctions;
+using static LogForm.SpeechRecognizer;
 using System.IO;
 
 namespace LogForm
@@ -83,6 +84,9 @@ namespace LogForm
 
         private void AddToWarehouse_Load(object sender, EventArgs e)
         {
+            SpeechRecognizerOn();
+            Default_SpeechRecognized(this, default);
+
             using (var connection = new SqlConnection(sqlConnection))
             {
                 StringBuilder sb = new StringBuilder();

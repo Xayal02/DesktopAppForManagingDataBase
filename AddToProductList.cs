@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using static LogForm.InnerFunctions;
 using static LogForm.Program;
+using static LogForm.SpeechRecognizer;
 
 namespace LogForm
 {
@@ -50,6 +51,9 @@ namespace LogForm
 
         private void AddToProductList_Load(object sender, EventArgs e)
         {
+
+            SpeechRecognizerOn();
+            Default_SpeechRecognized(this, default);
             //using (var connection = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = StudentsDb; Integrated Security= True;"))
             //{
             //    StringBuilder sb = new StringBuilder();
@@ -65,7 +69,7 @@ namespace LogForm
 
             //}
             //cmbType.Items.Add("Diger");
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
