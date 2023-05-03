@@ -29,7 +29,7 @@ namespace LogForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectFromWarehouse());
+            Application.Run(new SelectProducts());
         }
        
     }

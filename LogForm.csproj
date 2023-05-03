@@ -88,12 +88,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakeSize2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MakeSize2.Designer.cs">
-      <DependentUpon>MakeSize2.cs</DependentUpon>
-    </Compile>
     <Compile Include="RusSpeechRecognizer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,9 +137,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MakeSize2.resx">
-      <DependentUpon>MakeSize2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RusSpeechRecognizer.resx">
       <DependentUpon>RusSpeechRecognizer.cs</DependentUpon>
@@ -224,6 +215,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2cf47rw.ico" />
+    <None Include="Resources\images.jpeg" />
+    <None Include="Resources\istockphoto-1341408852-640x640.jpg" />
+    <None Include="Resources\загрузка.jpeg" />
+    <None Include="Resources\photo-1518837695005-2083093ee35b.jpeg" />
+    <None Include="Resources\istockphoto-589120498-170667a.jpg" />
+    <None Include="Resources\images %284%29.jpeg" />
+    <None Include="Resources\images %283%29.jpeg" />
     <Content Include="загрузка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

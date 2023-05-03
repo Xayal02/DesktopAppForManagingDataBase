@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectProducts));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnShow = new System.Windows.Forms.Button();
@@ -75,19 +77,27 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(825, 584);
+            this.dataGridView1.Size = new System.Drawing.Size(992, 696);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -97,9 +107,9 @@
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShow.Location = new System.Drawing.Point(880, 427);
+            this.btnShow.Location = new System.Drawing.Point(1155, 497);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(124, 48);
+            this.btnShow.Size = new System.Drawing.Size(180, 48);
             this.btnShow.TabIndex = 1;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
@@ -109,9 +119,9 @@
             // 
             this.btnSend.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSend.Location = new System.Drawing.Point(880, 481);
+            this.btnSend.Location = new System.Drawing.Point(1155, 591);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(124, 48);
+            this.btnSend.Size = new System.Drawing.Size(180, 48);
             this.btnSend.TabIndex = 2;
             this.btnSend.Text = "Send as file";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -121,30 +131,32 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1010, 497);
+            this.label1.Location = new System.Drawing.Point(1348, 526);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 16);
+            this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "+994";
             // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskedTextBox1.Location = new System.Drawing.Point(1051, 494);
+            this.maskedTextBox1.Location = new System.Drawing.Point(1394, 523);
             this.maskedTextBox1.Mask = "(00)0000000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(200, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(139, 22);
             this.maskedTextBox1.TabIndex = 6;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.allRBtn);
             this.groupBox1.Controls.Add(this.smokedRBtn);
             this.groupBox1.Controls.Add(this.frozenRBtn);
             this.groupBox1.Controls.Add(this.otherRBtn);
             this.groupBox1.Controls.Add(this.freshRBtn);
-            this.groupBox1.Location = new System.Drawing.Point(870, 113);
+            this.groupBox1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(1132, 66);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(175, 156);
             this.groupBox1.TabIndex = 7;
@@ -154,10 +166,10 @@
             // allRBtn
             // 
             this.allRBtn.AutoSize = true;
-            this.allRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.allRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.allRBtn.Location = new System.Drawing.Point(6, 23);
             this.allRBtn.Name = "allRBtn";
-            this.allRBtn.Size = new System.Drawing.Size(52, 20);
+            this.allRBtn.Size = new System.Drawing.Size(55, 22);
             this.allRBtn.TabIndex = 4;
             this.allRBtn.TabStop = true;
             this.allRBtn.Text = "Все";
@@ -167,10 +179,10 @@
             // smokedRBtn
             // 
             this.smokedRBtn.AutoSize = true;
-            this.smokedRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.smokedRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.smokedRBtn.Location = new System.Drawing.Point(6, 101);
             this.smokedRBtn.Name = "smokedRBtn";
-            this.smokedRBtn.Size = new System.Drawing.Size(93, 20);
+            this.smokedRBtn.Size = new System.Drawing.Size(98, 22);
             this.smokedRBtn.TabIndex = 3;
             this.smokedRBtn.TabStop = true;
             this.smokedRBtn.Text = "Капченые";
@@ -180,10 +192,10 @@
             // frozenRBtn
             // 
             this.frozenRBtn.AutoSize = true;
-            this.frozenRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.frozenRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.frozenRBtn.Location = new System.Drawing.Point(6, 75);
             this.frozenRBtn.Name = "frozenRBtn";
-            this.frozenRBtn.Size = new System.Drawing.Size(128, 20);
+            this.frozenRBtn.Size = new System.Drawing.Size(138, 22);
             this.frozenRBtn.TabIndex = 2;
             this.frozenRBtn.TabStop = true;
             this.frozenRBtn.Text = "Замороженные";
@@ -193,10 +205,10 @@
             // otherRBtn
             // 
             this.otherRBtn.AutoSize = true;
-            this.otherRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.otherRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.otherRBtn.Location = new System.Drawing.Point(6, 127);
             this.otherRBtn.Name = "otherRBtn";
-            this.otherRBtn.Size = new System.Drawing.Size(75, 20);
+            this.otherRBtn.Size = new System.Drawing.Size(79, 22);
             this.otherRBtn.TabIndex = 1;
             this.otherRBtn.TabStop = true;
             this.otherRBtn.Text = "Другое";
@@ -206,10 +218,10 @@
             // freshRBtn
             // 
             this.freshRBtn.AutoSize = true;
-            this.freshRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.freshRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.freshRBtn.Location = new System.Drawing.Point(6, 49);
             this.freshRBtn.Name = "freshRBtn";
-            this.freshRBtn.Size = new System.Drawing.Size(78, 20);
+            this.freshRBtn.Size = new System.Drawing.Size(83, 22);
             this.freshRBtn.TabIndex = 0;
             this.freshRBtn.TabStop = true;
             this.freshRBtn.Text = "Свежие";
@@ -221,7 +233,7 @@
             this.chCurrent.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chCurrent.AutoSize = true;
             this.chCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chCurrent.Location = new System.Drawing.Point(1057, 300);
+            this.chCurrent.Location = new System.Drawing.Point(1370, 327);
             this.chCurrent.Name = "chCurrent";
             this.chCurrent.Size = new System.Drawing.Size(175, 20);
             this.chCurrent.TabIndex = 9;
@@ -237,7 +249,7 @@
             this.ценаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1260, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1545, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -247,7 +259,7 @@
             this.добавитьToolStripMenuItem,
             this.списокНедоступныхToolStripMenuItem});
             this.продуктToolStripMenuItem.Name = "продуктToolStripMenuItem";
-            this.продуктToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
+            this.продуктToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.продуктToolStripMenuItem.Text = "Продукт";
             // 
             // добавитьToolStripMenuItem
@@ -267,7 +279,7 @@
             // ценаToolStripMenuItem
             // 
             this.ценаToolStripMenuItem.Name = "ценаToolStripMenuItem";
-            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.ценаToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.ценаToolStripMenuItem.Text = "Цена";
             // 
             // nmbrMin
@@ -275,7 +287,7 @@
             this.nmbrMin.DecimalPlaces = 2;
             this.nmbrMin.Location = new System.Drawing.Point(56, 22);
             this.nmbrMin.Name = "nmbrMin";
-            this.nmbrMin.Size = new System.Drawing.Size(69, 22);
+            this.nmbrMin.Size = new System.Drawing.Size(81, 27);
             this.nmbrMin.TabIndex = 11;
             this.nmbrMin.ValueChanged += new System.EventHandler(this.nmbrMin_ValueChanged);
             // 
@@ -288,7 +300,7 @@
             0,
             0});
             this.nmbrMax.Name = "nmbrMax";
-            this.nmbrMax.Size = new System.Drawing.Size(69, 22);
+            this.nmbrMax.Size = new System.Drawing.Size(81, 27);
             this.nmbrMax.TabIndex = 12;
             this.nmbrMax.Value = new decimal(new int[] {
             5000,
@@ -299,25 +311,26 @@
             // 
             // Цена
             // 
-            this.Цена.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Цена.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Цена.BackColor = System.Drawing.Color.LightBlue;
             this.Цена.Controls.Add(this.label3);
             this.Цена.Controls.Add(this.label2);
             this.Цена.Controls.Add(this.nmbrMin);
             this.Цена.Controls.Add(this.nmbrMax);
-            this.Цена.Location = new System.Drawing.Point(870, 282);
+            this.Цена.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Цена.Location = new System.Drawing.Point(1351, 66);
             this.Цена.Name = "Цена";
             this.Цена.Size = new System.Drawing.Size(163, 109);
             this.Цена.TabIndex = 13;
             this.Цена.TabStop = false;
             this.Цена.Text = "Цена";
-            this.Цена.Enter += new System.EventHandler(this.Цена_Enter);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(10, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 16);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "До:";
             // 
@@ -326,27 +339,28 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(10, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 16);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 13;
             this.label2.Text = "От:";
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox2.BackColor = System.Drawing.Color.LightBlue;
             this.groupBox2.Controls.Add(this.optomRBtn);
             this.groupBox2.Controls.Add(this.saleRBtn);
-            this.groupBox2.Location = new System.Drawing.Point(1057, 133);
+            this.groupBox2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Location = new System.Drawing.Point(1155, 327);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 75);
+            this.groupBox2.Size = new System.Drawing.Size(180, 75);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Продажа";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // optomRBtn
             // 
             this.optomRBtn.AutoSize = true;
-            this.optomRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.optomRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.optomRBtn.Location = new System.Drawing.Point(6, 21);
             this.optomRBtn.Name = "optomRBtn";
             this.optomRBtn.Size = new System.Drawing.Size(84, 20);
@@ -359,7 +373,7 @@
             // saleRBtn
             // 
             this.saleRBtn.AutoSize = true;
-            this.saleRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saleRBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saleRBtn.Location = new System.Drawing.Point(8, 45);
             this.saleRBtn.Name = "saleRBtn";
             this.saleRBtn.Size = new System.Drawing.Size(100, 20);
@@ -373,9 +387,9 @@
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Location = new System.Drawing.Point(1063, 219);
+            this.btnReset.Location = new System.Drawing.Point(1351, 418);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(157, 50);
+            this.btnReset.Size = new System.Drawing.Size(182, 48);
             this.btnReset.TabIndex = 17;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -387,7 +401,7 @@
             this.chOverall.AutoSize = true;
             this.chOverall.Enabled = false;
             this.chOverall.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chOverall.Location = new System.Drawing.Point(1057, 342);
+            this.chOverall.Location = new System.Drawing.Point(1370, 372);
             this.chOverall.Name = "chOverall";
             this.chOverall.Size = new System.Drawing.Size(72, 20);
             this.chOverall.TabIndex = 18;
@@ -428,9 +442,11 @@
             // 
             // SelectProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 641);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = global::LogForm.Properties.Resources.photo_1518837695005_2083093ee35b1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1545, 730);
             this.Controls.Add(this.chOverall);
             this.Controls.Add(this.chCurrent);
             this.Controls.Add(this.btnReset);
@@ -443,11 +459,12 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SelectProducts";
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SelectProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

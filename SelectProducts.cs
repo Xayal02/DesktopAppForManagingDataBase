@@ -51,7 +51,7 @@ namespace LogForm
                 ConditionDeterminer(ref conditionPrice);
 
                 SqlCommand sqlCommand = connection.CreateCommand();
-                sqlCommand.CommandText = $"Select {selection} from {view} where {conditionPrice}";
+                sqlCommand.CommandText = $"Select * from {view} where {conditionPrice}";
 
                 sqlCommand.Parameters.Add("@min", SqlDbType.Decimal).Value = nmbrMin.Value;
                 sqlCommand.Parameters.Add("@max", SqlDbType.Decimal).Value = nmbrMax.Value;
@@ -90,6 +90,8 @@ namespace LogForm
 
         private void изСпискаНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
+
             UnavailableProducts unavailableProducts= new UnavailableProducts();
             unavailableProducts.ShowDialog();
         }
@@ -99,41 +101,29 @@ namespace LogForm
             dataGridView1.Columns[idIndex].Visible = false;
             dataGridView1.Columns[keepTimeIndex].Visible = false;
 
+            dataGridView1.Columns[salePriceIndex].Visible= optomRBtn.Checked ? false : true;
+            dataGridView1.Columns[wholesalePriceIndex].Visible = saleRBtn.Checked ? false : true;
 
-            if (optomRBtn.Checked)
-            {
-                dataGridView1.Columns[salePriceIndex].Visible = false;
-            }
+            // dataGridView1.Columns[overallIndex].Visible = (chCurrent.Checked && chOverall.Checked) ? true : false;
+            //dataGridView1.Columns[overallIndex].Visible = chCurrent.Checked ? chOverall.Checked : false;
 
-            else
-            {
-                dataGridView1.Columns[salePriceIndex].Visible = true;
-            }
 
-            if (saleRBtn.Checked)
-            {
-                dataGridView1.Columns[wholesalePriceIndex].Visible = false;
-            }
-
-            else
-            {
-                dataGridView1.Columns[wholesalePriceIndex].Visible = true;
-            }
 
             if (chCurrent.Checked)
             {
 
-                if (!(chOverall.Checked))
+                if (chOverall.Checked)
                 {
-                    dataGridView1.Columns[overallIndex].Visible = false;
+                    dataGridView1.Columns[overallIndex].Visible = true;
                 }
 
                 else
                 {
-                    dataGridView1.Columns[overallIndex].Visible = true;
+                    dataGridView1.Columns[overallIndex].Visible = false;
                 }
+
             }
-                
+
 
         }
 
@@ -143,11 +133,8 @@ namespace LogForm
             SpeechRecognizerOn();
             Default_SpeechRecognized(this, default);
 
-            // allRBtn.Checked = true;
-            if (optomRBtn.Checked || saleRBtn.Checked)
-            {
-                chOverall.Enabled= true;
-            }
+            chOverall.Enabled = (optomRBtn.Checked || saleRBtn.Checked) ? true : false;
+
             ToolStripMenuItem toolStripMenu1 = new ToolStripMenuItem("Убрать");
             ToolStripMenuItem toolStripMenu2 = new ToolStripMenuItem("Удалить");
             ToolStripMenuItem toolStripMenu3 = new ToolStripMenuItem("Изменить");
@@ -200,7 +187,9 @@ namespace LogForm
         private void ConditionDeterminer(ref string condition)
         {
             if (optomRBtn.Checked) condition = "WholesalePrice Between @min and @max";
+           
             else if (saleRBtn.Checked) condition = "SalePrice Between @min and @max";
+
             else condition = $"SalePrice Between @min and @max  AND WholesalePrice Between @min and @max ";
 
         }
@@ -222,16 +211,7 @@ namespace LogForm
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             this.btnShow_Click(this, default);
-
-            if(chCurrent.Checked)
-            {
-                chOverall.Enabled = true;
-            }
-
-            else
-            {
-                chOverall.Enabled = false;
-            }
+            chOverall.Enabled = chCurrent.Checked ? true : false;
 
         }
 
@@ -240,18 +220,9 @@ namespace LogForm
             AddToProductList add= new AddToProductList();
             add.ShowDialog();
         }
-
-        private void временноУбратьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //dataGridView1.SelectedCells[0].Value;
-            
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.SelectedCells[0].ContextMenuStrip = contextMenuStrip1;
-            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            //textBox1.Text = dataGridView1.Rows[GetRowIndex(dataGridView1)].Cells[idIndex].Value.ToString();
 
         }
 
@@ -274,15 +245,15 @@ namespace LogForm
                     cmd.CommandText = "Insert into UnavailableProducts (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
                     "Values (@id,@name,@type,@optPrice,@salePrice,@keepTime,@notes)";
                     cmd.Parameters.AddWithValue("@name", ColumnValues(dataGridView1, Columns.Name));
-                    if (!TypeValueDeterminer(dataGridView1))
+                    if (TypeValueDeterminer(dataGridView1))
                     {
-
-                        TypeDeterminer(dataGridView1);
-                        cmd.Parameters.AddWithValue("@type",++type);
+                        cmd.Parameters.AddWithValue("@type", DBNull.Value);
+                      
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@type", DBNull.Value);
+                        TypeDeterminer(dataGridView1);
+                        cmd.Parameters.AddWithValue("@type", ++type);
                     }
                     cmd.Parameters.AddWithValue("@optPrice", ColumnValues(dataGridView1, Columns.WholesalePrice));
                     cmd.Parameters.AddWithValue("@salePrice", ColumnValues(dataGridView1, Columns.SalePrice));
@@ -375,11 +346,6 @@ namespace LogForm
             this.btnShow_Click(this, default);
         }
 
-        private void Цена_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddToProductList add = new AddToProductList();
@@ -392,29 +358,5 @@ namespace LogForm
             unavailableProducts.ShowDialog();
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-            string connection = ConfigurationManager.ConnectionStrings["myConnection"].ConnectionString;
-            using (var connection2 = new SqlConnection(connection))
-            {
-                connection2.Open();
-
-                SqlCommand command = connection2.CreateCommand();
-                command.CommandText = "Select * from Product";
-
-                SqlDataAdapter adapter1 = new SqlDataAdapter(command);
-                DataTable table = new DataTable();
-                adapter1.Fill(table);
-                dataGridView1.DataSource = table;
-
-
-            }
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }
