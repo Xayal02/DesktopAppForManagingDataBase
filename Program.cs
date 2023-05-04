@@ -30,9 +30,11 @@ namespace LogForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new AddToProductList());
             Application.Run(new SelectProducts());
-            
+
+
         }
-       
+
     }
 }

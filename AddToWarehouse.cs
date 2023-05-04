@@ -20,6 +20,8 @@ namespace LogForm
         {
             InitializeComponent();
             AddToWarehouse_Load(this, default);
+
+            btnChange.Visible = false;
         }
 
         public AddToWarehouse(object product, object amount, object measure, object date, object code)
@@ -39,6 +41,8 @@ namespace LogForm
             txtCode.Text = code.ToString();
 
             codeString = code.ToString();
+
+            btnAdd.Visible = false;
         }
 
         private void btnChange_Click(object sender, EventArgs e)

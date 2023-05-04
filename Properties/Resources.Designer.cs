@@ -63,6 +63,56 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _71273bbcd166cb4c95fc0839a3cfafaf {
+            get {
+                object obj = ResourceManager.GetObject("71273bbcd166cb4c95fc0839a3cfafaf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71273bbcd166cb4c95fc0839a3cfafaf1 {
+            get {
+                object obj = ResourceManager.GetObject("71273bbcd166cb4c95fc0839a3cfafaf1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71273bbcd166cb4c95fc0839a3cfafaf2 {
+            get {
+                object obj = ResourceManager.GetObject("71273bbcd166cb4c95fc0839a3cfafaf2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _71273bbcd166cb4c95fc0839a3cfafaf3 {
+            get {
+                object obj = ResourceManager.GetObject("71273bbcd166cb4c95fc0839a3cfafaf3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _92d86d286bf41e282af5a79be71cfb90a9841cce {
+            get {
+                object obj = ResourceManager.GetObject("92d86d286bf41e282af5a79be71cfb90a9841cce", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -73,9 +123,9 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images__3_ {
+        internal static System.Drawing.Bitmap images1 {
             get {
-                object obj = ResourceManager.GetObject("images (3)", resourceCulture);
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,29 +133,9 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap images__4_ {
+        internal static System.Drawing.Bitmap interior_empty_factory_d_rendering_79408550 {
             get {
-                object obj = ResourceManager.GetObject("images (4)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap istockphoto_1341408852_640x640 {
-            get {
-                object obj = ResourceManager.GetObject("istockphoto-1341408852-640x640", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap istockphoto_589120498_170667a {
-            get {
-                object obj = ResourceManager.GetObject("istockphoto-589120498-170667a", resourceCulture);
+                object obj = ResourceManager.GetObject("interior-empty-factory-d-rendering-79408550", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,9 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap photo_1518837695005_2083093ee35b1 {
+        internal static System.Drawing.Bitmap pngtree_vector_back_icon_png_image_1009850 {
             get {
-                object obj = ResourceManager.GetObject("photo-1518837695005-2083093ee35b1", resourceCulture);
+                object obj = ResourceManager.GetObject("pngtree-vector-back-icon-png-image_1009850", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +183,79 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap загрузка1 {
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_1950481 {
             get {
-                object obj = ResourceManager.GetObject("загрузка1", resourceCulture);
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 1950481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_195953 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 195953", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_1959531 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 1959531", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_1959532 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 1959532", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_211940 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 211940", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_2119401 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 2119401", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_2119402 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 2119402", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_2119403 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 2119403", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

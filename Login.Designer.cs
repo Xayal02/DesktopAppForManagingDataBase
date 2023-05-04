@@ -141,7 +141,8 @@
             // pctLog
             // 
             this.pctLog.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pctLog.Image = global::LogForm.Properties.Resources.user_login_icon_14;
+            // this.pctLog.Image = global::LogForm.Properties.Resources.user_login_icon_14;
+            this.pctLog.Image = null;
             this.pctLog.Location = new System.Drawing.Point(311, 16);
             this.pctLog.Name = "pctLog";
             this.pctLog.Size = new System.Drawing.Size(166, 137);

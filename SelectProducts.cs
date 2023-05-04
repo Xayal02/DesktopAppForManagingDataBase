@@ -365,5 +365,15 @@ namespace LogForm
         {
 
         }
+
+        private void lblWarehouse_Click(object sender, EventArgs e)
+        {
+            SelectFromWarehouse selectFromWarehouse = new SelectFromWarehouse();
+            this.Hide();
+            selectFromWarehouse.ShowDialog();
+            this.Close();
+
+            
+        }
     }
 }

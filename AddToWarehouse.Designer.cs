@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToWarehouse));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -49,27 +50,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 144);
+            this.label1.Location = new System.Drawing.Point(120, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 16);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Select Product";
+            this.label1.Text = "Продукт";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 173);
+            this.label2.Location = new System.Drawing.Point(120, 133);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Amount";
+            this.label2.Text = "Количество";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(206, 144);
+            this.comboBox1.Location = new System.Drawing.Point(286, 94);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(265, 24);
+            this.comboBox1.Size = new System.Drawing.Size(288, 28);
             this.comboBox1.TabIndex = 3;
             // 
             // nmbrAmount
@@ -80,46 +84,51 @@
             0,
             0,
             0});
-            this.nmbrAmount.Location = new System.Drawing.Point(206, 171);
+            this.nmbrAmount.Location = new System.Drawing.Point(286, 133);
+            this.nmbrAmount.Margin = new System.Windows.Forms.Padding(4);
             this.nmbrAmount.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nmbrAmount.Name = "nmbrAmount";
-            this.nmbrAmount.Size = new System.Drawing.Size(120, 22);
+            this.nmbrAmount.Size = new System.Drawing.Size(162, 27);
             this.nmbrAmount.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 215);
+            this.label3.Location = new System.Drawing.Point(120, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 16);
+            this.label3.Size = new System.Drawing.Size(141, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Measure";
+            this.label3.Text = "Мера измерения";
             // 
             // dateArrived
             // 
-            this.dateArrived.Location = new System.Drawing.Point(204, 261);
+            this.dateArrived.Location = new System.Drawing.Point(286, 236);
+            this.dateArrived.Margin = new System.Windows.Forms.Padding(4);
             this.dateArrived.Name = "dateArrived";
-            this.dateArrived.Size = new System.Drawing.Size(143, 22);
+            this.dateArrived.Size = new System.Drawing.Size(162, 27);
             this.dateArrived.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(106, 261);
+            this.label4.Location = new System.Drawing.Point(120, 243);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(132, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Arrived Date:";
+            this.label4.Text = "Дата прибытия";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(204, 303);
+            this.txtCode.Location = new System.Drawing.Point(286, 286);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(169, 25);
+            this.txtCode.Size = new System.Drawing.Size(288, 30);
             this.txtCode.TabIndex = 10;
             this.txtCode.Text = "";
             this.txtCode.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
@@ -127,17 +136,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(106, 303);
+            this.label5.Location = new System.Drawing.Point(120, 296);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(40, 20);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Code";
+            this.label5.Text = "Код";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(116, 355);
+            this.btnAdd.Location = new System.Drawing.Point(598, 186);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 30);
+            this.btnAdd.Size = new System.Drawing.Size(188, 38);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -149,9 +160,10 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(286, 355);
+            this.btnChange.Location = new System.Drawing.Point(598, 186);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(135, 30);
+            this.btnChange.Size = new System.Drawing.Size(188, 38);
             this.btnChange.TabIndex = 14;
             this.btnChange.Text = "Изменить";
             this.btnChange.UseVisualStyleBackColor = true;
@@ -159,18 +171,21 @@
             // 
             // txtMeasure
             // 
-            this.txtMeasure.Location = new System.Drawing.Point(196, 215);
+            this.txtMeasure.Location = new System.Drawing.Point(286, 181);
+            this.txtMeasure.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeasure.Name = "txtMeasure";
-            this.txtMeasure.Size = new System.Drawing.Size(130, 21);
+            this.txtMeasure.Size = new System.Drawing.Size(162, 25);
             this.txtMeasure.TabIndex = 15;
             this.txtMeasure.Text = "";
             this.txtMeasure.TextChanged += new System.EventHandler(this.textBoxes_TextChanged);
             // 
             // AddToWarehouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 580);
+            this.BackgroundImage = global::LogForm.Properties.Resources.Снимок_экрана_2023_05_04_2119401;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(868, 445);
             this.Controls.Add(this.txtMeasure);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnAdd);
@@ -183,6 +198,12 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddToWarehouse";
             this.Text = "AddToWarehouse";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddToWarehouse_FormClosing);

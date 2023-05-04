@@ -88,6 +88,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SelectFromWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +130,11 @@
     <Compile Include="InnerFunctions.cs" />
     <EmbeddedResource Include="AddToProductList.resx">
       <DependentUpon>AddToProductList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AddToWarehouse.resx">
       <DependentUpon>AddToWarehouse.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -140,14 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SelectProducts.resx">
       <DependentUpon>SelectProducts.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,14 +208,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2cf47rw.ico" />
-    <None Include="Resources\images.jpeg" />
-    <None Include="Resources\istockphoto-1341408852-640x640.jpg" />
-    <None Include="Resources\загрузка.jpeg" />
-    <None Include="Resources\photo-1518837695005-2083093ee35b.jpeg" />
-    <None Include="Resources\istockphoto-589120498-170667a.jpg" />
-    <None Include="Resources\images %284%29.jpeg" />
-    <None Include="Resources\images %283%29.jpeg" />
     <None Include="Resources\загрузка.png" />
+    <None Include="Resources\pngtree-vector-back-icon-png-image_1009850.jpg" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\71273bbcd166cb4c95fc0839a3cfafaf.jpg" />
+    <None Include="Resources\interior-empty-factory-d-rendering-79408550.jpg" />
+    <None Include="Resources\Снимок экрана 2023-05-04 1950481.png" />
+    <None Include="Resources\Снимок экрана 2023-05-04 195953.png" />
+    <None Include="Resources\Снимок экрана 2023-05-04 211940.png" />
+    <None Include="Resources\Снимок экрана 2023-05-04 2119401.png" />
+    <None Include="Resources\Снимок экрана 2023-05-04 1959531.png" />
+    <None Include="Resources\photo-1518837695005-2083093ee35b.jpeg" />
+    <None Include="Resources\92d86d286bf41e282af5a79be71cfb90a9841cce.jpeg" />
     <Content Include="загрузка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,6 +20,10 @@ namespace LogForm
         public AddToProductList()
         {
             InitializeComponent();
+
+            this.Text = "Добавить Продукт";
+            btnChange.Visible = false;
+
         }
         public AddToProductList(object id, object name, int  type, object wholesalaPrice, object salePrice, object keepTime, object notes)
         {
@@ -44,6 +48,8 @@ namespace LogForm
             this.btnChange.Visible = true;
 
             this.btnAdd.Visible = false;
+
+            this.Text = "Изменить Продукт";
 
         }
 
@@ -177,10 +183,7 @@ namespace LogForm
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.cmbType.SelectedIndex = 1;
-        }
+       
 
         private void btnChange_Click(object sender, EventArgs e)
         {

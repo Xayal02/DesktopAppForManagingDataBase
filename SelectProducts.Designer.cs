@@ -64,6 +64,7 @@
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblWarehouse = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -73,6 +74,7 @@
             this.groupBox2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -468,21 +470,39 @@
             // 
             this.lblWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWarehouse.AutoSize = true;
-            this.lblWarehouse.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWarehouse.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblWarehouse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblWarehouse.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblWarehouse.Location = new System.Drawing.Point(1476, 9);
+            this.lblWarehouse.Location = new System.Drawing.Point(1417, 5);
             this.lblWarehouse.Name = "lblWarehouse";
-            this.lblWarehouse.Size = new System.Drawing.Size(69, 24);
+            this.lblWarehouse.Size = new System.Drawing.Size(80, 27);
             this.lblWarehouse.TabIndex = 18;
             this.lblWarehouse.Text = "Амбар";
+            this.lblWarehouse.Click += new System.EventHandler(this.lblWarehouse_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::LogForm.Properties.Resources.images;
+            this.pictureBox2.Location = new System.Drawing.Point(1503, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.lblWarehouse_Click);
             // 
             // SelectProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = global::LogForm.Properties.Resources.photo_1518837695005_2083093ee35b1;
+            this.BackgroundImage = global::LogForm.Properties.Resources.photo_1518837695005_2083093ee35b;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1545, 730);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblWarehouse);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnReset);
@@ -499,7 +519,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SelectProducts";
-            this.Text = " b ";
+            this.Text = " Ассортимент";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectProducts_FormClosing);
             this.Load += new System.EventHandler(this.SelectProducts_Load);
@@ -517,6 +537,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -556,5 +577,6 @@
         private System.Windows.Forms.ToolStripMenuItem списокНедоступныхToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblWarehouse;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

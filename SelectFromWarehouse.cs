@@ -200,7 +200,6 @@ namespace LogForm
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _recognizer.RecognizeAsyncCancel();
             AddToWarehouse warehouse = new AddToWarehouse();
             warehouse.ShowDialog();
         }
@@ -229,6 +228,8 @@ namespace LogForm
 
         private void SelectFromWarehouse_Load(object sender, EventArgs e)
         {
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 11F);
+
             try
             {
                 SpeechRecognizerOn();
@@ -240,11 +241,26 @@ namespace LogForm
 
             }
 
+            btnShow_Click(this, default);
+
         }
 
         private void SelectFromWarehouse_FormClosing(object sender, FormClosingEventArgs e)
         {
             _recognizer.RecognizeAsyncCancel();
+        }
+
+        private void lblProductList_Click(object sender, EventArgs e)
+        {
+            SelectProducts selectProducts = new SelectProducts();
+            this.Hide();
+            selectProducts.ShowDialog();
+            this.Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
