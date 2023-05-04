@@ -9,19 +9,13 @@ using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
 using static LogForm.InnerFunctions;
 using static LogForm.SpeechRecognizer;
-using System.Configuration;
-using System.Windows.Forms.VisualStyles;
-using Microsoft.Speech.Recognition;
 
 namespace LogForm
 {
     public partial class SelectProducts : Form
     {
-        public string text = "hi";
          
         string view = "";
-
-        string selection = "";
 
         string conditionPrice = "";
 
@@ -29,10 +23,7 @@ namespace LogForm
 
         public SelectProducts()
         {
-           
             InitializeComponent();
-
-
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -45,8 +36,6 @@ namespace LogForm
                 connection.Open();
 
                 ViewDeterminer(ref view);
-
-                SelectionDeterminer(ref selection);
 
                 ConditionDeterminer(ref conditionPrice);
 
@@ -67,10 +56,9 @@ namespace LogForm
 
         }
 
-        private void btnSend_Click(object sender, EventArgs e)
+        private async void btnSend_Click(object sender, EventArgs e)
         {
-            SaveToFile(pathToProductList, this.dataGridView1);
-          
+            await SaveToFileAsync(pathToProductList, this.dataGridView1);
 
             string number = "994" + Fixer(maskedTextBox1.Text);
             Process.Start("msedge.exe", $"https://wa.me/{number}");
@@ -104,11 +92,6 @@ namespace LogForm
             dataGridView1.Columns[salePriceIndex].Visible= optomRBtn.Checked ? false : true;
             dataGridView1.Columns[wholesalePriceIndex].Visible = saleRBtn.Checked ? false : true;
 
-            // dataGridView1.Columns[overallIndex].Visible = (chCurrent.Checked && chOverall.Checked) ? true : false;
-            //dataGridView1.Columns[overallIndex].Visible = chCurrent.Checked ? chOverall.Checked : false;
-
-
-
             if (chCurrent.Checked)
             {
 
@@ -123,15 +106,22 @@ namespace LogForm
                 }
 
             }
-
-
         }
 
 
         private void SelectProducts_Load(object sender, EventArgs e)
         {
-            SpeechRecognizerOn();
-            Default_SpeechRecognized(this, default);
+            this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F);
+            try
+            {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch (Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+            }
 
             chOverall.Enabled = (optomRBtn.Checked || saleRBtn.Checked) ? true : false;
 
@@ -168,22 +158,6 @@ namespace LogForm
                 else view = "VW_ProductsPrice";
             }
         }
-        private void SelectionDeterminer (ref string selection)
-        {
-
-            selection = "*";
-            //if (optomRBtn.Checked)
-            //{
-            //    selection = "Name,ProductType,AdditionalNotes,WholesalePrice,Id";
-            //    if (chCurrent.Checked && chOverall.Checked) selection += ",Overall";
-            //}
-            //else if (saleRBtn.Checked)
-            //{
-            //    selection = "Name,ProductType,AdditionalNotes,SalePrice,Id";
-            //    if (chCurrent.Checked && chOverall.Checked) selection += ",Overall";
-            //}
-            //else selection = "*";
-        }
         private void ConditionDeterminer(ref string condition)
         {
             if (optomRBtn.Checked) condition = "WholesalePrice Between @min and @max";
@@ -217,6 +191,8 @@ namespace LogForm
 
         private void новыйПродуктToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
+
             AddToProductList add= new AddToProductList();
             add.ShowDialog();
         }
@@ -306,6 +282,8 @@ namespace LogForm
         }
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
+
             AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),TypeDeterminer(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
             addToProduct.Show();
 
@@ -348,15 +326,44 @@ namespace LogForm
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
+
             AddToProductList add = new AddToProductList();
             add.ShowDialog();
         }
 
         private void списокНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
+
             UnavailableProducts unavailableProducts = new UnavailableProducts();
             unavailableProducts.ShowDialog();
         }
 
+        private void SelectProducts_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            _recognizer.RecognizeAsyncCancel();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

@@ -88,12 +88,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="RusSpeechRecognizer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RusSpeechRecognizer.Designer.cs">
-      <DependentUpon>RusSpeechRecognizer.cs</DependentUpon>
-    </Compile>
     <Compile Include="SelectFromWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RusSpeechRecognizer.resx">
-      <DependentUpon>RusSpeechRecognizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectFromWarehouse.resx">
       <DependentUpon>SelectFromWarehouse.cs</DependentUpon>
@@ -222,6 +213,7 @@
     <None Include="Resources\istockphoto-589120498-170667a.jpg" />
     <None Include="Resources\images %284%29.jpeg" />
     <None Include="Resources\images %283%29.jpeg" />
+    <None Include="Resources\загрузка.png" />
     <Content Include="загрузка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

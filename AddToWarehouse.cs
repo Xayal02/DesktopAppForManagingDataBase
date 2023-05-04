@@ -43,7 +43,7 @@ namespace LogForm
 
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if(TextBoxesError(txtCode) && TextBoxesError(txtMeasure))
+            if(TextBoxesError(txtCode,errorProvider1) && TextBoxesError(txtMeasure, errorProvider1))
             {
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
@@ -84,8 +84,16 @@ namespace LogForm
 
         private void AddToWarehouse_Load(object sender, EventArgs e)
         {
-            SpeechRecognizerOn();
-            Default_SpeechRecognized(this, default);
+            try
+            {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch(Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+            }
 
             using (var connection = new SqlConnection(sqlConnection))
             {
@@ -189,60 +197,6 @@ namespace LogForm
 
             return id;
         }
-
-        //private int GetId(string text)
-        //{
-        //    int id = 0;
-
-        //    if (text.Contains('|'))
-        //    {
-        //        string[] strings = text.Split('|');
-
-        //        using (var connection = new SqlConnection(sqlConnection))
-        //        {
-        //            connection.Open();
-        //            SqlCommand cmd = connection.CreateCommand();
-        //            if (strings.Length == 2)
-        //            {
-        //                cmd.CommandText = "select Id from VW_AddToWarehouse Where Name = @name and ProductType = @type";
-        //                cmd.Parameters.AddWithValue("@name", strings[0].Trim());
-        //                cmd.Parameters.AddWithValue("@type", strings[1].Trim());
-        //            }
-        //            else
-        //            {
-        //                cmd.CommandText = "select Id from VW_AddToWarehouse Where Name = @name and ProductType = @type and AdditionalNotes = @note";
-        //                cmd.Parameters.AddWithValue("@name", strings[0].Trim());
-        //                cmd.Parameters.AddWithValue("@type", strings[1].Trim());
-        //                cmd.Parameters.AddWithValue("@note", strings[2].Trim());
-        //            }
-        //            SqlDataReader reader = cmd.ExecuteReader();
-        //            while (reader.Read())
-        //            {
-        //                id = reader.GetInt32(0);
-        //            }
-        //        }
-
-
-        //    }
-        //    else
-        //    {
-        //        using (var connection = new SqlConnection(sqlConnection))
-        //        {
-        //            connection.Open();
-        //            SqlCommand cmd = connection.CreateCommand();
-        //            cmd.CommandText = "select Id from VW_AddToWarehouse Where Name = @name";
-        //            cmd.Parameters.AddWithValue("@name", text);
-        //            SqlDataReader reader = cmd.ExecuteReader();
-        //            while (reader.Read())
-        //            {
-        //                id = reader.GetInt32(0);
-        //            }
-        //            //cmd.Parameters.Add()
-        //        }
-        //    }
-        //    return id;
-        //}
-
         private DateTime GetTime(string text)
         {
             var st = (from s in db.Products where s.Id == GetId(text) select s).First();
@@ -252,7 +206,7 @@ namespace LogForm
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            if (ComboBoxError(comboBox1) && TextBoxesError(txtMeasure))
+            if (ComboBoxError(comboBox1,errorProvider1) && TextBoxesError(txtMeasure, errorProvider1) && NumericError(nmbrAmount,errorProvider1))
             {
                 if(string.IsNullOrEmpty(txtCode.Text))
                 {
@@ -311,34 +265,15 @@ namespace LogForm
 
 
         }
-        private bool ComboBoxError(ComboBox comboBox)
-        {
-            while(comboBox.SelectedItem == null)
-            {
-                errorProvider1.SetError(comboBox, "You haven't choosen product");
-                return false;
-            }
-            errorProvider1.Clear();
-            return true;
-            
-        }
-        private bool TextBoxesError(RichTextBox textBox)
-        {
-            while (string.IsNullOrEmpty(textBox.Text))
-            {
-                
-                errorProvider1.SetError(textBox, "You haven't entered  value");
-                return false;
-
-            }
-            return true;
-        }
         private void textBoxes_TextChanged(object sender, EventArgs e)
         {
             errorProvider1.Clear();
         }
 
-        
+        private void AddToWarehouse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _recognizer.RecognizeAsyncCancel();
+        }
     }
 }
 

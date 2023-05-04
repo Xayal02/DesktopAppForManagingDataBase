@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
+using static LogForm.SpeechRecognizer;
 using System.IO;
 
 namespace LogForm
@@ -22,11 +23,19 @@ namespace LogForm
 
         private void UnavailableProducts_Load(object sender, EventArgs e)
         {
-            var connection = new SqlConnection(sqlConnection);
-            connection.Open();
-
             try
             {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch (Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+            }
+            using (var connection = new SqlConnection(sqlConnection))
+            {
+                connection.Open();
                 SqlCommand sqlCommand = connection.CreateCommand();
                 sqlCommand.CommandText = "select UnavailableProducts.Id,UnavailableProducts.KeepTime, UnavailableProducts.Name, Type.Name as 'Type', UnavailableProducts.AdditionalNotes,  UnavailableProducts.WholesalePrice, UnavailableProducts.SalePrice  from  UnavailableProducts Left Join Type on UnavailableProducts.ProductType=Type.Id\r\n";
                 SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
@@ -34,15 +43,6 @@ namespace LogForm
                 adapter1.Fill(table);
                 dataUnavailableProducts.DataSource = table;
                 ColumnHeader();
-            }
-            catch(Exception exc)
-            {
-                //File.AppendAllText(path, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
-
-            }
-            finally
-            {
-                connection.Close();
             }
             
         }
@@ -56,10 +56,12 @@ namespace LogForm
             var result = MessageBox.Show(message, caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
             if (result == DialogResult.OK)
+
             {
-                using (var connection = new SqlConnection(sqlConnection))
+                var connection = new SqlConnection(sqlConnection);
+                connection.Open();
+                try
                 {
-                    connection.Open();
                     SqlCommand cmd = connection.CreateCommand();
 
                     cmd.CommandText = "SET IDENTITY_INSERT Product ON";
@@ -74,16 +76,15 @@ namespace LogForm
 
                     cmd.Parameters.AddWithValue("@name", ColumnValues(dataUnavailableProducts, Columns.Name));
 
-                    if (!TypeValueDeterminer(dataUnavailableProducts))
+                    if (TypeValueDeterminer(dataUnavailableProducts))
                     {
-
-                        TypeDeterminer(dataUnavailableProducts);
-                        cmd.Parameters.AddWithValue("@type", ++type);
+                        cmd.Parameters.AddWithValue("@type", DBNull.Value);
                     }
 
                     else
                     {
-                        cmd.Parameters.AddWithValue("@type", DBNull.Value);
+                        TypeDeterminer(dataUnavailableProducts);
+                        cmd.Parameters.AddWithValue("@type", ++type);
                     }
 
                     cmd.Parameters.AddWithValue("@wholeSalePrice", ColumnValues(dataUnavailableProducts, Columns.WholesalePrice));
@@ -96,18 +97,19 @@ namespace LogForm
 
                     cmd.ExecuteNonQuery();
 
-
-
-                    ////cmd.CommandText = "SET IDENTITY_INSERT Product OFF";
-                    ////cmd.ExecuteNonQuery();
-
-
-
-
                     cmd.CommandText = "Delete from UnavailableProducts where Id=@id";
                     cmd.ExecuteNonQuery();
 
                     UnavailableProducts_Load(this, default);
+                }
+                catch (Exception exc)
+                {
+                    File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+                }
+                finally
+                {
+                    connection.Close();
                 }
             }
 
@@ -123,8 +125,8 @@ namespace LogForm
 
             if (result == DialogResult.OK)
             {
-
-                using (var connection = new SqlConnection(sqlConnection))
+                var connection = new SqlConnection(sqlConnection);
+                try
                 {
                     connection.Open();
 
@@ -136,7 +138,15 @@ namespace LogForm
                     cmd.ExecuteNonQuery();
 
                     UnavailableProducts_Load(this, default);
+                }
+                 catch (Exception exc)
+                {
+                    File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
+                }
+                finally
+                {
+                    connection.Close();
                 }
             }
 
@@ -151,6 +161,12 @@ namespace LogForm
 
             dataUnavailableProducts.Columns[salePriceIndex].Visible = false;
 
+        }
+
+        private void UnavailableProducts_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            _recognizer.RecognizeAsyncCancel();
         }
     }
 }

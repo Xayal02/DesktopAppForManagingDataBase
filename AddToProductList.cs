@@ -14,6 +14,9 @@ namespace LogForm
     {
         private int _productId;
         private string _productName;
+        private int type;
+
+
         public AddToProductList()
         {
             InitializeComponent();
@@ -51,27 +54,18 @@ namespace LogForm
 
         private void AddToProductList_Load(object sender, EventArgs e)
         {
+            try
+            {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch(Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
-            SpeechRecognizerOn();
-            Default_SpeechRecognized(this, default);
-            //using (var connection = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = StudentsDb; Integrated Security= True;"))
-            //{
-            //    StringBuilder sb = new StringBuilder();
-
-            //    connection.Open();
-            //    SqlCommand cmd = connection.CreateCommand();
-            //    cmd.CommandText = "Select Name from Type";
-            //    SqlDataReader reader = cmd.ExecuteReader();
-            //    while (reader.Read())
-            //    {
-            //        cmbType.Items.Add(reader.GetString(0));
-            //    }
-
-            //}
-            //cmbType.Items.Add("Diger");
-
+            }
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             _productName = txtName.Text;
 
@@ -79,7 +73,7 @@ namespace LogForm
 
             Shrinker(ref _productName);
 
-            if (Checker())
+            if (TextBoxesError(txtName,errorProvider1) && TextBoxesError(txtSrok,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && NumericError(nmbrOptom,errorProvider1)  && NumericError(nmbrSale,errorProvider1) && NumericsDifferenceError(nmbrOptom,nmbrSale,errorProvider1))
             {
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
@@ -89,13 +83,15 @@ namespace LogForm
                     SqlCommand cmd = connection.CreateCommand();
                     cmd.CommandText = "Select Id from Product Where Name=@name And ProductType = @type And AdditionalNotes=@notes";
                     cmd.Parameters.AddWithValue("@name", _productName);
-                    if (cmbType.SelectedIndex == 3)
+
+                    TypeDeterminer();
+                    if (type == 4)
                     {
                         cmd.Parameters.AddWithValue("@type", DBNull.Value);
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@type", TypeDeterminer());
+                        cmd.Parameters.AddWithValue("@type", type);
                     }
 
                     cmd.Parameters.AddWithValue("@notes", txtNotes.Text.Trim());
@@ -133,23 +129,21 @@ namespace LogForm
 
         }
 
-        private int TypeDeterminer()
+        private void  TypeDeterminer()
         {
-            cmbType.SelectedItem.ToString();
-            int type;
-            if (cmbType.SelectedIndex == 0)
+            if (cmbType.SelectedItem.ToString() == "Dondurulmus")
             {
                 type = 1;
             }
-            else if (cmbType.SelectedIndex == 1)
+            else if (cmbType.SelectedItem.ToString() == "Teze")
             {
                 type = 2;
             }
-            else
+            else if (cmbType.SelectedItem.ToString() =="Kaptit olunmus")
             {
                 type = 3;
             }
-            return type;
+            else type = 4;
         }
         private int KeepTime()
         {
@@ -164,87 +158,12 @@ namespace LogForm
             }
             return srok;
         }
-
-        private bool Checker()
-        {
-            bool determiner = false;
-
-            if (string.IsNullOrWhiteSpace(_productName))
-            {
-                errorProvider1.SetError(txtName, "Ввведите имя продукта");
-            }
-            else if (cmbType.SelectedItem == null)
-            {
-                errorProvider1.SetError(cmbType, "Выберите тип продукта");
-            }
-            else if (nmbrOptom.Value == 0)
-            {
-                errorProvider1.SetError(nmbrOptom, "Введите оптовую цену");
-            }
-            else if (nmbrSale.Value == 0)
-            {
-                errorProvider1.SetError(nmbrSale, "Введите розничную цену");
-            }
-            else if (nmbrOptom.Value > nmbrSale.Value)
-            {
-                errorProvider1.SetError(nmbrOptom, "Оптовая цена больше розничной");
-                errorProvider1.SetError(nmbrSale, "Оптовая цена больше розничной");
-            }
-
-            else if (string.IsNullOrWhiteSpace(txtSrok.Text))
-            {
-                errorProvider1.SetError(txtSrok, "Введите срок хранения");
-            }
-            else if (cmbPeriod.SelectedItem == null)
-            {
-                errorProvider1.SetError(cmbPeriod, "Укажите интервал хранения ");
-            }
-            else
-            {
-                determiner = true;
-            }
-
-            return determiner;
-        }
+        
         private void Value_Changed(object sender, EventArgs e)
         {
             errorProvider1.Clear();
         }
-        private void StringModifier(ref string str) //modify strings
-        {
-            if (!(string.IsNullOrEmpty(str)))
-            {
-                str = str.ToLower();
-                StringBuilder sb = new StringBuilder();
-                sb.Append(char.ToUpper(str[0]));
-                for (int i = 1; i < str.Length; i++)
-                {
-
-                    sb.Append(str[i]);
-                }
-                str = sb.ToString();
-            }
-        }
-        public static void Shrinker(ref string str) // artiq boshluglari yigihsdirir
-        {
-            StringBuilder sb = new StringBuilder();
-            bool determiner = true;
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (char.IsLetter(str[i]))
-                {
-                    ;
-                    sb.Append(str[i]);
-                    determiner = true;
-                }
-                else if ((str[i] == ' ') && (determiner))
-                {
-                    sb.Append(str[i]);
-                    determiner = false;
-                }
-            }
-            str = sb.ToString();
-        }
+      
         private void Notifier(string message,string caption)
         {
             DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -254,7 +173,7 @@ namespace LogForm
             }
             else
             {
-                ResetComponents(this);
+               // ResetComponents(this);
             }
         }
 
@@ -270,7 +189,7 @@ namespace LogForm
             StringModifier(ref _productName);
             Shrinker(ref _productName);
 
-            if (Checker())
+            if (TextBoxesError(txtName, errorProvider1) && TextBoxesError(txtSrok, errorProvider1) && ComboBoxError(cmbPeriod, errorProvider1) && ComboBoxError(cmbPeriod, errorProvider1) && NumericError(nmbrOptom, errorProvider1) && NumericError(nmbrSale, errorProvider1))
             {
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
@@ -281,13 +200,14 @@ namespace LogForm
                     cmd.CommandText = "update Product Set Name = @name, ProductType = @type , WholesalePrice = @optPrice, SalePrice = @salePrice, KeepTime = @keepTime , AdditionalNotes = @notes Where Id = @id";
                     cmd.Parameters.AddWithValue("@name", _productName);
 
-                    if (cmbType.SelectedIndex == 3)
+                    TypeDeterminer();
+                    if(type==4)
                     {
                         cmd.Parameters.AddWithValue("@type", DBNull.Value);
                     }
                     else
                     {
-                        cmd.Parameters.AddWithValue("@type", TypeDeterminer());
+                        cmd.Parameters.AddWithValue("@type",type);
                     }
 
                     cmd.Parameters.AddWithValue("@optPrice", SqlDbType.Decimal).Value = nmbrOptom.Value;
@@ -312,5 +232,13 @@ namespace LogForm
             }
 
         }
+
+
+        private void AddToProductList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _recognizer.RecognizeAsyncCancel();
+        }
+
+      
     }
 }

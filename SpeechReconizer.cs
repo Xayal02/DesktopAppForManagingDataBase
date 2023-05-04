@@ -48,21 +48,13 @@ namespace LogForm
                     {
                         Process.Start("msedge.exe", $"https://www.gismeteo.ru/weather-sumqayit-5295/");
                     }
-                    if (speech == "открой вотсап")
-                    {
-                        Process.Start("msedge.exe", $"https://wa.me");
-                    }
+                    //if (speech == "открой вотсап")
+                    //{
+                    //    Process.Start("msedge.exe", $"https://wa.me");
+                    //}
                 }
             }
         }
-
-        //private void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
-        //{
-        //    txtSpeech.Text = e.Result.Text;
-        //}
-
-
-
 
     }
 

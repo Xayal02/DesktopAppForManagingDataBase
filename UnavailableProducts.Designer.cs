@@ -64,19 +64,19 @@
             this.вернутьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(174, 52);
             // 
             // вернутьToolStripMenuItem
             // 
             this.вернутьToolStripMenuItem.Name = "вернутьToolStripMenuItem";
-            this.вернутьToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.вернутьToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.вернутьToolStripMenuItem.Text = "Восстановить";
             this.вернутьToolStripMenuItem.Click += new System.EventHandler(this.вернутьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(173, 24);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
@@ -88,6 +88,7 @@
             this.Controls.Add(this.dataUnavailableProducts);
             this.Name = "UnavailableProducts";
             this.Text = "UnavailableProducts";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UnavailableProducts_FormClosing);
             this.Load += new System.EventHandler(this.UnavailableProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataUnavailableProducts)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

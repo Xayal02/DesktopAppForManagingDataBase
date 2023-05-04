@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
 using static LogForm.Program;
+using static LogForm.InnerFunctions;
+using static LogForm.SpeechRecognizer;
+
 
 namespace LogForm
 {
@@ -24,45 +28,49 @@ namespace LogForm
 
         private void Extract_Click2(object sender, EventArgs e)
         {
-            using (var connection = new SqlConnection(sqlConnection))
+            if (NumericError(nmbrAmount, errorProvider1))
             {
-                connection.Open();
 
-                SqlCommand cmd = connection.CreateCommand();
-
-                cmd.CommandText = "Select Amount, Measure from Warehouse Where Code = @code";
-                cmd.Parameters.AddWithValue("@code", _code);
-
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while(reader.Read())
+                using (var connection = new SqlConnection(sqlConnection))
                 {
-                    totalAmount = reader.GetDecimal(0);
-                    measure= reader.IsDBNull(1) ? "kg" : reader.GetString(1);
-                }
+                    connection.Open();
 
-                reader.Close();
+                    SqlCommand cmd = connection.CreateCommand();
 
-                if(chAll.Checked || totalAmount==nmbrAmount.Value)
-                {
-                    cmd.CommandText = "Delete from Warehouse Where code = @code";
-                }
+                    cmd.CommandText = "Select Amount, Measure from Warehouse Where Code = @code";
+                    cmd.Parameters.AddWithValue("@code", _code);
 
-                else
-                {
-                    cmd.CommandText = "Update Warehouse Set Amount = @amount Where Code=@code";
-                    cmd.Parameters.AddWithValue("@amount", (totalAmount - nmbrAmount.Value));
-                }
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                if (ValueChecker())
-                {
-                    cmd.ExecuteNonQuery();
+                    while (reader.Read())
+                    {
+                        totalAmount = reader.GetDecimal(0);
+                        measure = reader.IsDBNull(1) ? "kg" : reader.GetString(1);
+                    }
 
-                    deductedAmount = chAll.Checked ? totalAmount : nmbrAmount.Value;
+                    reader.Close();
 
-                    string message = $"{deductedAmount} {MeasureAdjuster()} товара было выписано";
-                    MessageBox.Show(message);
-                    this.Close();
+                    if (chAll.Checked || (totalAmount == nmbrAmount.Value))
+                    {
+                        cmd.CommandText = "Delete from Warehouse Where code = @code";
+                    }
+
+                    else
+                    {
+                        cmd.CommandText = "Update Warehouse Set Amount = @amount Where Code=@code";
+                        cmd.Parameters.AddWithValue("@amount", (totalAmount - nmbrAmount.Value));
+                    }
+
+                    if (ValueChecker())
+                    {
+                        cmd.ExecuteNonQuery();
+
+                        deductedAmount = chAll.Checked ? totalAmount : nmbrAmount.Value;
+
+                        string message = $"{deductedAmount} {MeasureAdjuster()} товара было выписано";
+                        MessageBox.Show(message);
+                        this.Close();
+                    }
                 }
             }
 
@@ -70,15 +78,7 @@ namespace LogForm
 
         private void chAll_CheckedChanged(object sender, EventArgs e)
         {
-            if (chAll.Checked)
-            {
-                nmbrAmount.Visible = false;
-            }
-
-            else
-            {
-                nmbrAmount.Visible = true;
-            }
+            nmbrAmount.Visible = chAll.Checked ? false : true;
 
         }
 
@@ -118,6 +118,25 @@ namespace LogForm
             }
 
             return true;
+        }
+
+        private void DeductFromWarehouse_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch (Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+            }
+        }
+
+        private void DeductFromWarehouse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _recognizer.RecognizeAsyncCancel();
         }
     }
 }

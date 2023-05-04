@@ -108,6 +108,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DeductFromWarehouse";
             this.Text = "Form4";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeductFromWarehouse_FormClosing);
+            this.Load += new System.EventHandler(this.DeductFromWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

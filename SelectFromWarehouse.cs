@@ -50,7 +50,7 @@ namespace LogForm
                     cmd = "select Product.Name,Type.Name as 'Type', Product.AdditionalNotes, Sum(Warehouse.Amount) as 'Overall', Warehouse.Measure from Product \r\nInner Join Warehouse on Warehouse.ProductId=Product.Id\r\nLeft Join Type on Product.ProductType=Type.Id\r\nGroup by Product.Name, Warehouse.Measure, Type.Name, Product.AdditionalNotes";
 
                 }
-                
+
                 else
                 {
                     cmd = "select Product.Name, Type.Name as 'Type', Product.AdditionalNotes, Warehouse.Amount,Warehouse.Measure, Warehouse.ArrivedDate,Warehouse.ExpiredDate,Warehouse.Code from Product  \r\nInner Join Warehouse on Warehouse.ProductId=Product.Id\r\nLeft Join Type on Product.ProductType=Type.Id";
@@ -188,6 +188,7 @@ namespace LogForm
 
         private void button5_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             AddToWarehouse addToWarehouse=  new AddToWarehouse();
             addToWarehouse.Show();
         }
@@ -195,18 +196,18 @@ namespace LogForm
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(!chOverall.Checked) dataGridView1.SelectedCells[0].ContextMenuStrip = cntxtCells;
-
-            // int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             AddToWarehouse warehouse = new AddToWarehouse();
             warehouse.ShowDialog();
         }
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             DeductFromWarehouse form4 = new DeductFromWarehouse(dataGridView1.SelectedCells[0].Value.ToString());
             form4.Show();
         }
@@ -214,20 +215,36 @@ namespace LogForm
 
         private void изменитьToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             AddToWarehouse warehouse = new AddToWarehouse(ColumnValues(dataGridView1, Columns.Product), ColumnValues(dataGridView1,Columns.Amount), ColumnValues(dataGridView1,Columns.Measure),ColumnValues(dataGridView1,Columns.ArrivedDate),ColumnValues(dataGridView1,Columns.Code));
             warehouse.ShowDialog();
         }
 
         private void вычестиToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            _recognizer.RecognizeAsyncCancel();
             DeductFromWarehouse form4 = new DeductFromWarehouse(ColumnValues(dataGridView1,Columns.Code));
             form4.ShowDialog ();
         }
 
         private void SelectFromWarehouse_Load(object sender, EventArgs e)
         {
-            SpeechRecognizerOn();
-            Default_SpeechRecognized(this, default);
+            try
+            {
+                SpeechRecognizerOn();
+                Default_SpeechRecognized(this, default);
+            }
+            catch(Exception exc)
+            {
+                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+            }
+
+        }
+
+        private void SelectFromWarehouse_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _recognizer.RecognizeAsyncCancel();
         }
     }
 }

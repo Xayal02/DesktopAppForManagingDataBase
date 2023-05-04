@@ -186,7 +186,7 @@
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // errorProvider1
             // 
@@ -237,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddToProductList";
             this.Text = "AddToProductList";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddToProductList_FormClosing);
             this.Load += new System.EventHandler(this.AddToProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrOptom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbrSale)).EndInit();
