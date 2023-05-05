@@ -145,6 +145,11 @@
             this.nmbrOptom.DecimalPlaces = 1;
             this.nmbrOptom.Location = new System.Drawing.Point(173, 124);
             this.nmbrOptom.Margin = new System.Windows.Forms.Padding(4);
+            this.nmbrOptom.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nmbrOptom.Name = "nmbrOptom";
             this.nmbrOptom.Size = new System.Drawing.Size(150, 27);
             this.nmbrOptom.TabIndex = 16;
@@ -155,6 +160,11 @@
             this.nmbrSale.DecimalPlaces = 1;
             this.nmbrSale.Location = new System.Drawing.Point(173, 164);
             this.nmbrSale.Margin = new System.Windows.Forms.Padding(4);
+            this.nmbrSale.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nmbrSale.Name = "nmbrSale";
             this.nmbrSale.Size = new System.Drawing.Size(150, 27);
             this.nmbrSale.TabIndex = 17;
@@ -255,7 +265,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddToProductList";
             this.Text = "Добавить Продукт";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddToProductList_FormClosing);
             this.Load += new System.EventHandler(this.AddToProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrOptom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmbrSale)).EndInit();

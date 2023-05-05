@@ -30,70 +30,120 @@ namespace LogForm
             }
         }
 
+        //public static void ResetComponents(Form form)
+        //{
+        //    foreach (var control in form.Controls)
+        //    {
+        //        if (control is System.Windows.Forms.TextBox)
+        //        {
+        //            System.Windows.Forms.TextBox textBox = control as System.Windows.Forms.TextBox;
+        //            textBox.Text = null;
+
+        //        }
+        //        else if (control is NumericUpDown)
+        //        {
+        //            NumericUpDown numericUpDown = control as NumericUpDown;
+        //            numericUpDown.Value = numericUpDown.Minimum;
+
+        //        }
+        //        else if (control is System.Windows.Forms.ComboBox)
+        //        {
+        //            System.Windows.Forms.ComboBox comboBox = control as System.Windows.Forms.ComboBox;
+        //            comboBox.SelectedItem = null;
+
+        //        }
+        //        else if (control is MaskedTextBox)
+        //        {
+        //            MaskedTextBox maskedTextBox = control as MaskedTextBox;
+        //            maskedTextBox.Text = null;
+        //        }
+        //        else if (control is RichTextBox)
+        //        {
+        //            RichTextBox richTextBox = control as RichTextBox;
+        //            richTextBox.Text = null;
+        //        }
+        //        else if (control is RadioButton)
+        //        {
+        //            RadioButton radioButton = control as RadioButton;
+        //            if (radioButton.Checked)
+        //            {
+        //                radioButton.Checked = false;
+        //            }
+        //        }
+        //        else if (control is CheckBox)
+        //        {
+        //            CheckBox checkBox = control as CheckBox;
+        //            if (checkBox.Checked)
+        //            {
+        //                checkBox.Checked = false;
+        //            }
+        //        }
+        //        else if (control is GroupBox)
+        //        {
+        //            GroupBox groupBox = control as GroupBox;
+        //            foreach (var group in groupBox.Controls)
+        //            {
+        //                if (group is RadioButton)
+        //                {
+        //                    RadioButton radioButton = group as RadioButton;
+        //                    if (radioButton.Checked)
+        //                    {
+        //                        radioButton.Checked = false;
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //    }
+        //}
+
         public static void ResetComponents(Form form)
         {
             foreach (var control in form.Controls)
             {
-                if (control is System.Windows.Forms.TextBox)
+                switch (control)
                 {
-                    System.Windows.Forms.TextBox textBox = control as System.Windows.Forms.TextBox;
-                    textBox.Text = null;
-
-                }
-                else if (control is NumericUpDown)
-                {
-                    NumericUpDown numericUpDown = control as NumericUpDown;
-                    numericUpDown.Value = numericUpDown.Minimum;
-
-                }
-                else if (control is System.Windows.Forms.ComboBox)
-                {
-                    System.Windows.Forms.ComboBox comboBox = control as System.Windows.Forms.ComboBox;
-                    comboBox.SelectedItem = null;
-
-                }
-                else if (control is MaskedTextBox)
-                {
-                    MaskedTextBox maskedTextBox = control as MaskedTextBox;
-                    maskedTextBox.Text = null;
-                }
-                else if (control is RichTextBox)
-                {
-                    RichTextBox richTextBox = control as RichTextBox;
-                    richTextBox.Text = null;
-                }
-                else if (control is RadioButton)
-                {
-                    RadioButton radioButton = control as RadioButton;
-                    if (radioButton.Checked)
-                    {
+                    case TextBox textBox:
+                        textBox.Text = null;
+                        break;
+                    case NumericUpDown numericUpDown:
+                        numericUpDown.Value = numericUpDown.Minimum;
+                        break;
+                    case ComboBox comboBox:
+                        comboBox.SelectedItem = null;
+                        break;
+                    case MaskedTextBox maskedTextBox:
+                        maskedTextBox.Text = null;
+                        break;
+                    case RichTextBox richTextBox:
+                        richTextBox.Text = null;
+                        break;
+                    case RadioButton radioButton:
                         radioButton.Checked = false;
-                    }
-                }
-                else if (control is CheckBox)
-                {
-                    CheckBox checkBox = control as CheckBox;
-                    if (checkBox.Checked)
-                    {
+                        break;
+                    case CheckBox checkBox:
                         checkBox.Checked = false;
-                    }
+                        break;
+                    case GroupBox groupBox:
+                        ResetRadioButtonsAndCheckBoxes(groupBox.Controls);
+                        break;
                 }
-                else if (control is GroupBox)
-                {
-                    GroupBox groupBox = control as GroupBox;
-                    foreach (var group in groupBox.Controls)
-                    {
-                        if (group is RadioButton)
-                        {
-                            RadioButton radioButton = group as RadioButton;
-                            if (radioButton.Checked)
-                            {
-                                radioButton.Checked = false;
-                            }
-                        }
-                    }
-                }
+            }
+        }
 
+        private static void ResetRadioButtonsAndCheckBoxes(Control.ControlCollection controls)
+        {
+            foreach (var control in controls)
+            {
+                switch (control)
+                {
+                    case RadioButton radioButton:
+                        radioButton.Checked = false;
+                        break;
+                    case CheckBox checkBox:
+                        checkBox.Checked = false;
+                        break;
+                }
             }
         }
         public static void StringModifier(ref string str) //modify strings

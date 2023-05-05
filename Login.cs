@@ -12,9 +12,6 @@ namespace LogForm
 {
     public partial class Login : Form
     {
-        private Rectangle panelOriginalS;
-        private Rectangle formOrigianlS;
-
         DataUsers data = new DataUsers();
 
         List<Employee> employees = new List<Employee>();

@@ -9,6 +9,7 @@ using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
 using static LogForm.InnerFunctions;
 using static LogForm.SpeechRecognizer;
+using System.Threading.Tasks;
 
 namespace LogForm
 {
@@ -26,14 +27,11 @@ namespace LogForm
             InitializeComponent();
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
+        private async void btnShow_Click(object sender, EventArgs e)
         {
-           
-           
             using (var connection = new SqlConnection(sqlConnection))
             {
-                
-                connection.Open();
+                await connection.OpenAsync();
 
                 ViewDeterminer(ref view);
 
@@ -47,13 +45,11 @@ namespace LogForm
 
                 SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
                 DataTable table = new DataTable();
-                adapter1.Fill(table);
+                await Task.Run(() => adapter1.Fill(table));
                 dataGridView1.DataSource = table;
 
                 ColumnHeader();
-
             }
-
         }
 
         private async void btnSend_Click(object sender, EventArgs e)
@@ -238,7 +234,7 @@ namespace LogForm
                     cmd.ExecuteNonQuery();
                     this.btnShow_Click(this, default);
                 }
-                catch(System.Data.SqlClient.SqlException exc)
+                catch(System.Data.SqlClient.SqlException)
                 {
                     MessageBox.Show("Невозможно убрать этот продукт так как в амбаре  ");
                 }
@@ -268,7 +264,7 @@ namespace LogForm
                     cmd.Parameters.AddWithValue("@id", ColumnValues(dataGridView1, Columns.Id));
                     cmd.ExecuteNonQuery();
                 }
-                catch(System.Data.SqlClient.SqlException exc)
+                catch(System.Data.SqlClient.SqlException)
                 {
                     MessageBox.Show("Невозможно убрать этот продукт так как в амбаре  ");
                 }
@@ -282,7 +278,6 @@ namespace LogForm
         }
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _recognizer.RecognizeAsyncCancel();
 
             AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),TypeDeterminer(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
             addToProduct.Show();
@@ -326,16 +321,12 @@ namespace LogForm
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _recognizer.RecognizeAsyncCancel();
-
             AddToProductList add = new AddToProductList();
             add.ShowDialog();
         }
 
         private void списокНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _recognizer.RecognizeAsyncCancel();
-
             UnavailableProducts unavailableProducts = new UnavailableProducts();
             unavailableProducts.ShowDialog();
         }

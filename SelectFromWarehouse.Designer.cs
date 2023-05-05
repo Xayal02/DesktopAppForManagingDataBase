@@ -34,6 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectFromWarehouse));
             this.cntxtAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обновитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnShow = new System.Windows.Forms.Button();
             this.chOverall = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -43,7 +44,6 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.cntxtCells = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вычестиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblProductList = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -59,16 +59,24 @@
             // 
             this.cntxtAdd.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cntxtAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьToolStripMenuItem});
+            this.добавитьToolStripMenuItem,
+            this.обновитьToolStripMenuItem});
             this.cntxtAdd.Name = "contextMenuStrip1";
-            this.cntxtAdd.Size = new System.Drawing.Size(146, 28);
+            this.cntxtAdd.Size = new System.Drawing.Size(148, 52);
             // 
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.добавитьToolStripMenuItem_Click);
+            // 
+            // обновитьToolStripMenuItem
+            // 
+            this.обновитьToolStripMenuItem.Name = "обновитьToolStripMenuItem";
+            this.обновитьToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
+            this.обновитьToolStripMenuItem.Text = "Обновить";
+            this.обновитьToolStripMenuItem.Click += new System.EventHandler(this.обновитьToolStripMenuItem_Click);
             // 
             // btnShow
             // 
@@ -125,10 +133,11 @@
             // cmbStaff
             // 
             this.cmbStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cmbStaff.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(1067, 376);
+            this.cmbStaff.Location = new System.Drawing.Point(845, 458);
             this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(222, 24);
+            this.cmbStaff.Size = new System.Drawing.Size(444, 32);
             this.cmbStaff.TabIndex = 9;
             // 
             // btnSend
@@ -137,7 +146,7 @@
             this.btnSend.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSend.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSend.Location = new System.Drawing.Point(845, 370);
+            this.btnSend.Location = new System.Drawing.Point(845, 403);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(202, 31);
             this.btnSend.TabIndex = 10;
@@ -151,10 +160,9 @@
             this.cntxtCells.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.cntxtCells.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.изменитьToolStripMenuItem,
-            this.удалитьToolStripMenuItem,
             this.вычестиToolStripMenuItem});
             this.cntxtCells.Name = "contextMenuStrip2";
-            this.cntxtCells.Size = new System.Drawing.Size(159, 88);
+            this.cntxtCells.Size = new System.Drawing.Size(159, 60);
             // 
             // изменитьToolStripMenuItem
             // 
@@ -162,13 +170,6 @@
             this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(158, 28);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click_1);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(158, 28);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
-            this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.удалитьToolStripMenuItem_Click);
             // 
             // вычестиToolStripMenuItem
             // 
@@ -240,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = global::LogForm.Properties.Resources._92d86d286bf41e282af5a79be71cfb90a9841cce;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1331, 653);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblProductList);
@@ -278,11 +279,11 @@
         private System.Windows.Forms.ContextMenuStrip cntxtAdd;
         private System.Windows.Forms.ToolStripMenuItem добавитьToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip cntxtCells;
-        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вычестиToolStripMenuItem;
         private System.Windows.Forms.Label lblProductList;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
     }
 }

@@ -58,7 +58,7 @@
             0,
             0});
             this.nmbrAmount.Location = new System.Drawing.Point(201, 67);
-            this.nmbrAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmbrAmount.Margin = new System.Windows.Forms.Padding(4);
             this.nmbrAmount.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -73,7 +73,7 @@
             // 
             this.chAll.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chAll.Location = new System.Drawing.Point(333, 65);
-            this.chAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chAll.Margin = new System.Windows.Forms.Padding(4);
             this.chAll.Name = "chAll";
             this.chAll.Size = new System.Drawing.Size(90, 28);
             this.chAll.TabIndex = 4;
@@ -87,7 +87,7 @@
             this.Extract.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Extract.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Extract.Location = new System.Drawing.Point(54, 107);
-            this.Extract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Extract.Margin = new System.Windows.Forms.Padding(4);
             this.Extract.Name = "Extract";
             this.Extract.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Extract.Size = new System.Drawing.Size(369, 58);
@@ -105,8 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::LogForm.Properties.Resources.загрузка1;
-            this.BackgroundImage = null;
+            this.BackgroundImage = global::LogForm.Properties.Resources.загрузка;
             this.ClientSize = new System.Drawing.Size(486, 227);
             this.Controls.Add(this.Extract);
             this.Controls.Add(this.chAll);
@@ -115,9 +114,8 @@
             this.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeductFromWarehouse";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeductFromWarehouse_FormClosing);
             this.Load += new System.EventHandler(this.DeductFromWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

@@ -6,6 +6,7 @@ using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
 using static LogForm.SpeechRecognizer;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace LogForm
 {
@@ -21,7 +22,7 @@ namespace LogForm
             dataUnavailableProducts.SelectedCells[0].ContextMenuStrip = contextMenuStrip1;
         }
 
-        private void UnavailableProducts_Load(object sender, EventArgs e)
+        private async void UnavailableProducts_LoadAsync(object sender, EventArgs e)
         {
             try
             {
@@ -31,89 +32,78 @@ namespace LogForm
             catch (Exception exc)
             {
                 File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
-
             }
+
             using (var connection = new SqlConnection(sqlConnection))
             {
-                connection.Open();
+                await connection.OpenAsync();
                 SqlCommand sqlCommand = connection.CreateCommand();
                 sqlCommand.CommandText = "select UnavailableProducts.Id,UnavailableProducts.KeepTime, UnavailableProducts.Name, Type.Name as 'Type', UnavailableProducts.AdditionalNotes,  UnavailableProducts.WholesalePrice, UnavailableProducts.SalePrice  from  UnavailableProducts Left Join Type on UnavailableProducts.ProductType=Type.Id\r\n";
                 SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
                 DataTable table = new DataTable();
-                adapter1.Fill(table);
+                await Task.Run(() => adapter1.Fill(table));
                 dataUnavailableProducts.DataSource = table;
                 ColumnHeader();
             }
-            
         }
 
-        private void вернутьToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void вернутьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string message = "Вы хотите довабить товар обратно?";
-
             string caption = "Предупреждение";
-
             var result = MessageBox.Show(message, caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
             if (result == DialogResult.OK)
-
             {
-                var connection = new SqlConnection(sqlConnection);
-                connection.Open();
-                try
+                using (var connection = new SqlConnection(sqlConnection))
                 {
-                    SqlCommand cmd = connection.CreateCommand();
+                    await connection.OpenAsync();
 
-                    cmd.CommandText = "SET IDENTITY_INSERT Product ON";
-                    cmd.ExecuteNonQuery();
-
-
-
-                    cmd.CommandText = "Insert into Product (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
-                        "Values (@id,@name,@type,@wholeSalePrice,@salePrice,@keepTime,@notes)";
-
-                    cmd.Parameters.AddWithValue("@id", ColumnValues(dataUnavailableProducts, Columns.Id));
-
-                    cmd.Parameters.AddWithValue("@name", ColumnValues(dataUnavailableProducts, Columns.Name));
-
-                    if (TypeValueDeterminer(dataUnavailableProducts))
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@type", DBNull.Value);
-                    }
+                        SqlCommand cmd = connection.CreateCommand();
 
-                    else
+                        cmd.CommandText = "SET IDENTITY_INSERT Product ON";
+                        await cmd.ExecuteNonQueryAsync();
+
+                        cmd.CommandText = "Insert into Product (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
+                            "Values (@id,@name,@type,@wholeSalePrice,@salePrice,@keepTime,@notes)";
+
+                        cmd.Parameters.AddWithValue("@id", ColumnValues(dataUnavailableProducts, Columns.Id));
+                        cmd.Parameters.AddWithValue("@name", ColumnValues(dataUnavailableProducts, Columns.Name));
+
+                        if (TypeValueDeterminer(dataUnavailableProducts))
+                        {
+                            cmd.Parameters.AddWithValue("@type", DBNull.Value);
+                        }
+                        else
+                        {
+                            TypeDeterminer(dataUnavailableProducts);
+                            cmd.Parameters.AddWithValue("@type", ++type);
+                        }
+
+                        cmd.Parameters.AddWithValue("@wholeSalePrice", ColumnValues(dataUnavailableProducts, Columns.WholesalePrice));
+                        cmd.Parameters.AddWithValue("@salePrice", ColumnValues(dataUnavailableProducts, Columns.SalePrice));
+                        cmd.Parameters.AddWithValue("@keepTime", ColumnValues(dataUnavailableProducts, Columns.KeepTime));
+                        cmd.Parameters.AddWithValue("@notes", ColumnValues(dataUnavailableProducts, Columns.AdditionalNotes));
+
+                        await cmd.ExecuteNonQueryAsync();
+
+                        cmd.CommandText = "Delete from UnavailableProducts where Id=@id";
+                        cmd.Parameters.Clear();
+                        cmd.Parameters.AddWithValue("@id", ColumnValues(dataUnavailableProducts, Columns.Id));
+
+                        await cmd.ExecuteNonQueryAsync();
+
+                         UnavailableProducts_LoadAsync(this, default);
+                    }
+                    catch (Exception exc)
                     {
-                        TypeDeterminer(dataUnavailableProducts);
-                        cmd.Parameters.AddWithValue("@type", ++type);
+                        File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
                     }
-
-                    cmd.Parameters.AddWithValue("@wholeSalePrice", ColumnValues(dataUnavailableProducts, Columns.WholesalePrice));
-
-                    cmd.Parameters.AddWithValue("@salePrice", ColumnValues(dataUnavailableProducts, Columns.SalePrice));
-
-                    cmd.Parameters.AddWithValue("@keepTime", ColumnValues(dataUnavailableProducts, Columns.KeepTime));
-
-                    cmd.Parameters.AddWithValue("@notes", ColumnValues(dataUnavailableProducts, Columns.AdditionalNotes));
-
-                    cmd.ExecuteNonQuery();
-
-                    cmd.CommandText = "Delete from UnavailableProducts where Id=@id";
-                    cmd.ExecuteNonQuery();
-
-                    UnavailableProducts_Load(this, default);
-                }
-                catch (Exception exc)
-                {
-                    File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
-
-                }
-                finally
-                {
-                    connection.Close();
                 }
             }
-
         }
+
 
         private void удалитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -137,9 +127,9 @@ namespace LogForm
 
                     cmd.ExecuteNonQuery();
 
-                    UnavailableProducts_Load(this, default);
+                    UnavailableProducts_LoadAsync(this, default);
                 }
-                 catch (Exception exc)
+                catch (Exception exc)
                 {
                     File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
@@ -163,10 +153,6 @@ namespace LogForm
 
         }
 
-        private void UnavailableProducts_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            _recognizer.RecognizeAsyncCancel();
-        }
+      
     }
 }

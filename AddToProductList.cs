@@ -179,7 +179,8 @@ namespace LogForm
             }
             else
             {
-               // ResetComponents(this);
+                ResetComponents(this);
+                
             }
         }
 
@@ -234,12 +235,6 @@ namespace LogForm
 
             }
 
-        }
-
-
-        private void AddToProductList_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _recognizer.RecognizeAsyncCancel();
         }
 
       

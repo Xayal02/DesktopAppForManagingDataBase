@@ -206,7 +206,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddToWarehouse";
             this.Text = "AddToWarehouse";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddToWarehouse_FormClosing);
             this.Load += new System.EventHandler(this.AddToWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

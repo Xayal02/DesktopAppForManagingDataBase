@@ -72,6 +72,10 @@ namespace LogForm
                     cmd.Parameters.AddWithValue("@code", codeString);
 
                     cmd.ExecuteNonQuery();
+
+                    string message2 = "Продукт изменен!";
+                    this.Close();
+                    
                 }
                 catch(Exception exc)
                 {
@@ -79,7 +83,9 @@ namespace LogForm
                 }
                 finally
                 {
-                  connection.Close();
+                    connection.Close();
+                   
+
                 }
 
             }
@@ -253,7 +259,7 @@ namespace LogForm
 
 
 
-                        string message2 = "Product added successfully!\nDo you want to add new product?";
+                        string message2 = "Продукт добавлен!\nХотите добавить новый?";
                         DialogResult result = MessageBox.Show(message2, "Notify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.No)
                         {
@@ -274,10 +280,6 @@ namespace LogForm
             errorProvider1.Clear();
         }
 
-        private void AddToWarehouse_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _recognizer.RecognizeAsyncCancel();
-        }
     }
 }
 

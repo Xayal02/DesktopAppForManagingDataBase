@@ -37,27 +37,19 @@ namespace LogForm
 
                     SqlCommand cmd = connection.CreateCommand();
 
-                    cmd.CommandText = "Select Amount, Measure from Warehouse Where Code = @code";
-                    cmd.Parameters.AddWithValue("@code", _code);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        totalAmount = reader.GetDecimal(0);
-                        measure = reader.IsDBNull(1) ? "kg" : reader.GetString(1);
-                    }
-
-                    reader.Close();
+                   
 
                     if (chAll.Checked || (totalAmount == nmbrAmount.Value))
                     {
                         cmd.CommandText = "Delete from Warehouse Where code = @code";
+                        cmd.Parameters.AddWithValue("@code", _code);
+
                     }
 
                     else
                     {
                         cmd.CommandText = "Update Warehouse Set Amount = @amount Where Code=@code";
+                        cmd.Parameters.AddWithValue("@code", _code);
                         cmd.Parameters.AddWithValue("@amount", (totalAmount - nmbrAmount.Value));
                     }
 
@@ -78,7 +70,9 @@ namespace LogForm
 
         private void chAll_CheckedChanged(object sender, EventArgs e)
         {
-            nmbrAmount.Visible = chAll.Checked ? false : true;
+            if (chAll.Checked) nmbrAmount.Value = totalAmount;
+            
+           // nmbrAmount.Visible = chAll.Checked ? false : true;
 
         }
 
@@ -132,11 +126,34 @@ namespace LogForm
                 File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
             }
-        }
+            var connection = new SqlConnection(sqlConnection);
+            connection.Open();
+            try
+            {
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = "Select Amount, Measure from Warehouse Where Code = @code";
+                cmd.Parameters.AddWithValue("@code", _code);
 
-        private void DeductFromWarehouse_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            _recognizer.RecognizeAsyncCancel();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    totalAmount = reader.GetDecimal(0);
+                    measure = reader.IsDBNull(1) ? "kg" : reader.GetString(1);
+                }
+                reader.Close();
+
+                
+            }
+            catch(Exception exc)
+            {
+
+            }
+            finally
+            {
+               
+                connection.Close();
+            }
         }
     }
 }

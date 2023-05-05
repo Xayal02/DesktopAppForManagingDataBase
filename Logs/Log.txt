@@ -2243,3 +2243,1091 @@ StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultA
    at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 93
 
 
+04.05.2023 23:27:40
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:27:42
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+04.05.2023 23:27:55
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+04.05.2023 23:30:24
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+04.05.2023 23:30:40
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:30:47
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 93
+
+
+04.05.2023 23:30:48
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 93
+
+
+04.05.2023 23:34:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:34:38
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 93
+
+
+04.05.2023 23:34:38
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 93
+
+
+04.05.2023 23:35:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:35:59
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+04.05.2023 23:35:59
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+04.05.2023 23:36:04
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 127
+
+
+04.05.2023 23:36:17
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 127
+
+
+04.05.2023 23:39:24
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:39:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 129
+
+
+04.05.2023 23:45:44
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:45:49
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 121
+
+
+04.05.2023 23:47:34
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:53:58
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:54:07
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+04.05.2023 23:54:07
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+04.05.2023 23:55:26
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+04.05.2023 23:55:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+04.05.2023 23:55:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 95
+
+
+05.05.2023 0:01:23
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:01:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 0:01:29
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:03:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 0:03:57
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:03:59
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 0:04:01
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:04:39
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:05:20
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 0:05:22
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:05:26
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:05:26
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:05:30
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 121
+
+
+05.05.2023 0:10:39
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 0:15:27
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 0:16:02
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 0:16:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 0:20:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 0:20:42
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 0:20:47
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 0:20:49
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:20:49
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:20:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:20:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:20:56
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 0:20:56
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 8:32:51
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 8:32:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 8:32:58
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 8:33:10
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 8:33:10
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToWarehouse.AddToWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToWarehouse.cs:line 99
+
+
+05.05.2023 8:33:15
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.DeductFromWarehouse.DeductFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\DeductFromWarehouse.cs:line 121
+
+
+05.05.2023 8:33:33
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 8:33:37
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 8:33:42
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 8:34:06
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 232
+
+
+05.05.2023 8:34:48
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 8:34:52
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 8:35:04
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 8:35:07
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 8:35:16
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 8:35:22
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 8:35:25
+Message: Violation of PRIMARY KEY constraint 'PK_Product'. Cannot insert duplicate key in object 'dbo.Product'. The duplicate key value is (2).
+The statement has been terminated.
+
+Source:.Net SqlClient Data Provider
+
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at LogForm.UnavailableProducts.вернутьToolStripMenuItem_Click(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 98
+
+
+05.05.2023 8:36:29
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 8:36:32
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 8:36:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 9:32:23
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 240
+
+
+05.05.2023 9:34:38
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:35:59
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:36:40
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:37:19
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:37:51
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 9:37:53
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:37:55
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 9:38:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 234
+
+
+05.05.2023 9:38:30
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+05.05.2023 9:38:31
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.UnavailableProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 28
+
+
+05.05.2023 9:43:59
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 219
+
+
+05.05.2023 10:16:47
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 10:18:27
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+05.05.2023 10:29:15
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_Load>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:38:27
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:38:31
+Message: Violation of PRIMARY KEY constraint 'PK_Product'. Cannot insert duplicate key in object 'dbo.Product'. The duplicate key value is (2).
+The statement has been terminated.
+
+Source:.Net SqlClient Data Provider
+
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at LogForm.UnavailableProducts.<вернутьToolStripMenuItem_Click>d__3.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 89
+
+
+05.05.2023 10:38:35
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:38:37
+Message: Violation of PRIMARY KEY constraint 'PK_Product'. Cannot insert duplicate key in object 'dbo.Product'. The duplicate key value is (2).
+The statement has been terminated.
+
+Source:.Net SqlClient Data Provider
+
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at LogForm.UnavailableProducts.<вернутьToolStripMenuItem_Click>d__3.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 89
+
+
+05.05.2023 10:38:41
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:38:49
+Message: Violation of PRIMARY KEY constraint 'PK_Product'. Cannot insert duplicate key in object 'dbo.Product'. The duplicate key value is (2).
+The statement has been terminated.
+
+Source:.Net SqlClient Data Provider
+
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, String endMethod, Boolean isInternal)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at LogForm.UnavailableProducts.<вернутьToolStripMenuItem_Click>d__3.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 89
+
+
+05.05.2023 10:40:08
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:40:11
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
