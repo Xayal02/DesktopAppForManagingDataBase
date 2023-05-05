@@ -10,6 +10,7 @@ using static ColumnDeterminer.WarehouseList;
 using static LogForm.SpeechRecognizer;
 using static LogForm.InnerFunctions;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace LogForm
 {
@@ -18,6 +19,7 @@ namespace LogForm
     {
         
         string number;
+        private List<Workforce> _workforce;
 
         public SelectFromWarehouse()
         {
@@ -136,19 +138,7 @@ namespace LogForm
                 {
                     MessageBox.Show("Все нормально!");
                 }
-                else
-                {
-                   
-                    cmd.CommandText = "select Name,Surname,Position,Number from Staff";
-                    SqlDataReader reader = await cmd.ExecuteReaderAsync();
-                    while (reader.Read())
-                    {
-                        cmbStaff.Items.Add(reader.GetString(0).Trim() + " " + reader.GetString(1).Trim() + reader.GetString(2).Trim());
-                        number = reader.GetString(3).Trim();
-
-                    }
-                    reader.Close();
-                }
+               
             }
         }
 
@@ -157,6 +147,8 @@ namespace LogForm
         private async void btnSend_Click_1(object sender, EventArgs e)
         {
             await SaveToFileAsync(pathToWarehouseList, this.dataGridView1);
+
+            number = cmbStaff.SelectedItem.ToString().Substring(cmbStaff.SelectedItem.ToString().IndexOf("+994"));
 
             //number= cmbStaff.item
 
@@ -208,7 +200,7 @@ namespace LogForm
             form4.ShowDialog ();
         }
 
-        private void SelectFromWarehouse_Load(object sender, EventArgs e)
+        private async void SelectFromWarehouse_Load(object sender, EventArgs e)
         {
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 11F);
 
@@ -223,35 +215,48 @@ namespace LogForm
 
             }
 
-            var connection = new SqlConnection(sqlConnection);
-            connection.Open();
 
-            try
-            {
-                SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = "Select Name, Surname, Position, Number from Staff";
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    cmbStaff.Items.Add(reader.GetString(0).Trim() + " " + reader.GetString(1).Trim() + " " + reader.GetString(2).Trim());
-                    number = reader.GetString(3).Trim();
-                }
-            }
-            catch (Exception exc)
-            {
-                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
-
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-
+            _workforce= await GetWorkforceAsync();
+            _workforce.ForEach(x => { cmbStaff.Items.Add(x.ToString()); });
 
             btnShow_Click(this, default);
 
         }
+        public async Task<List<Workforce>> GetWorkforceAsync()
+        {
+            List<Workforce> workforce = new List<Workforce>();
+
+            using (var connection = new SqlConnection(sqlConnection))
+            {
+                await connection.OpenAsync();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "SELECT Name, Surname, Position, Number FROM Staff";
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            Workforce employee = new Workforce()
+                            {
+                                Name = reader["Name"].ToString().Trim(),
+                                Surname = reader["Surname"].ToString().Trim(),
+                                Position = reader["Position"].ToString().Trim(),
+                                Number = reader["Number"].ToString().Trim()
+                            };
+
+                            workforce.Add(employee);
+                        }
+                    }
+                }
+            }
+
+            return workforce;
+        }
+
+        
+
 
         private void SelectFromWarehouse_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -276,4 +281,19 @@ namespace LogForm
             btnShow_Click(this, default);
         }
     }
+    public class Workforce
+    {
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Position { get; set; }
+        public string Number { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.Name} {this.Surname} {this.Position}";
+        }
+
+
+    }
 }
+

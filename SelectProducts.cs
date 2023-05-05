@@ -328,7 +328,7 @@ namespace LogForm
         private void списокНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UnavailableProducts unavailableProducts = new UnavailableProducts();
-            unavailableProducts.ShowDialog();
+            unavailableProducts.Show();
         }
 
         private void SelectProducts_FormClosing(object sender, FormClosingEventArgs e)

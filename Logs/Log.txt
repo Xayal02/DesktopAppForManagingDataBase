@@ -3331,3 +3331,190 @@ StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultA
    at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
 
 
+05.05.2023 10:45:51
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.UnavailableProducts.<UnavailableProducts_LoadAsync>d__2.MoveNext() in D:\VisualStudio\Projects\LogForm\UnavailableProducts.cs:line 29
+
+
+05.05.2023 10:48:35
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 217
+
+
+05.05.2023 10:52:08
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:54:19
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 113
+
+
+05.05.2023 10:54:21
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:55:00
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:56:31
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:56:54
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:57:22
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 205
+
+
+05.05.2023 10:59:48
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 207
+
+
+05.05.2023 11:00:21
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 207
+
+
+05.05.2023 11:01:43
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 207
+
+
+05.05.2023 11:24:50
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 209
+
+
+05.05.2023 11:29:02
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__19.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 209
+
+
+05.05.2023 11:29:29
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__19.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 209
+
+
+05.05.2023 11:38:32
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__18.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 208
+
+
+05.05.2023 11:39:10
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 20
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__18.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 208
+
+

@@ -137,7 +137,7 @@
             this.cmbStaff.FormattingEnabled = true;
             this.cmbStaff.Location = new System.Drawing.Point(845, 458);
             this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(444, 32);
+            this.cmbStaff.Size = new System.Drawing.Size(328, 32);
             this.cmbStaff.TabIndex = 9;
             // 
             // btnSend
