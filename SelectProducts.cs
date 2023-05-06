@@ -217,14 +217,14 @@ namespace LogForm
                     cmd.CommandText = "Insert into UnavailableProducts (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
                     "Values (@id,@name,@type,@optPrice,@salePrice,@keepTime,@notes)";
                     cmd.Parameters.AddWithValue("@name", ColumnValues(dataGridView1, Columns.Name));
-                    if (TypeValueDeterminer(dataGridView1))
+                    if (IsTypeValueEmpty(dataGridView1))
                     {
                         cmd.Parameters.AddWithValue("@type", DBNull.Value);
                       
                     }
                     else
                     {
-                        TypeDeterminer(dataGridView1);
+                        GetTypeValue(dataGridView1);
                         cmd.Parameters.AddWithValue("@type", ++type);
                     }
                     cmd.Parameters.AddWithValue("@optPrice", ColumnValues(dataGridView1, Columns.WholesalePrice));
@@ -279,8 +279,8 @@ namespace LogForm
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),TypeDeterminer(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
-            addToProduct.Show();
+            AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),GetTypeValue(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
+            addToProduct.ShowDialog();
 
         }
 

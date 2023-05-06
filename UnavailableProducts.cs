@@ -18,7 +18,9 @@ namespace LogForm
         }
 
         private void dataUnavailableProducts_CellClick(object sender, DataGridViewCellEventArgs e)
-        {  
+        {
+            dataUnavailableProducts.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F);
+
             dataUnavailableProducts.SelectedCells[0].ContextMenuStrip = contextMenuStrip1;
         }
 
@@ -62,13 +64,13 @@ namespace LogForm
                         cmd.Parameters.AddWithValue("@id", ColumnValues(dataUnavailableProducts, Columns.Id));
                         cmd.Parameters.AddWithValue("@name", ColumnValues(dataUnavailableProducts, Columns.Name));
 
-                        if (TypeValueDeterminer(dataUnavailableProducts))
+                        if (IsTypeValueEmpty(dataUnavailableProducts))
                         {
                             cmd.Parameters.AddWithValue("@type", DBNull.Value);
                         }
                         else
                         {
-                            TypeDeterminer(dataUnavailableProducts);
+                            GetTypeValue(dataUnavailableProducts);
                             cmd.Parameters.AddWithValue("@type", ++type);
                         }
 

@@ -23,3 +23,4 @@ D:\VisualStudio\Projects\LogForm\obj\Debug\LogForm.csproj.CoreCompileInputs.cach
 D:\VisualStudio\Projects\LogForm\obj\Debug\LogForm.csproj.CopyComplete
 D:\VisualStudio\Projects\LogForm\obj\Debug\LogForm.exe
 D:\VisualStudio\Projects\LogForm\obj\Debug\LogForm.pdb
+D:\VisualStudio\Projects\LogForm\obj\Debug\LogForm.AddEmployee.resources

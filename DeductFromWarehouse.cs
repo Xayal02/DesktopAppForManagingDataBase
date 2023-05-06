@@ -116,16 +116,6 @@ namespace LogForm
 
         private void DeductFromWarehouse_Load(object sender, EventArgs e)
         {
-            try
-            {
-                SpeechRecognizerOn();
-                Default_SpeechRecognized(this, default);
-            }
-            catch (Exception exc)
-            {
-                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
-
-            }
             var connection = new SqlConnection(sqlConnection);
             connection.Open();
             try

@@ -30,73 +30,6 @@ namespace LogForm
             }
         }
 
-        //public static void ResetComponents(Form form)
-        //{
-        //    foreach (var control in form.Controls)
-        //    {
-        //        if (control is System.Windows.Forms.TextBox)
-        //        {
-        //            System.Windows.Forms.TextBox textBox = control as System.Windows.Forms.TextBox;
-        //            textBox.Text = null;
-
-        //        }
-        //        else if (control is NumericUpDown)
-        //        {
-        //            NumericUpDown numericUpDown = control as NumericUpDown;
-        //            numericUpDown.Value = numericUpDown.Minimum;
-
-        //        }
-        //        else if (control is System.Windows.Forms.ComboBox)
-        //        {
-        //            System.Windows.Forms.ComboBox comboBox = control as System.Windows.Forms.ComboBox;
-        //            comboBox.SelectedItem = null;
-
-        //        }
-        //        else if (control is MaskedTextBox)
-        //        {
-        //            MaskedTextBox maskedTextBox = control as MaskedTextBox;
-        //            maskedTextBox.Text = null;
-        //        }
-        //        else if (control is RichTextBox)
-        //        {
-        //            RichTextBox richTextBox = control as RichTextBox;
-        //            richTextBox.Text = null;
-        //        }
-        //        else if (control is RadioButton)
-        //        {
-        //            RadioButton radioButton = control as RadioButton;
-        //            if (radioButton.Checked)
-        //            {
-        //                radioButton.Checked = false;
-        //            }
-        //        }
-        //        else if (control is CheckBox)
-        //        {
-        //            CheckBox checkBox = control as CheckBox;
-        //            if (checkBox.Checked)
-        //            {
-        //                checkBox.Checked = false;
-        //            }
-        //        }
-        //        else if (control is GroupBox)
-        //        {
-        //            GroupBox groupBox = control as GroupBox;
-        //            foreach (var group in groupBox.Controls)
-        //            {
-        //                if (group is RadioButton)
-        //                {
-        //                    RadioButton radioButton = group as RadioButton;
-        //                    if (radioButton.Checked)
-        //                    {
-        //                        radioButton.Checked = false;
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //    }
-        //}
-
         public static void ResetComponents(Form form)
         {
             foreach (var control in form.Controls)
@@ -182,7 +115,7 @@ namespace LogForm
             str = sb.ToString();
         }
 
-        public static bool ComboBoxError(ComboBox comboBox,ErrorProvider errorProvider)
+        public static bool ComboBoxError(ComboBox comboBox, ErrorProvider errorProvider)
         {
             while (comboBox.SelectedItem == null)
             {
@@ -209,7 +142,7 @@ namespace LogForm
             while (string.IsNullOrEmpty(textBox.Text))
             {
 
-                errorProvider.SetError(textBox, "Выберите значение");
+                errorProvider.SetError(textBox, "Введите значение");
                 return false;
 
             }
@@ -220,12 +153,23 @@ namespace LogForm
             while (string.IsNullOrEmpty(textBox.Text))
             {
 
-                errorProvider.SetError(textBox, "Выберите значение");
+                errorProvider.SetError(textBox, "Введите значение");
                 return false;
 
             }
             return true;
         }
+        public static bool MaskedTextNumberError(MaskedTextBox textBox, ErrorProvider errorProvider)
+        {
+            if (textBox.Text.Length != 11)
+            {
+                errorProvider.SetError(textBox, "Введите действидельное  значение");
+                return false;
+            }
+
+            return true;
+        }
+
         public static bool NumericError(NumericUpDown numericUpDown, ErrorProvider errorProvider)
         {
             while (numericUpDown.Value == 0)
@@ -237,7 +181,7 @@ namespace LogForm
             return true;
         }
 
-        public static bool NumericsDifferenceError(NumericUpDown numericUpDown1,NumericUpDown numericUpDown2, ErrorProvider errorProvider)
+        public static bool NumericsDifferenceError(NumericUpDown numericUpDown1, NumericUpDown numericUpDown2, ErrorProvider errorProvider)
         {
             while (numericUpDown1.Value > numericUpDown2.Value)
             {
@@ -245,8 +189,38 @@ namespace LogForm
 
             }
             return true;
-           
+
         }
+
+        public static string PhoneNumberToDisplay(ref string number)
+        {
+            return number.Substring(1);
+        }
+        public static string PhoneNumberToAdd(string number)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("0");
+
+            foreach (char c in number)
+            {
+                if (char.IsDigit(c))
+                {
+                    sb.Append(c);
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        public static string PhoneNumberToSendAsLink(ref string number)
+        {
+            number.Substring(1); //for deleting zero
+
+            number = "994" + number;
+
+            return number;
+        }
+           
 
     }
 }

@@ -63,6 +63,26 @@ namespace LogForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1619206153_41_phonoteka_org_p_belii_fon_odnotonnii_na_ves_ekran_63 {
+            get {
+                object obj = ResourceManager.GetObject("1619206153_41-phonoteka_org-p-belii-fon-odnotonnii-na-ves-ekran-63", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1619206153_41_phonoteka_org_p_belii_fon_odnotonnii_na_ves_ekran_631 {
+            get {
+                object obj = ResourceManager.GetObject("1619206153_41-phonoteka_org-p-belii-fon-odnotonnii-na-ves-ekran-631", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _71273bbcd166cb4c95fc0839a3cfafaf {
             get {
                 object obj = ResourceManager.GetObject("71273bbcd166cb4c95fc0839a3cfafaf", resourceCulture);
@@ -126,6 +146,16 @@ namespace LogForm.Properties {
         internal static System.Drawing.Bitmap images1 {
             get {
                 object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images2 {
+            get {
+                object obj = ResourceManager.GetObject("images2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,26 @@ namespace LogForm.Properties {
         internal static System.Drawing.Bitmap Снимок_экрана_2023_05_04_2119403 {
             get {
                 object obj = ResourceManager.GetObject("Снимок экрана 2023-05-04 2119403", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_05_205243 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-05 205243", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2023_05_05_213510 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок экрана 2023-05-05 213510", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

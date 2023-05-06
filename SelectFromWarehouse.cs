@@ -11,14 +11,13 @@ using static LogForm.SpeechRecognizer;
 using static LogForm.InnerFunctions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LogForm
 {
    
     public partial class SelectFromWarehouse : Form
     {
-        
-        string number;
         private List<Workforce> _workforce;
 
         public SelectFromWarehouse()
@@ -80,13 +79,6 @@ namespace LogForm
 
         }
 
-
-
-        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
-        { 
-            Application.Exit();
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -146,14 +138,15 @@ namespace LogForm
 
         private async void btnSend_Click_1(object sender, EventArgs e)
         {
+            int index = cmbStaff.SelectedItem.ToString().IndexOf(' ');
+            string name = cmbStaff.SelectedItem.ToString().Substring(0, index);
+
+            var employeeNumber = _workforce.FirstOrDefault(x => x.Name == name).Number;
+
             await SaveToFileAsync(pathToWarehouseList, this.dataGridView1);
 
-            number = cmbStaff.SelectedItem.ToString().Substring(cmbStaff.SelectedItem.ToString().IndexOf("+994"));
+            Process.Start("msedge.exe", $"https://wa.me/{PhoneNumberToSendAsLink(ref employeeNumber)}");
 
-            //number= cmbStaff.item
-
-            Process.Start("msedge.exe", $"https://wa.me/{number}");
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -165,7 +158,7 @@ namespace LogForm
 
         private void button5_Click(object sender, EventArgs e)
         {
-            _recognizer.RecognizeAsyncCancel();
+            
             AddToWarehouse addToWarehouse=  new AddToWarehouse();
             addToWarehouse.Show();
         }
@@ -209,15 +202,17 @@ namespace LogForm
                 SpeechRecognizerOn();
                 Default_SpeechRecognized(this, default);
             }
-            catch(Exception exc)
+            catch (Exception exc)
             {
                 File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
             }
 
 
-            _workforce= await GetWorkforceAsync();
+            _workforce = await GetWorkforceAsync();
             _workforce.ForEach(x => { cmbStaff.Items.Add(x.ToString()); });
+
+            cmbStaff.SelectedIndex = 0;
 
             btnShow_Click(this, default);
 
@@ -279,6 +274,12 @@ namespace LogForm
         private void обновитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnShow_Click(this, default);
+        }
+
+        private void lblStaff_Click(object sender, EventArgs e)
+        {
+            Staff staff = new Staff();
+            staff.Show();
         }
     }
     public class Workforce

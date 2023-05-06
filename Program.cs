@@ -19,6 +19,7 @@ namespace LogForm
         public static string pathToLogs = stringPath.Remove(stringPath.IndexOf("bin")) + "Logs\\Log.txt";
         public static string pathToProductList= stringPath.Remove(stringPath.IndexOf("bin")) + "ProductList";
         public static string pathToWarehouseList= stringPath.Remove(stringPath.IndexOf("bin")) + "WarehouseList";
+        public static string pathToSpeechCommands = stringPath.Remove(stringPath.IndexOf("bin")) + "SpeechCommands\\Commands.txt";
 
 
         [STAThread]

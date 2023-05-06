@@ -47,7 +47,7 @@ namespace ColumnDeterminer
             else return default;
         }
 
-        public static int TypeDeterminer(DataGridView dataGridView)
+        public static int GetTypeValue(DataGridView dataGridView)
         {
             string typeString = ColumnValues(dataGridView, Columns.ProductType).ToString();
             if (typeString == "Dondurulmus") type = 0;
@@ -58,7 +58,7 @@ namespace ColumnDeterminer
             return type;
         }
 
-        public static bool TypeValueDeterminer(DataGridView dataGridView)
+        public static bool IsTypeValueEmpty(DataGridView dataGridView)
         {
             return string.IsNullOrEmpty(dataGridView.Rows[GetRowIndex(dataGridView)].Cells[typeIndex].Value.ToString());
         }
@@ -131,5 +131,43 @@ namespace ColumnDeterminer
             Code
 
         }
+    }
+    public static class Staff
+    {
+        public static readonly int idIndex = 0;
+        public static readonly int nameIndex = 1;
+        public static readonly int surnameIndex = 2;
+        public static readonly int positionIndex = 3;
+        public static readonly int numberIndex = 4;
+
+        public static int GetRowIndex(DataGridView dataGridView)
+        {
+            return dataGridView.SelectedCells[0].RowIndex;
+
+        }
+        public static object ColumnValues(DataGridView dataGridView, Columns column)
+        {
+            if (column == Columns.Id) return dataGridView.Rows[GetRowIndex(dataGridView)].Cells[idIndex].Value;
+          
+            else if (column == Columns.Name) return dataGridView.Rows[GetRowIndex(dataGridView)].Cells[nameIndex].Value;
+
+            else if (column == Columns.Surname) return dataGridView.Rows[GetRowIndex(dataGridView)].Cells[surnameIndex].Value;
+
+            else if (column == Columns.Position) return dataGridView.Rows[GetRowIndex(dataGridView)].Cells[positionIndex].Value;
+
+            else if (column == Columns.Number) return dataGridView.Rows[GetRowIndex(dataGridView)].Cells[numberIndex].Value;
+
+            else return default;
+        }
+
+        public enum Columns
+        {
+            Id,
+            Name,
+            Surname,
+            Position,
+            Number
+        }
+
     }
 }

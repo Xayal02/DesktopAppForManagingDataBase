@@ -4,6 +4,9 @@ using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Diagnostics;
 using System;
+using static LogForm.Program;
+using System.IO;
+using ColumnDeterminer;
 
 namespace LogForm
 {
@@ -13,16 +16,20 @@ namespace LogForm
         public static SpeechRecognitionEngine _recognizer = new SpeechRecognitionEngine(ci);
         public static SpeechSynthesizer Sarah = new SpeechSynthesizer();
         public static Choices words = new Choices();
+        public static Choices commands = new Choices();
+
 
         public static void SpeechRecognizerOn()
         {
-            words.Add(new string[] { "покажи погоду", "открой вотсап" });
+            commands.Add(File.ReadAllLines(pathToSpeechCommands));
+
+            words.Add(new string[] { "покажи погоду", "открой вотсап", "Выйди" });
             _recognizer.SetInputToDefaultAudioDevice();
             _recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Default_SpeechRecognized);
 
             GrammarBuilder grammarbuilder = new GrammarBuilder();
             grammarbuilder.Culture = ci;
-            grammarbuilder.Append(words);
+            grammarbuilder.Append(commands);
 
             _recognizer.LoadGrammarAsync(new Grammar(grammarbuilder));
             _recognizer.RecognizeAsync(RecognizeMode.Multiple);
@@ -48,10 +55,29 @@ namespace LogForm
                     {
                         Process.Start("msedge.exe", $"https://www.gismeteo.ru/weather-sumqayit-5295/");
                     }
-                    //if (speech == "открой вотсап")
-                    //{
-                    //    Process.Start("msedge.exe", $"https://wa.me");
-                    //}
+                    if (speech == "открой вотсап")
+                    {
+                        Process.Start("msedge.exe", $"https://wa.me");
+                    }
+
+                    if (speech == "открой калькулятор")
+                    {
+                        Process.Start("msedge.exe", $"https://www.desmos.com/scientific?lang=ru");
+                    }
+
+                    if (speech == "открой файл список продуктов")
+                    {
+                        Process.Start("explorer.exe", $"D:\\VisualStudio\\Projects\\LogForm\\ProductList");
+                    }
+                    if (speech == "открой файл амбар")
+                    {
+                        Process.Start("explorer.exe", $"D:\\VisualStudio\\Projects\\LogForm\\WarehouseList");
+                    }
+
+                    if (speech == "выйди" || speech == "выйди из приложения")
+                    {
+                        Application.Exit();
+                    }
                 }
             }
         }

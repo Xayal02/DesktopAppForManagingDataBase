@@ -48,11 +48,14 @@
             this.lblProductList = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblStaff = new System.Windows.Forms.Label();
             this.cntxtAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.cntxtCells.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // cntxtAdd
@@ -116,9 +119,9 @@
             this.btnShowExpired.BackColor = System.Drawing.Color.LightCoral;
             this.btnShowExpired.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowExpired.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowExpired.Location = new System.Drawing.Point(845, 303);
+            this.btnShowExpired.Location = new System.Drawing.Point(845, 320);
             this.btnShowExpired.Name = "btnShowExpired";
-            this.btnShowExpired.Size = new System.Drawing.Size(202, 36);
+            this.btnShowExpired.Size = new System.Drawing.Size(226, 36);
             this.btnShowExpired.TabIndex = 7;
             this.btnShowExpired.Text = "Показать список просроченных продуктов";
             this.toolTip1.SetToolTip(this.btnShowExpired, "Показывает, какие продукты не подлежат хранению");
@@ -135,9 +138,9 @@
             this.cmbStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmbStaff.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(845, 458);
+            this.cmbStaff.Location = new System.Drawing.Point(845, 464);
             this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(328, 32);
+            this.cmbStaff.Size = new System.Drawing.Size(444, 32);
             this.cmbStaff.TabIndex = 9;
             // 
             // btnSend
@@ -182,10 +185,10 @@
             // 
             this.lblProductList.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblProductList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblProductList.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblProductList.Location = new System.Drawing.Point(30, -1);
+            this.lblProductList.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblProductList.Location = new System.Drawing.Point(30, 2);
             this.lblProductList.Name = "lblProductList";
-            this.lblProductList.Size = new System.Drawing.Size(131, 39);
+            this.lblProductList.Size = new System.Drawing.Size(181, 28);
             this.lblProductList.TabIndex = 21;
             this.lblProductList.Text = "Ассортимент";
             this.lblProductList.Click += new System.EventHandler(this.lblProductList_Click);
@@ -208,7 +211,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.cntxtAdd;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -217,7 +220,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(819, 612);
+            this.dataGridView1.Size = new System.Drawing.Size(819, 613);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -226,6 +229,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(1)))));
+            this.pictureBox1.BackgroundImage = global::LogForm.Properties.Resources._1619206153_41_phonoteka_org_p_belii_fon_odnotonnii_na_ves_ekran_631;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::LogForm.Properties.Resources._71273bbcd166cb4c95fc0839a3cfafaf3;
             this.pictureBox1.Location = new System.Drawing.Point(0, -1);
@@ -236,6 +240,35 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.lblProductList_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::LogForm.Properties.Resources.images;
+            this.pictureBox2.Location = new System.Drawing.Point(1295, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.lblStaff_Click);
+            // 
+            // lblStaff
+            // 
+            this.lblStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblStaff.AutoSize = true;
+            this.lblStaff.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblStaff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblStaff.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblStaff.Location = new System.Drawing.Point(1164, 2);
+            this.lblStaff.Name = "lblStaff";
+            this.lblStaff.Size = new System.Drawing.Size(155, 27);
+            this.lblStaff.TabIndex = 26;
+            this.lblStaff.Text = "Рабочая сила";
+            this.lblStaff.Click += new System.EventHandler(this.lblStaff_Click);
+            // 
             // SelectFromWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,6 +276,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1331, 653);
+            this.Controls.Add(this.lblStaff);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblProductList);
             this.Controls.Add(this.btnSend);
@@ -257,14 +292,15 @@
             this.Text = "Амбар";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectFromWarehouse_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.SelectFromWarehouse_Load);
             this.cntxtAdd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.cntxtCells.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -285,5 +321,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblStaff;
     }
 }
