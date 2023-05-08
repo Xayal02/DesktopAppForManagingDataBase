@@ -48,7 +48,7 @@ namespace LogForm
 
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddEmployee addEmployee = new AddEmployee(ColumnValues(dataGridView1, Columns.Name), ColumnValues(dataGridView1, Columns.Surname), ColumnValues(dataGridView1, Columns.Position), ColumnValues(dataGridView1, Columns.Number));
+            AddEmployee addEmployee = new AddEmployee(ColumnValues(dataGridView1,Columns.Id),ColumnValues(dataGridView1, Columns.Name), ColumnValues(dataGridView1, Columns.Surname), ColumnValues(dataGridView1, Columns.Position), ColumnValues(dataGridView1, Columns.Number));
 
             addEmployee.ShowDialog();
 

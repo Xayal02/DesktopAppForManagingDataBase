@@ -4,7 +4,6 @@ using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using static LogForm.SpeechRecognizer;
 
 
 namespace LogForm
@@ -31,8 +30,7 @@ namespace LogForm
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AddToProductList());
-            Application.Run(new SelectProducts());
+            Application.Run(new Login());
 
 
         }

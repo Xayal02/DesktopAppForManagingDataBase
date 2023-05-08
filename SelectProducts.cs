@@ -10,6 +10,7 @@ using static ColumnDeterminer.ProductList;
 using static LogForm.InnerFunctions;
 using static LogForm.SpeechRecognizer;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace LogForm
 {
@@ -17,93 +18,17 @@ namespace LogForm
     {
          
         string view = "";
-
         string conditionPrice = "";
-
-       
-
         public SelectProducts()
         {
             InitializeComponent();
         }
-
-        private async void btnShow_Click(object sender, EventArgs e)
+        public SelectProducts(string userName)
         {
-            using (var connection = new SqlConnection(sqlConnection))
-            {
-                await connection.OpenAsync();
+            InitializeComponent();
 
-                ViewDeterminer(ref view);
-
-                ConditionDeterminer(ref conditionPrice);
-
-                SqlCommand sqlCommand = connection.CreateCommand();
-                sqlCommand.CommandText = $"Select * from {view} where {conditionPrice}";
-
-                sqlCommand.Parameters.Add("@min", SqlDbType.Decimal).Value = nmbrMin.Value;
-                sqlCommand.Parameters.Add("@max", SqlDbType.Decimal).Value = nmbrMax.Value;
-
-                SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
-                DataTable table = new DataTable();
-                await Task.Run(() => adapter1.Fill(table));
-                dataGridView1.DataSource = table;
-
-                ColumnHeader();
-            }
+            Sarah.SpeakAsync(userName);
         }
-
-        private async void btnSend_Click(object sender, EventArgs e)
-        {
-            await SaveToFileAsync(pathToProductList, this.dataGridView1);
-
-            string number = "994" + Fixer(maskedTextBox1.Text);
-            Process.Start("msedge.exe", $"https://wa.me/{number}");
-        }
-        private static string Fixer(string str)
-        {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (char.IsDigit(str[i]))
-                {
-                    sb.Append(str[i]);
-                }
-            }
-            return (sb.ToString());
-        }
-
-        private void изСпискаНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _recognizer.RecognizeAsyncCancel();
-
-            UnavailableProducts unavailableProducts= new UnavailableProducts();
-            unavailableProducts.ShowDialog();
-        }
-
-        private void ColumnHeader()
-        {
-            dataGridView1.Columns[idIndex].Visible = false;
-            dataGridView1.Columns[keepTimeIndex].Visible = false;
-
-            dataGridView1.Columns[salePriceIndex].Visible= optomRBtn.Checked ? false : true;
-            dataGridView1.Columns[wholesalePriceIndex].Visible = saleRBtn.Checked ? false : true;
-
-            if (chCurrent.Checked)
-            {
-
-                if (chOverall.Checked)
-                {
-                    dataGridView1.Columns[overallIndex].Visible = true;
-                }
-
-                else
-                {
-                    dataGridView1.Columns[overallIndex].Visible = false;
-                }
-
-            }
-        }
-
 
         private void SelectProducts_Load(object sender, EventArgs e)
         {
@@ -126,7 +51,74 @@ namespace LogForm
             ToolStripMenuItem toolStripMenu3 = new ToolStripMenuItem("Изменить");
 
         }
-        
+
+
+        private async void btnShow_Click(object sender, EventArgs e)
+        {
+             using (var connection = new SqlConnection(sqlConnection))
+             {
+                await connection.OpenAsync();
+
+                ViewDeterminer(ref view);
+
+                ConditionDeterminer(ref conditionPrice);
+
+                SqlCommand sqlCommand = connection.CreateCommand();
+                sqlCommand.CommandText = $"Select * from {view} where {conditionPrice}";
+
+                sqlCommand.Parameters.Add("@min", SqlDbType.Decimal).Value = nmbrMin.Value;
+                sqlCommand.Parameters.Add("@max", SqlDbType.Decimal).Value = nmbrMax.Value;
+
+                SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
+                DataTable table = new DataTable();
+                await Task.Run(() => adapter1.Fill(table));
+                dataGridView1.DataSource = table;
+
+                ColumnHeader();
+             }
+        }
+
+        private void ColumnHeader()
+        {
+            dataGridView1.Columns[idIndex].Visible = false;
+            dataGridView1.Columns[keepTimeIndex].Visible = false;
+
+            dataGridView1.Columns[salePriceIndex].Visible = optomRBtn.Checked ? false : true;
+            dataGridView1.Columns[wholesalePriceIndex].Visible = saleRBtn.Checked ? false : true;
+
+            if (chCurrent.Checked)
+            {
+                if (chOverall.Checked)
+                {
+                    dataGridView1.Columns[overallIndex].Visible = true;
+                }
+
+                else
+                {
+                    dataGridView1.Columns[overallIndex].Visible = false;
+                }
+
+            }
+        }
+
+        private async void btnSend_Click(object sender, EventArgs e)
+        {
+            await SaveToFileAsync(pathToProductList, this.dataGridView1);
+
+            string number =(txtNumber.Text);
+            PhoneNumberFixer(ref number);
+            Process.Start("msedge.exe", $"https://wa.me/{PhoneNumberToSendAsLink(ref number)}");
+        }
+
+        private void изСпискаНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _recognizer.RecognizeAsyncCancel();
+
+            UnavailableProducts unavailableProducts= new UnavailableProducts();
+            unavailableProducts.ShowDialog();
+        }
+
+      
 
         private void btnReset_Click(object sender, EventArgs e)
         {
@@ -157,32 +149,14 @@ namespace LogForm
         private void ConditionDeterminer(ref string condition)
         {
             if (optomRBtn.Checked) condition = "WholesalePrice Between @min and @max";
-           
             else if (saleRBtn.Checked) condition = "SalePrice Between @min and @max";
-
             else condition = $"SalePrice Between @min and @max  AND WholesalePrice Between @min and @max ";
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-        private void optomRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void saleRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
+        { 
             this.btnShow_Click(this, default);
             chOverall.Enabled = chCurrent.Checked ? true : false;
-
         }
 
         private void новыйПродуктToolStripMenuItem_Click(object sender, EventArgs e)
@@ -195,7 +169,6 @@ namespace LogForm
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.SelectedCells[0].ContextMenuStrip = contextMenuStrip1;
-
         }
 
         private void убратьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -278,45 +251,8 @@ namespace LogForm
         }
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),GetTypeValue(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
             addToProduct.ShowDialog();
-
-        }
-
-        private void allRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void freshRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void frozenRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void smokedRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void otherRBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void nmbrMin_ValueChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
-        }
-
-        private void nmbrMax_ValueChanged(object sender, EventArgs e)
-        {
-            this.btnShow_Click(this, default);
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -333,29 +269,9 @@ namespace LogForm
 
         private void SelectProducts_FormClosing(object sender, FormClosingEventArgs e)
         {
-
             _recognizer.RecognizeAsyncCancel();
         }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
+        
 
         private void lblWarehouse_Click(object sender, EventArgs e)
         {
@@ -363,8 +279,6 @@ namespace LogForm
             this.Hide();
             selectFromWarehouse.ShowDialog();
             this.Close();
-
-            
         }
     }
 }

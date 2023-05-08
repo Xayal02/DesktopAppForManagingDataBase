@@ -1,0 +1,668 @@
+06.05.2023 12:36:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 12:38:29
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.SelectFromWarehouse_Shown(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 279
+
+
+06.05.2023 12:46:18
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 12:47:46
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 13:48:28
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:33:13
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:35:48
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:36:06
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:39:07
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:39:26
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:39:35
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 15:43:42
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+06.05.2023 18:49:36
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.AddToProductList.AddToProductList_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\AddToProductList.cs:line 65
+
+
+06.05.2023 18:49:44
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 1:10:06
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 1:10:13
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 1:10:26
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 113
+
+
+07.05.2023 1:10:30
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 1:10:44
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 113
+
+
+07.05.2023 13:18:25
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 113
+
+
+07.05.2023 13:19:14
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 27
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 13:30:19
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 117
+
+
+07.05.2023 13:31:07
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 13:31:46
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 13:32:17
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 13:32:37
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 13:37:26
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 14:17:12
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 14:19:05
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 37
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 17:21:24
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 119
+
+
+07.05.2023 17:21:30
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+07.05.2023 18:00:16
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 109
+
+
+07.05.2023 18:01:08
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 109
+
+
+07.05.2023 18:01:47
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 109
+
+
+07.05.2023 18:02:12
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 109
+
+
+07.05.2023 18:11:44
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 18:12:36
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 18:13:21
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 18:13:50
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 18:28:27
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 19:24:42
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+07.05.2023 21:52:12
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 110
+
+
+08.05.2023 10:11:46
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:14:49
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:14:51
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+08.05.2023 10:15:30
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:15:32
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+08.05.2023 10:15:33
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:15:35
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+08.05.2023 10:16:16
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:16:17
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+08.05.2023 10:16:20
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 10:16:21
+Message: Cannot perform this operation while the recognizer is doing recognition.
+
+Source:Microsoft.Speech
+
+StackTrace:    at Microsoft.Speech.Recognition.RecognizerBase.SetInputToDefaultAudioDevice()
+   at Microsoft.Speech.Recognition.SpeechRecognitionEngine.SetInputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 23
+   at LogForm.SelectFromWarehouse.<SelectFromWarehouse_Load>d__17.MoveNext() in D:\VisualStudio\Projects\LogForm\SelectFromWarehouse.cs:line 202
+
+
+08.05.2023 12:18:41
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 12:24:07
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+
+08.05.2023 12:25:31
+Message: Cannot change synthesizer's output while speaking.
+
+Source:System.Speech
+
+StackTrace:    at System.Speech.Internal.Synthesis.VoiceSynthesis.SetOutput(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToNull()
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputStream(Stream stream, SpeechAudioFormatInfo formatInfo, Boolean headerInfo, Boolean closeStreamOnExit)
+   at System.Speech.Synthesis.SpeechSynthesizer.SetOutputToDefaultAudioDevice()
+   at LogForm.SpeechRecognizer.SpeechRecognizerOn() in D:\VisualStudio\Projects\LogForm\SpeechReconizer.cs:line 33
+   at LogForm.SelectProducts.SelectProducts_Load(Object sender, EventArgs e) in D:\VisualStudio\Projects\LogForm\SelectProducts.cs:line 38
+
+

@@ -48,7 +48,7 @@
             this.dataUnavailableProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataUnavailableProducts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataUnavailableProducts.Location = new System.Drawing.Point(0, 0);
-            this.dataUnavailableProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataUnavailableProducts.Margin = new System.Windows.Forms.Padding(4);
             this.dataUnavailableProducts.MultiSelect = false;
             this.dataUnavailableProducts.Name = "dataUnavailableProducts";
             this.dataUnavailableProducts.ReadOnly = true;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.dataUnavailableProducts);
             this.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UnavailableProducts";
             this.Text = "Недоступные продукты";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

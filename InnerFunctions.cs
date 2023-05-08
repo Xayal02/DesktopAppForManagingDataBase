@@ -11,6 +11,7 @@ namespace LogForm
         public static async Task SaveToFileAsync(string path, DataGridView dataGridView)
         {
             var file = Path.Combine(path, $"{DateTime.Now.ToString("dd-MM (HH.mm.ss) ")}.txt");
+
             using (TextWriter tw = new StreamWriter(file))
             {
                 for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
@@ -39,24 +40,31 @@ namespace LogForm
                     case TextBox textBox:
                         textBox.Text = null;
                         break;
+
                     case NumericUpDown numericUpDown:
                         numericUpDown.Value = numericUpDown.Minimum;
                         break;
+
                     case ComboBox comboBox:
                         comboBox.SelectedItem = null;
                         break;
+
                     case MaskedTextBox maskedTextBox:
                         maskedTextBox.Text = null;
                         break;
+
                     case RichTextBox richTextBox:
                         richTextBox.Text = null;
                         break;
+
                     case RadioButton radioButton:
                         radioButton.Checked = false;
                         break;
+
                     case CheckBox checkBox:
                         checkBox.Checked = false;
                         break;
+
                     case GroupBox groupBox:
                         ResetRadioButtonsAndCheckBoxes(groupBox.Controls);
                         break;
@@ -73,96 +81,75 @@ namespace LogForm
                     case RadioButton radioButton:
                         radioButton.Checked = false;
                         break;
+
                     case CheckBox checkBox:
                         checkBox.Checked = false;
                         break;
                 }
             }
         }
-        public static void StringModifier(ref string str) //modify strings
+        public static void StringModifier(ref string str)
         {
             if (!(string.IsNullOrEmpty(str)))
             {
                 str = str.ToLower();
+
                 StringBuilder sb = new StringBuilder();
                 sb.Append(char.ToUpper(str[0]));
+
                 for (int i = 1; i < str.Length; i++)
                 {
 
                     sb.Append(str[i]);
                 }
+
                 str = sb.ToString();
             }
         }
-        public static void Shrinker(ref string str) // artiq boshluglari yigihsdirir
-        {
-            StringBuilder sb = new StringBuilder();
-            bool determiner = true;
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (char.IsLetter(str[i]))
-                {
-                    ;
-                    sb.Append(str[i]);
-                    determiner = true;
-                }
-                else if ((str[i] == ' ') && (determiner))
-                {
-                    sb.Append(str[i]);
-                    determiner = false;
-                }
-            }
-            str = sb.ToString();
-        }
-
         public static bool ComboBoxError(ComboBox comboBox, ErrorProvider errorProvider)
         {
             while (comboBox.SelectedItem == null)
             {
-                errorProvider.SetError(comboBox, "Вы не выбрали значение");
+                errorProvider.SetError(comboBox, "Выберите значение");
                 return false;
             }
-            errorProvider.Clear();
-            return true;
 
+            return true;
         }
         public static bool TextBoxesError(RichTextBox textBox, ErrorProvider errorProvider)
         {
             while (string.IsNullOrEmpty(textBox.Text))
             {
-
                 errorProvider.SetError(textBox, "Введите значение");
                 return false;
-
             }
+
             return true;
         }
         public static bool TextBoxesError(TextBox textBox, ErrorProvider errorProvider)
         {
             while (string.IsNullOrEmpty(textBox.Text))
             {
-
                 errorProvider.SetError(textBox, "Введите значение");
                 return false;
-
             }
+
             return true;
         }
         public static bool TextBoxesError(MaskedTextBox textBox, ErrorProvider errorProvider)
         {
             while (string.IsNullOrEmpty(textBox.Text))
             {
-
                 errorProvider.SetError(textBox, "Введите значение");
                 return false;
-
             }
+
             return true;
         }
         public static bool MaskedTextNumberError(MaskedTextBox textBox, ErrorProvider errorProvider)
         {
             if (textBox.Text.Length != 11)
-            {
+            { 
                 errorProvider.SetError(textBox, "Введите действидельное  значение");
                 return false;
             }
@@ -176,20 +163,8 @@ namespace LogForm
             {
                 errorProvider.SetError(numericUpDown, "Введите число");
                 return false;
-
             }
             return true;
-        }
-
-        public static bool NumericsDifferenceError(NumericUpDown numericUpDown1, NumericUpDown numericUpDown2, ErrorProvider errorProvider)
-        {
-            while (numericUpDown1.Value > numericUpDown2.Value)
-            {
-                errorProvider.SetError(numericUpDown1, "Оптовая цена больше розничной");
-
-            }
-            return true;
-
         }
 
         public static string PhoneNumberToDisplay(ref string number)
@@ -212,11 +187,24 @@ namespace LogForm
             return sb.ToString();
         }
 
-        public static string PhoneNumberToSendAsLink(ref string number)
+        public static void PhoneNumberFixer( ref string number) //erase ( )
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (char.IsDigit(number[i]))
+                {
+                    sb.Append(number[i]);
+                }
+            }
+             number= sb.ToString();
+        }
+
+        public static string PhoneNumberToSendAsLink(ref string number) 
         {
             number.Substring(1); //for deleting zero
 
-            number = "994" + number;
+            number = "+994" + number;
 
             return number;
         }

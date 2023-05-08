@@ -152,7 +152,7 @@ namespace LogForm
         private void button2_Click(object sender, EventArgs e)
         {
             _recognizer.RecognizeAsyncCancel();
-            SelectProducts selectProducts = new SelectProducts();
+            SelectProducts selectProducts = new SelectProducts("");
             selectProducts.Show();
         }
 
@@ -260,7 +260,7 @@ namespace LogForm
 
         private void lblProductList_Click(object sender, EventArgs e)
         {
-            SelectProducts selectProducts = new SelectProducts();
+            SelectProducts selectProducts = new SelectProducts("ы");
             this.Hide();
             selectProducts.ShowDialog();
             this.Close();

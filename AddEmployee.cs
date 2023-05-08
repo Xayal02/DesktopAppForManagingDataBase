@@ -18,10 +18,10 @@ namespace LogForm
 {
     public partial class AddEmployee : Form
     {
+        private int _id;
         private string _name;
         private string _surname;
         private string _position;
-        private string _phoneNumber;
         public AddEmployee()
         {
             InitializeComponent();
@@ -29,10 +29,10 @@ namespace LogForm
             btnChange.Visible = false;
         }
 
-        public AddEmployee(object name, object surname, object position, object number)
+        public AddEmployee(object id,object name, object surname, object position, object number)
         {
             InitializeComponent();
-
+            this._id = (int)id;
             this.txtName.Text = name.ToString().Trim();
             this.txtSurname.Text = surname.ToString().Trim();
             this.txtPosition.Text = position.ToString().Trim();
@@ -67,7 +67,16 @@ namespace LogForm
         {
             
             if (TextBoxesError(txtName, errorProvider) && TextBoxesError(txtSurname, errorProvider) && MaskedTextNumberError(txtNumber, errorProvider) && TextBoxesError(txtPosition, errorProvider))
-                {
+            {
+
+                _name = txtName.Text;
+                _surname = txtSurname.Text;
+                _position = txtPosition.Text;
+
+                StringModifier(ref _name);
+                StringModifier(ref _surname);
+                StringModifier(ref _position);
+
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
 
@@ -79,9 +88,9 @@ namespace LogForm
 
                     
 
-                    cmd.Parameters.AddWithValue("@name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
-                    cmd.Parameters.AddWithValue("@position", txtPosition.Text);
+                    cmd.Parameters.AddWithValue("@name",_name);
+                    cmd.Parameters.AddWithValue("@surname", _surname);
+                    cmd.Parameters.AddWithValue("@position", _position);
                     cmd.Parameters.AddWithValue("@number", PhoneNumberToAdd(txtNumber.Text));
 
                     cmd.ExecuteNonQuery();
@@ -107,20 +116,34 @@ namespace LogForm
                 connection.Open();
                 try
                 {
+                    _name = txtName.Text;
+                    _surname = txtSurname.Text;
+                    _position = txtPosition.Text;
+
+                    StringModifier(ref _name);
+                    StringModifier(ref _surname);
+                    StringModifier(ref _position);
+
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "Update Staff Set Name = @name, Surname = @surname, Position = @position, Number = @number";
-                    cmd.Parameters.AddWithValue("@name", txtName.Text);
-                    cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
-                    cmd.Parameters.AddWithValue("@position", txtPosition.Text);
+                    cmd.CommandText = "Update Staff Set Name = @name, Surname = @surname, Position = @position, Number = @number Where id=@id";
+                    cmd.Parameters.AddWithValue("@id",_id);
+                    cmd.Parameters.AddWithValue("@name", _name);
+                    cmd.Parameters.AddWithValue("@surname", _surname);
+                    cmd.Parameters.AddWithValue("@position", _position);
                     cmd.Parameters.AddWithValue("@number", txtNumber.Text);
 
-
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Данные изменены!");
+                    this.Close();
 
                 }
-                catch
+                catch(Exception exc)
                 {
+                    File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
                 }
+                finally { connection.Close(); }
+
 
             }
         }

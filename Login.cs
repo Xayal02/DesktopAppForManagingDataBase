@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using static LogForm.Program;
 
@@ -14,124 +15,112 @@ namespace LogForm
     {
         DataUsers data = new DataUsers();
 
-        List<Employee> employees = new List<Employee>();
+        List<User> users = new List<User>(); // создаем контейнер Users
         public Login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
             using (var connection = new SqlConnection(sqlConnection))
             {
                 connection.Open();
 
                 SqlCommand cmd = connection.CreateCommand();
-
-                cmd.CommandText = "Select Login, Password from Users;";
+                cmd.CommandText = "Select Login, Password, Name from Users;";
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    Employee employee = new Employee();
-                    employee.Log = reader.GetString(0);
-                    employee.Password = reader.GetString(1);
+                    User user = new User();
+                    user.Log = reader.GetString(0);
+                    user.Password = reader.GetString(1);
+                    user.Name= reader.GetString(2);
 
-                    employees.Add(employee);
+                    users.Add(user);
 
                 }
 
             }
 
-        }
-
-        //private void SizeDeterminer(Rectangle rectangle, Control control)
-        //{
-        //    float differenceX = (float)(this.Width / formOrigianlS.Width);
-        //    float differenceY = (float)(this.Height / formOrigianlS.Height);
-
-        //    int newX = (int)(control.Location.X * differenceX);
-        //    int newY = (int)(control.Location.Y * differenceY);
-
-        //    int newWidth = (int)(control.Width * differenceX);
-        //    int newHeight = (int)(control.Height * differenceY);
-
-        //    control.Location = new Point(newX, newY);
-        //    control.Size = new Size(newWidth, newHeight);
-        //}
-
-        private void Login_Resize(object sender, EventArgs e)
-        {
-            //SizeDeterminer(panelOriginalS, panel1);
         }
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            foreach (var employe in employees)
+            foreach (var user in users)
             {
-                if (employe.Log == txtLog.Text.Trim() && employe.Password == txtPassword.Text)
+                if (user.Log == txtLog.Text.Trim() && user.Password == txtPassword.Text)
                 {
                     this.Hide();
 
-                    SelectFromWarehouse form2 = new SelectFromWarehouse();
-                    form2.ShowDialog();
+                    SelectProducts selectProducts = new SelectProducts($"Приветсвую Вас, {user} ");
+                    selectProducts.ShowDialog();
 
+                    this.Close();
+
+                }
+                else
+                {
+                    errorProvider.SetError(txtPassword, "Пользователя с таким именем или паролем не существует");
                 }
 
             }
-
         }
-        private void txtLog_TextChanged(object sender, EventArgs e)
+        private async void txtLog_TextChangedAsync(object sender, EventArgs e)
         {
             pctLog.Image = Properties.Resources.user_login_icon_14;
 
-            foreach (var employe in employees)
+            foreach (var employe in users)
             {
                 if (txtLog.Text.Trim() == employe.Log)
                 {
                     var user = (from u in data.Users where u.Login == txtLog.Text.Trim() select u).First();
                     if (user.UserPhoto != null)
                     {
-                        pctLog.Image = BytearrayToImage(user.UserPhoto.ToArray());
-
+                        pctLog.Image = await BytearrayToImageAsync(user.UserPhoto.ToArray());
                     }
                 }
             }
         }
-        private Image BytearrayToImage(byte[] bytes)
+
+        private async Task<Image> BytearrayToImageAsync(byte[] bytes)
         {
             using (MemoryStream stream = new MemoryStream(bytes))
             {
-                Image image = Image.FromStream(stream);
-
+                Image image = await Task.Run(() => Image.FromStream(stream));
                 return image;
-
             }
         }
+
+      
         private void chShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (chShowPass.Checked)
+            txtPassword.UseSystemPasswordChar = chShowPass.Checked ? false : true;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            errorProvider.Clear();
+        }
+        public class User
+        {
+            public string Log { get; set; }
+            public string Password { get; set; }
+            public string Name { get; set; }
+
+            public override string ToString()
             {
-
-                txtPassword.UseSystemPasswordChar = false;
-
+                return $"{this.Name}";
             }
+        }
 
-            else txtPassword.UseSystemPasswordChar = true;
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-       
-    }
-    public class Employee
-    {
-        public string Log { get; set; }
-        public string Password { get; set; }
+        
     }
 
 }

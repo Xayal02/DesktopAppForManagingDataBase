@@ -1,12 +1,10 @@
-﻿using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Threading.Tasks;using System.Windows.Forms;
 using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Diagnostics;
 using System;
 using static LogForm.Program;
 using System.IO;
-using ColumnDeterminer;
 
 namespace LogForm
 {
@@ -15,7 +13,6 @@ namespace LogForm
         public static System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo("ru-Ru");
         public static SpeechRecognitionEngine _recognizer = new SpeechRecognitionEngine(ci);
         public static SpeechSynthesizer Sarah = new SpeechSynthesizer();
-        public static Choices words = new Choices();
         public static Choices commands = new Choices();
 
 
@@ -23,7 +20,6 @@ namespace LogForm
         {
             commands.Add(File.ReadAllLines(pathToSpeechCommands));
 
-            words.Add(new string[] { "покажи погоду", "открой вотсап", "Выйди" });
             _recognizer.SetInputToDefaultAudioDevice();
             _recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Default_SpeechRecognized);
 
@@ -55,6 +51,12 @@ namespace LogForm
                     {
                         Process.Start("msedge.exe", $"https://www.gismeteo.ru/weather-sumqayit-5295/");
                     }
+
+                    if (speech == "покажи новости")
+                    {
+                        Process.Start("msedge.exe", $"https://www.day.az//");
+                    }
+
                     if (speech == "открой вотсап")
                     {
                         Process.Start("msedge.exe", $"https://wa.me");
@@ -69,6 +71,7 @@ namespace LogForm
                     {
                         Process.Start("explorer.exe", $"D:\\VisualStudio\\Projects\\LogForm\\ProductList");
                     }
+
                     if (speech == "открой файл амбар")
                     {
                         Process.Start("explorer.exe", $"D:\\VisualStudio\\Projects\\LogForm\\WarehouseList");

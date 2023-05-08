@@ -36,7 +36,7 @@
             this.btnShow = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtNumber = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.allRBtn = new System.Windows.Forms.RadioButton();
             this.smokedRBtn = new System.Windows.Forms.RadioButton();
@@ -147,16 +147,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "+994";
             // 
-            // maskedTextBox1
+            // txtNumber
             // 
-            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(1345, 514);
-            this.maskedTextBox1.Mask = "(00)0000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(180, 30);
-            this.maskedTextBox1.TabIndex = 6;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.txtNumber.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtNumber.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtNumber.Location = new System.Drawing.Point(1345, 514);
+            this.txtNumber.Mask = "(00)0000000";
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(180, 30);
+            this.txtNumber.TabIndex = 6;
             // 
             // groupBox1
             // 
@@ -174,7 +173,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вид:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // allRBtn
             // 
@@ -187,7 +185,7 @@
             this.allRBtn.TabStop = true;
             this.allRBtn.Text = "Все";
             this.allRBtn.UseVisualStyleBackColor = true;
-            this.allRBtn.CheckedChanged += new System.EventHandler(this.allRBtn_CheckedChanged);
+            this.allRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // smokedRBtn
             // 
@@ -200,7 +198,7 @@
             this.smokedRBtn.TabStop = true;
             this.smokedRBtn.Text = "Капченые";
             this.smokedRBtn.UseVisualStyleBackColor = true;
-            this.smokedRBtn.CheckedChanged += new System.EventHandler(this.smokedRBtn_CheckedChanged);
+            this.smokedRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // frozenRBtn
             // 
@@ -213,7 +211,7 @@
             this.frozenRBtn.TabStop = true;
             this.frozenRBtn.Text = "Замороженные";
             this.frozenRBtn.UseVisualStyleBackColor = true;
-            this.frozenRBtn.CheckedChanged += new System.EventHandler(this.frozenRBtn_CheckedChanged);
+            this.frozenRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // otherRBtn
             // 
@@ -226,7 +224,7 @@
             this.otherRBtn.TabStop = true;
             this.otherRBtn.Text = "Другое";
             this.otherRBtn.UseVisualStyleBackColor = true;
-            this.otherRBtn.CheckedChanged += new System.EventHandler(this.otherRBtn_CheckedChanged);
+            this.otherRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // freshRBtn
             // 
@@ -239,7 +237,7 @@
             this.freshRBtn.TabStop = true;
             this.freshRBtn.Text = "Свежие";
             this.freshRBtn.UseVisualStyleBackColor = true;
-            this.freshRBtn.CheckedChanged += new System.EventHandler(this.freshRBtn_CheckedChanged);
+            this.freshRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // chCurrent
             // 
@@ -297,7 +295,7 @@
             this.nmbrMin.Name = "nmbrMin";
             this.nmbrMin.Size = new System.Drawing.Size(81, 30);
             this.nmbrMin.TabIndex = 11;
-            this.nmbrMin.ValueChanged += new System.EventHandler(this.nmbrMin_ValueChanged);
+            this.nmbrMin.ValueChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // nmbrMax
             // 
@@ -316,7 +314,7 @@
             0,
             0,
             0});
-            this.nmbrMax.ValueChanged += new System.EventHandler(this.nmbrMax_ValueChanged);
+            this.nmbrMax.ValueChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // Цена
             // 
@@ -365,7 +363,6 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Продажа";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // optomRBtn
             // 
@@ -378,7 +375,7 @@
             this.optomRBtn.TabStop = true;
             this.optomRBtn.Text = "Оптовая";
             this.optomRBtn.UseVisualStyleBackColor = true;
-            this.optomRBtn.CheckedChanged += new System.EventHandler(this.optomRBtn_CheckedChanged);
+            this.optomRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // saleRBtn
             // 
@@ -391,7 +388,7 @@
             this.saleRBtn.TabStop = true;
             this.saleRBtn.Text = "Розничная";
             this.saleRBtn.UseVisualStyleBackColor = true;
-            this.saleRBtn.CheckedChanged += new System.EventHandler(this.saleRBtn_CheckedChanged);
+            this.saleRBtn.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // btnReset
             // 
@@ -419,7 +416,7 @@
             this.chOverall.TabIndex = 18;
             this.chOverall.Text = "Сумма";
             this.chOverall.UseVisualStyleBackColor = true;
-            this.chOverall.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.chOverall.CheckedChanged += new System.EventHandler(this.btnShow_Click);
             // 
             // contextMenuStrip1
             // 
@@ -464,7 +461,6 @@
             this.groupBox3.Size = new System.Drawing.Size(355, 82);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // lblWarehouse
             // 
@@ -509,7 +505,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Цена);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnShow);
@@ -549,7 +545,7 @@
         private System.Windows.Forms.Button btnShow;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtNumber;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton smokedRBtn;
         private System.Windows.Forms.RadioButton frozenRBtn;

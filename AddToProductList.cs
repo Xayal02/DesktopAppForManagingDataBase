@@ -77,9 +77,7 @@ namespace LogForm
 
             StringModifier(ref _productName);
 
-            Shrinker(ref _productName);
-
-            if (TextBoxesError(txtName,errorProvider1) && TextBoxesError(txtSrok,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && NumericError(nmbrOptom,errorProvider1)  && NumericError(nmbrSale,errorProvider1) && NumericsDifferenceError(nmbrOptom,nmbrSale,errorProvider1))
+            if (TextBoxesError(txtName,errorProvider1) && TextBoxesError(txtSrok,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && NumericError(nmbrOptom,errorProvider1)  && NumericError(nmbrSale,errorProvider1))
             {
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
@@ -191,7 +189,6 @@ namespace LogForm
             _productName = txtName.Text;
 
             StringModifier(ref _productName);
-            Shrinker(ref _productName);
 
             if (TextBoxesError(txtName, errorProvider1) && TextBoxesError(txtSrok, errorProvider1) && ComboBoxError(cmbPeriod, errorProvider1) && ComboBoxError(cmbPeriod, errorProvider1) && NumericError(nmbrOptom, errorProvider1) && NumericError(nmbrSale, errorProvider1))
             {
