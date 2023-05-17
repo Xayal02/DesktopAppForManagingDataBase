@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using static LogForm.InnerFunctions;
 
 
 namespace LogForm
@@ -24,15 +25,19 @@ namespace LogForm
         [STAThread]
         static void Main()
         {
-
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
-
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.ThreadException += Application_ThreadException;
             Application.Run(new Login());
+        }
+        static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            MessageBox.Show($"Произошла ошибка");
 
-
+            
+            LogException(e.Exception);
         }
 
     }

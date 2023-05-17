@@ -116,10 +116,9 @@ namespace LogForm
 
         private void DeductFromWarehouse_Load(object sender, EventArgs e)
         {
-            var connection = new SqlConnection(sqlConnection);
-            connection.Open();
-            try
+            using (var connection = new SqlConnection(sqlConnection))
             {
+                connection.Open();
                 SqlCommand cmd = connection.CreateCommand();
                 cmd.CommandText = "Select Amount, Measure from Warehouse Where Code = @code";
                 cmd.Parameters.AddWithValue("@code", _code);
@@ -132,17 +131,6 @@ namespace LogForm
                     measure = reader.IsDBNull(1) ? "kg" : reader.GetString(1);
                 }
                 reader.Close();
-
-                
-            }
-            catch(Exception exc)
-            {
-
-            }
-            finally
-            {
-               
-                connection.Close();
             }
         }
     }

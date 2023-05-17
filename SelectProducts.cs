@@ -3,22 +3,20 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 using static LogForm.Program;
 using static ColumnDeterminer.ProductList;
 using static LogForm.InnerFunctions;
 using static LogForm.SpeechRecognizer;
 using System.Threading.Tasks;
-using System.Threading;
 
 namespace LogForm
 {
     public partial class SelectProducts : Form
     {
-         
-        string view = "";
-        string conditionPrice = "";
+
+        string view = "VW_ProductsPrice";
+        string conditionPrice = string.Empty;
         public SelectProducts()
         {
             InitializeComponent();
@@ -33,16 +31,16 @@ namespace LogForm
         private void SelectProducts_Load(object sender, EventArgs e)
         {
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F);
-            try
-            {
+            //try
+            //{
                 SpeechRecognizerOn();
                 Default_SpeechRecognized(this, default);
-            }
-            catch (Exception exc)
-            {
-                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+            //}
+            //catch (Exception exc)
+            //{
+            //    LogException(exc);
 
-            }
+            //}
 
             chOverall.Enabled = (optomRBtn.Checked || saleRBtn.Checked) ? true : false;
 
@@ -64,7 +62,7 @@ namespace LogForm
                 ConditionDeterminer(ref conditionPrice);
 
                 SqlCommand sqlCommand = connection.CreateCommand();
-                sqlCommand.CommandText = $"Select * from {view} where {conditionPrice}";
+                sqlCommand.CommandText = $"Select * from {view} Where {conditionPrice}";
 
                 sqlCommand.Parameters.Add("@min", SqlDbType.Decimal).Value = nmbrMin.Value;
                 sqlCommand.Parameters.Add("@max", SqlDbType.Decimal).Value = nmbrMax.Value;
@@ -75,6 +73,7 @@ namespace LogForm
                 dataGridView1.DataSource = table;
 
                 ColumnHeader();
+                ColumnsNameConfigurator(dataGridView1);
              }
         }
 
@@ -105,9 +104,12 @@ namespace LogForm
         {
             await SaveToFileAsync(pathToProductList, this.dataGridView1);
 
-            string number =(txtNumber.Text);
-            PhoneNumberFixer(ref number);
-            Process.Start("msedge.exe", $"https://wa.me/{PhoneNumberToSendAsLink(ref number)}");
+            if ((MaskedTextNumberError(txtNumber, errorProvider1)))
+            {
+                string number = (txtNumber.Text);
+                PhoneNumberFixer(ref number);
+                Process.Start("msedge.exe", $"https://wa.me/{PhoneNumberToSendAsLink(ref number)}");
+            }
         }
 
         private void изСпискаНедоступныхToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,7 +165,7 @@ namespace LogForm
         {
             _recognizer.RecognizeAsyncCancel();
 
-            AddToProductList add= new AddToProductList();
+            AddAndChangeProductList add= new AddAndChangeProductList();
             add.ShowDialog();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -183,7 +185,7 @@ namespace LogForm
                 {
                     connection.Open();
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "Delete from Product Where Id = @id";
+                    cmd.CommandText = "Delete from Products Where Id = @id";
                     cmd.Parameters.AddWithValue("@id", ColumnValues(dataGridView1, Columns.Id));
                     cmd.ExecuteNonQuery();
 
@@ -251,13 +253,13 @@ namespace LogForm
         }
         private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddToProductList addToProduct = new AddToProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),GetTypeValue(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
+            AddAndChangeProductList addToProduct = new AddAndChangeProductList(ColumnValues(dataGridView1, Columns.Id),ColumnValues(dataGridView1, Columns.Name),GetTypeValue(dataGridView1), ColumnValues(dataGridView1, Columns.WholesalePrice), ColumnValues(dataGridView1, Columns.SalePrice), ColumnValues(dataGridView1, Columns.KeepTime), ColumnValues(dataGridView1, Columns.AdditionalNotes));
             addToProduct.ShowDialog();
         }
 
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddToProductList add = new AddToProductList();
+            AddAndChangeProductList add = new AddAndChangeProductList();
             add.ShowDialog();
         }
 
@@ -280,5 +282,28 @@ namespace LogForm
             selectFromWarehouse.ShowDialog();
             this.Close();
         }
+
+        private async void txtProductName_TextChanged(object sender, EventArgs e)
+        {
+            string name = txtProductName.Text;
+            using (var connection = new SqlConnection(sqlConnection))
+            {
+                connection.Open();
+
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = $"Select * from {view} Where Name Like @name";
+
+                ViewDeterminer(ref view);
+
+                cmd.Parameters.AddWithValue("@name", "%" + name + "%");
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+
+                await Task.Run(() => adapter.Fill(table));
+
+                dataGridView1.DataSource = table;
+            }
+        }
+
     }
 }

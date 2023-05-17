@@ -15,7 +15,7 @@ namespace LogForm
     {
         DataUsers data = new DataUsers();
 
-        List<User> users = new List<User>(); // создаем контейнер Users
+        List<User> users = new List<User>();
         public Login()
         {
             InitializeComponent();
@@ -115,12 +115,10 @@ namespace LogForm
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = (7 / numericUpDown1.Value).ToString();
         }
-
-        
     }
 
 }

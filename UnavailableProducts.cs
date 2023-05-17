@@ -22,6 +22,8 @@ namespace LogForm
             dataUnavailableProducts.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F);
 
             dataUnavailableProducts.SelectedCells[0].ContextMenuStrip = contextMenuStrip1;
+
+            
         }
 
         private async void UnavailableProducts_LoadAsync(object sender, EventArgs e)
@@ -31,13 +33,14 @@ namespace LogForm
             {
                 await connection.OpenAsync();
                 SqlCommand sqlCommand = connection.CreateCommand();
-                sqlCommand.CommandText = "select UnavailableProducts.Id,UnavailableProducts.KeepTime, UnavailableProducts.Name, Type.Name as 'Type', UnavailableProducts.AdditionalNotes,  UnavailableProducts.WholesalePrice, UnavailableProducts.SalePrice  from  UnavailableProducts Left Join Type on UnavailableProducts.ProductType=Type.Id\r\n";
+                sqlCommand.CommandText = "select UnavailableProducts.Id,UnavailableProducts.KeepTime, UnavailableProducts.Name, Types.Name as 'Type', UnavailableProducts.AdditionalNotes,  UnavailableProducts.WholesalePrice, UnavailableProducts.SalePrice  from  UnavailableProducts Left Join Types on UnavailableProducts.ProductType=Types.Id\r\n";
                 SqlDataAdapter adapter1 = new SqlDataAdapter(sqlCommand);
                 DataTable table = new DataTable();
                 await Task.Run(() => adapter1.Fill(table));
                 dataUnavailableProducts.DataSource = table;
                 ColumnHeader();
             }
+            ColumnsNameConfigurator(dataUnavailableProducts);
         }
 
         private async void вернутьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,10 +58,10 @@ namespace LogForm
                     {
                         SqlCommand cmd = connection.CreateCommand();
 
-                        cmd.CommandText = "SET IDENTITY_INSERT Product ON";
+                        cmd.CommandText = "SET IDENTITY_INSERT Products ON";
                         await cmd.ExecuteNonQueryAsync();
 
-                        cmd.CommandText = "Insert into Product (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
+                        cmd.CommandText = "Insert into Products (Id,Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
                             "Values (@id,@name,@type,@wholeSalePrice,@salePrice,@keepTime,@notes)";
 
                         cmd.Parameters.AddWithValue("@id", ColumnValues(dataUnavailableProducts, Columns.Id));

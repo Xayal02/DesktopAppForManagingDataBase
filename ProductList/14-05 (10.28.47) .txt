@@ -1,0 +1,72 @@
+Skumbriya           Dondurulmus                             6,20                7                   
+
+Skumbriya           Kaptit olunmus                          8,50                9                   
+
+Xek                 Dondurulmus                             6,80                7                   
+
+Kambala             Dondurulmus                             7,00                7                   
+
+Kefal               Kaptit olunmus                          8,00                9                   
+
+Telapiya            Dondurulmus                             7,50                8                   
+
+Narsharab                               0.15                0,90                1                   
+
+Narsharab                               0.3                 1,70                2                   
+
+Narsharab                               0.4                 2,00                2                   
+
+Skumbriya           Kaptit olunmus      Sous ile            9,20                10                  
+
+Okun                Dondurulmus                             6,50                7                   
+
+Skumbriya           Dondurulmus         Bashdi              6,60                7                   
+
+Xesem               Kaptit olunmus                          8,00                9                   
+
+Kilke               Dondurulmus                             1,80                2                   
+
+Som                 Teze                Saxlama             5,50                6                   
+
+Krevetka            Dondurulmus         Cay                 10,00               11                  
+
+Krevetka            Dondurulmus         Cay iri             13,00               14                  
+
+Krevetka            Dondurulmus         Tigroviy            15,00               17                  
+
+Krevetka            Dondurulmus         Korolevskiy         18,00               20                  
+
+Forel               Dondurulmus                             12,00               13                  
+
+Syomqa              Dondurulmus                             24,00               26                  
+
+Sudak               Teze                                    6,50                7                   
+
+Vobla               Kaptit olunmus      Ag                  4,00                5                   
+
+Vobla               Kaptit olunmus                          4,00                5                   
+
+Samayka             Kaptit olunmus                          8,00                9                   
+
+Syomqa              Kaptit olunmus      Bel                 4,00                4                   
+
+Bogaz               Kaptit olunmus                          6,00                7                   
+
+Peteney             Kaptit olunmus                          10,00               11                  
+
+Kutum               Teze                                    9,00                10                  
+
+Kefal               Teze                                    7,00                8                   
+
+Kilke               Kaptit olunmus                          3,50                4                   
+
+Sazan               Teze                Astraxan            6,50                7                   
+
+Sazan               Teze                Kur                 6,00                7                   
+
+Som                 Dondurulmus         Mermer              6,20                7                   
+
+Qorbusa             Teze                                    14,00               15                  
+
+Forel               Teze                Turkiyye            12,00               14                  
+

@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static LogForm.Program;
 
 namespace LogForm
 {
@@ -21,12 +22,11 @@ namespace LogForm
                         if (!dataGridView.Columns[j].Visible) continue;
                         else
                         {
-                            await tw.WriteAsync($"{dataGridView.Rows[i].Cells[j].Value.ToString(),-15}");
+                            await tw.WriteAsync($"{dataGridView.Rows[i].Cells[j].Value.ToString(),-20}");
                         }
                     }
                     await tw.WriteAsync("\n\n");
                 }
-
                 await tw.FlushAsync();
             }
         }
@@ -63,6 +63,10 @@ namespace LogForm
 
                     case CheckBox checkBox:
                         checkBox.Checked = false;
+                        break;
+
+                    case DateTimePicker dateTimePicker:
+                        dateTimePicker.Value= DateTime.Now;
                         break;
 
                     case GroupBox groupBox:
@@ -209,6 +213,11 @@ namespace LogForm
             return number;
         }
            
+        public static void LogException(Exception exc)
+        {
+            File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+
+        }
 
     }
 }

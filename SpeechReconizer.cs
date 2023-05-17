@@ -16,28 +16,23 @@ namespace LogForm
         public static Choices commands = new Choices();
 
 
-        public static void SpeechRecognizerOn()
+        public static void SpeechRecognizerDetermineValues()
         {
             commands.Add(File.ReadAllLines(pathToSpeechCommands));
-
             _recognizer.SetInputToDefaultAudioDevice();
             _recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(Default_SpeechRecognized);
-
             GrammarBuilder grammarbuilder = new GrammarBuilder();
             grammarbuilder.Culture = ci;
             grammarbuilder.Append(commands);
-
             _recognizer.LoadGrammarAsync(new Grammar(grammarbuilder));
             _recognizer.RecognizeAsync(RecognizeMode.Multiple);
-
             Sarah.SetOutputToDefaultAudioDevice();
         }
 
-        public static void SpeechRecognizerOf()
+        public static void SpeechRecognizerOn()
         {
             _recognizer.SpeechRecognized -= new EventHandler<SpeechRecognizedEventArgs>(Default_SpeechRecognized);
         }
-
 
         public static void Default_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
@@ -77,10 +72,10 @@ namespace LogForm
                         Process.Start("explorer.exe", $"D:\\VisualStudio\\Projects\\LogForm\\WarehouseList");
                     }
 
-                    if (speech == "выйди" || speech == "выйди из приложения")
-                    {
-                        Application.Exit();
-                    }
+                    //if (speech == "выйди" || speech == "выйди из приложения")
+                    //{
+                    //    Application.Exit();
+                    //}
                 }
             }
         }

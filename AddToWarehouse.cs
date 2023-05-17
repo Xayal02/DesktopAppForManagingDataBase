@@ -14,7 +14,7 @@ namespace LogForm
     public partial class AddToWarehouse : Form
     {
         public string codeString;
-        DataClasses2DataContext db = new DataClasses2DataContext();
+        DatapProducts db = new DatapProducts();
 
         public AddToWarehouse()
         {
@@ -101,7 +101,7 @@ namespace LogForm
                 connection.Open();
                 SqlCommand cmd = connection.CreateCommand();
 
-                cmd.CommandText = "select Product.Name, Type.Name, Product.AdditionalNotes from Product \r\nleft join Type on Product.ProductType=Type.Id";
+                cmd.CommandText = "select Products.Name, Types.Name, Products.AdditionalNotes from Products \r\nleft join Types on Products.ProductType=Types.Id";
                 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -114,7 +114,7 @@ namespace LogForm
                         sb.Append(" | " + reader.GetString(1));
                     }
 
-                    if (!(reader.IsDBNull(2)))
+                    if (!(reader.IsDBNull(2)) && !(string.IsNullOrWhiteSpace(reader.GetString(2))))
                     {
                         sb.Append(" | " + reader.GetString(2));
                     }
@@ -154,7 +154,7 @@ namespace LogForm
             int id;
 
             using (var connection = new SqlConnection(sqlConnection))
-            using (var command = new SqlCommand("select Id from VW_AddToWarehouse Where Name = @name", connection))
+            using (var command = new SqlCommand("select Id from VW_ProductInfo Where Name = @name", connection))
             {
                 command.Parameters.AddWithValue("@name", name);
                 connection.Open();
@@ -169,7 +169,7 @@ namespace LogForm
             int id = 0;
 
             using (var connection = new SqlConnection(sqlConnection))
-            using (var command = new SqlCommand("select Id from VW_AddToWarehouse Where Name = @name and ProductType = @type", connection))
+            using (var command = new SqlCommand("select Id from VW_ProductInfo Where Name = @name and ProductType = @type", connection))
             {
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@type", type);
@@ -185,7 +185,7 @@ namespace LogForm
             int id = 0;
 
             using (var connection = new SqlConnection(sqlConnection))
-            using (var command = new SqlCommand("select Id from VW_AddToWarehouse Where Name = @name and ProductType = @type and AdditionalNotes = @note", connection))
+            using (var command = new SqlCommand("select Id from VW_ProductInfo Where Name = @name and ProductType = @type and AdditionalNotes = @note", connection))
             {
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@type", type);
@@ -198,6 +198,7 @@ namespace LogForm
         }
         private DateTime GetTime(string text)
         {
+            
             var st = (from s in db.Products where s.Id == GetId(text) select s).First();
             return  (dateArrived.Value.AddDays((double)st.KeepTime));            
         }

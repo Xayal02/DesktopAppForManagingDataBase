@@ -45,16 +45,6 @@ namespace LogForm
             btnAdd.Visible = false;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddEmployee_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string number = "+994558110081";
@@ -84,7 +74,7 @@ namespace LogForm
                 {
 
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "Insert into Staff(Name,Surname,Position,Number) Values(@name,@surname,@position,@number)";
+                    cmd.CommandText = "Insert into WarehouseStaff(Name,Surname,Position,Number) Values(@name,@surname,@position,@number)";
 
                     
 
@@ -125,12 +115,12 @@ namespace LogForm
                     StringModifier(ref _position);
 
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "Update Staff Set Name = @name, Surname = @surname, Position = @position, Number = @number Where id=@id";
+                    cmd.CommandText = "Update WarehouseStaff Set Name = @name, Surname = @surname, Position = @position, Number = @number Where id=@id";
                     cmd.Parameters.AddWithValue("@id",_id);
                     cmd.Parameters.AddWithValue("@name", _name);
                     cmd.Parameters.AddWithValue("@surname", _surname);
                     cmd.Parameters.AddWithValue("@position", _position);
-                    cmd.Parameters.AddWithValue("@number", txtNumber.Text);
+                    cmd.Parameters.AddWithValue("@number", PhoneNumberToAdd(txtNumber.Text));
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Данные изменены!");

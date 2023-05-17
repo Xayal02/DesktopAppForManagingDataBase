@@ -118,6 +118,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeductFromWarehouse";
+            this.Text = "Вычести продукцию";
             this.Load += new System.EventHandler(this.DeductFromWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

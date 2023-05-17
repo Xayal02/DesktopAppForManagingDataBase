@@ -50,41 +50,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(120, 97);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(100, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Продукт";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 133);
+            this.label2.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(120, 140);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(132, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Количество";
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(286, 94);
+            this.comboBox1.Location = new System.Drawing.Point(294, 93);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(288, 28);
+            this.comboBox1.Size = new System.Drawing.Size(288, 29);
             this.comboBox1.TabIndex = 3;
             // 
             // nmbrAmount
             // 
             this.nmbrAmount.DecimalPlaces = 3;
+            this.nmbrAmount.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nmbrAmount.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.nmbrAmount.Location = new System.Drawing.Point(286, 133);
+            this.nmbrAmount.Location = new System.Drawing.Point(294, 139);
             this.nmbrAmount.Margin = new System.Windows.Forms.Padding(4);
             this.nmbrAmount.Maximum = new decimal(new int[] {
             10000,
@@ -92,40 +96,44 @@
             0,
             0});
             this.nmbrAmount.Name = "nmbrAmount";
-            this.nmbrAmount.Size = new System.Drawing.Size(162, 27);
+            this.nmbrAmount.Size = new System.Drawing.Size(162, 28);
             this.nmbrAmount.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 186);
+            this.label3.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(120, 193);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 20);
+            this.label3.Size = new System.Drawing.Size(184, 27);
             this.label3.TabIndex = 7;
             this.label3.Text = "Мера измерения";
             // 
             // dateArrived
             // 
-            this.dateArrived.Location = new System.Drawing.Point(286, 236);
+            this.dateArrived.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateArrived.Location = new System.Drawing.Point(294, 250);
             this.dateArrived.Margin = new System.Windows.Forms.Padding(4);
             this.dateArrived.Name = "dateArrived";
-            this.dateArrived.Size = new System.Drawing.Size(162, 27);
+            this.dateArrived.Size = new System.Drawing.Size(162, 28);
             this.dateArrived.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(120, 243);
+            this.label4.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(120, 250);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.Size = new System.Drawing.Size(168, 27);
             this.label4.TabIndex = 9;
             this.label4.Text = "Дата прибытия";
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(286, 286);
+            this.txtCode.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCode.Location = new System.Drawing.Point(294, 297);
             this.txtCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(288, 30);
@@ -136,10 +144,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(120, 296);
+            this.label5.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(120, 297);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 20);
+            this.label5.Size = new System.Drawing.Size(51, 27);
             this.label5.TabIndex = 11;
             this.label5.Text = "Код";
             // 
@@ -160,6 +169,7 @@
             // 
             // btnChange
             // 
+            this.btnChange.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnChange.Location = new System.Drawing.Point(598, 186);
             this.btnChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnChange.Name = "btnChange";
@@ -171,7 +181,8 @@
             // 
             // txtMeasure
             // 
-            this.txtMeasure.Location = new System.Drawing.Point(286, 181);
+            this.txtMeasure.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtMeasure.Location = new System.Drawing.Point(294, 186);
             this.txtMeasure.Margin = new System.Windows.Forms.Padding(4);
             this.txtMeasure.Name = "txtMeasure";
             this.txtMeasure.Size = new System.Drawing.Size(162, 25);
@@ -205,7 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddToWarehouse";
-            this.Text = "AddToWarehouse";
+            this.Text = "Добавить продукцию";
             this.Load += new System.EventHandler(this.AddToWarehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

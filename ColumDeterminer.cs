@@ -63,6 +63,26 @@ namespace ColumnDeterminer
             return string.IsNullOrEmpty(dataGridView.Rows[GetRowIndex(dataGridView)].Cells[typeIndex].Value.ToString());
         }
 
+        public static void ColumnsNameConfigurator(DataGridView dataGridView)
+        {
+            dataGridView.Columns[idIndex].HeaderText = "Идентификатор продукта";
+
+            dataGridView.Columns[keepTimeIndex].HeaderText = "Срок Хранения";
+
+            dataGridView.Columns[nameIndex].HeaderText = "Имя продукта";
+
+            dataGridView.Columns[typeIndex].HeaderText = "Тип продукта";
+
+            dataGridView.Columns[notesIndex].HeaderText = "Дополнительные заметки";
+
+            dataGridView.Columns[wholesalePriceIndex].HeaderText = "Оптовая цена";
+
+            dataGridView.Columns[salePriceIndex].HeaderText = "Розничная цена";
+
+            if (dataGridView.Columns.Count == 8) {dataGridView.Columns[overallIndex].HeaderText = "Общее количество"; }
+        }
+
+
         public enum Columns
         {
             Id,
@@ -122,6 +142,26 @@ namespace ColumnDeterminer
             else return default;
         }
 
+        public static void ColumnsNameConfigurator(DataGridView dataGridView)
+        {
+            dataGridView.Columns[nameIndex].HeaderText = "Имя продукта";
+
+            dataGridView.Columns[typeIndex].HeaderText = "Тип";
+
+            dataGridView.Columns[notesIndex].HeaderText = "Дополнительные заметки";
+
+            dataGridView.Columns[amountIndex].HeaderText = "Количество";
+
+            dataGridView.Columns[measureIndex].HeaderText = "Мера измерения";
+
+            dataGridView.Columns[arriveDateIndex].HeaderText = "Дата прибытия";
+
+            dataGridView.Columns[expireDateIndex].HeaderText = "Дата утилизации";
+           
+            dataGridView.Columns[codeIndex].HeaderText = "Код продукта";
+
+        }
+
         public enum Columns
         {
             Product,
@@ -129,7 +169,6 @@ namespace ColumnDeterminer
             Measure,
             ArrivedDate,
             Code
-
         }
     }
     public static class Staff
@@ -159,7 +198,19 @@ namespace ColumnDeterminer
 
             else return default;
         }
+        public static void ColumnsNameConfigurator(DataGridView dataGridView)
+        {
+            dataGridView.Columns[idIndex].HeaderText = "Идентификатор работника";
 
+            dataGridView.Columns[nameIndex].HeaderText = "Имя ";
+
+            dataGridView.Columns[surnameIndex].HeaderText = "Фамилия";
+
+            dataGridView.Columns[positionIndex].HeaderText = "Должность";
+
+            dataGridView.Columns[numberIndex].HeaderText = "Номер телефона";
+
+        }
         public enum Columns
         {
             Id,

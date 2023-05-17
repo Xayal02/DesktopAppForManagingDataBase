@@ -1,6 +1,6 @@
 ﻿namespace LogForm
 {
-    partial class AddToProductList
+    partial class AddAndChangeProductList
     {
         private System.ComponentModel.IContainer components = null;
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,7 +22,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddToProductList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAndChangeProductList));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -228,7 +228,7 @@
             this.btnChange.Visible = false;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
-            // AddToProductList
+            // AddAndChangeProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(1000, 1000);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AddToProductList";
+            this.Name = "AddAndChangeProductList";
             this.Text = "Добавить Продукт";
             this.Load += new System.EventHandler(this.AddToProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbrOptom)).EndInit();

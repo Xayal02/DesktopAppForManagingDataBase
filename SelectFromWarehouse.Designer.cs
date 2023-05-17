@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectFromWarehouse));
             this.cntxtAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,12 +51,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblStaff = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtCode = new System.Windows.Forms.TextBox();
             this.cntxtAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.cntxtCells.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // cntxtAdd
@@ -87,7 +91,7 @@
             this.btnShow.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnShow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShow.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShow.Location = new System.Drawing.Point(845, 230);
+            this.btnShow.Location = new System.Drawing.Point(885, 228);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(202, 44);
             this.btnShow.TabIndex = 5;
@@ -100,10 +104,10 @@
             // 
             this.chOverall.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.chOverall.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chOverall.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chOverall.Location = new System.Drawing.Point(1067, 238);
+            this.chOverall.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chOverall.Location = new System.Drawing.Point(1107, 236);
             this.chOverall.Name = "chOverall";
-            this.chOverall.Size = new System.Drawing.Size(222, 31);
+            this.chOverall.Size = new System.Drawing.Size(212, 31);
             this.chOverall.TabIndex = 6;
             this.chOverall.Text = "Общее количество";
             this.chOverall.UseVisualStyleBackColor = false;
@@ -119,7 +123,7 @@
             this.btnShowExpired.BackColor = System.Drawing.Color.LightCoral;
             this.btnShowExpired.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowExpired.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowExpired.Location = new System.Drawing.Point(845, 320);
+            this.btnShowExpired.Location = new System.Drawing.Point(885, 318);
             this.btnShowExpired.Name = "btnShowExpired";
             this.btnShowExpired.Size = new System.Drawing.Size(226, 36);
             this.btnShowExpired.TabIndex = 7;
@@ -138,9 +142,9 @@
             this.cmbStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cmbStaff.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(845, 464);
+            this.cmbStaff.Location = new System.Drawing.Point(885, 462);
             this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(444, 32);
+            this.cmbStaff.Size = new System.Drawing.Size(434, 32);
             this.cmbStaff.TabIndex = 9;
             // 
             // btnSend
@@ -149,7 +153,7 @@
             this.btnSend.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSend.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSend.Location = new System.Drawing.Point(845, 403);
+            this.btnSend.Location = new System.Drawing.Point(885, 401);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(202, 31);
             this.btnSend.TabIndex = 10;
@@ -188,7 +192,7 @@
             this.lblProductList.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblProductList.Location = new System.Drawing.Point(30, 2);
             this.lblProductList.Name = "lblProductList";
-            this.lblProductList.Size = new System.Drawing.Size(181, 28);
+            this.lblProductList.Size = new System.Drawing.Size(181, 27);
             this.lblProductList.TabIndex = 21;
             this.lblProductList.Text = "Ассортимент";
             this.lblProductList.Click += new System.EventHandler(this.lblProductList_Click);
@@ -200,7 +204,7 @@
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -209,18 +213,27 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ContextMenuStrip = this.cntxtAdd;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(-11, 28);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(819, 613);
+            this.dataGridView1.Size = new System.Drawing.Size(879, 624);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -269,6 +282,27 @@
             this.lblStaff.Text = "Рабочая сила";
             this.lblStaff.Click += new System.EventHandler(this.lblStaff_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox3.Image = global::LogForm.Properties.Resources.Снимок_экрана_2023_05_12_220132;
+            this.pictureBox3.Location = new System.Drawing.Point(885, 155);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
+            // txtCode
+            // 
+            this.txtCode.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtCode.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtCode.Location = new System.Drawing.Point(920, 155);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Size = new System.Drawing.Size(185, 30);
+            this.txtCode.TabIndex = 28;
+            this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
+            // 
             // SelectFromWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,6 +310,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1331, 653);
+            this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lblStaff);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -299,6 +335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +360,7 @@
         private System.Windows.Forms.ToolStripMenuItem обновитьToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblStaff;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtCode;
     }
 }

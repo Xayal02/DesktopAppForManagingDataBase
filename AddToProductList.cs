@@ -10,14 +10,14 @@ using static LogForm.SpeechRecognizer;
 
 namespace LogForm
 {
-    public partial class AddToProductList : Form
+    public partial class AddAndChangeProductList : Form
     {
         private int _productId;
         private string _productName;
         private int type;
 
 
-        public AddToProductList()
+        public AddAndChangeProductList()
         {
             InitializeComponent();
 
@@ -25,7 +25,7 @@ namespace LogForm
             btnChange.Visible = false;
 
         }
-        public AddToProductList(object id, object name, int  type, object wholesalaPrice, object salePrice, object keepTime, object notes)
+        public AddAndChangeProductList(object id, object name, int  type, object wholesalaPrice, object salePrice, object keepTime, object notes)
         {
             InitializeComponent();
 
@@ -77,7 +77,7 @@ namespace LogForm
 
             StringModifier(ref _productName);
 
-            if (TextBoxesError(txtName,errorProvider1) && TextBoxesError(txtSrok,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && NumericError(nmbrOptom,errorProvider1)  && NumericError(nmbrSale,errorProvider1))
+            if (TextBoxesError(txtName,errorProvider1) && TextBoxesError(txtSrok,errorProvider1) && ComboBoxError(cmbType,errorProvider1) && ComboBoxError(cmbPeriod,errorProvider1) && NumericError(nmbrOptom,errorProvider1)  && NumericError(nmbrSale,errorProvider1))
             {
                 var connection = new SqlConnection(sqlConnection);
                 connection.Open();
@@ -85,7 +85,7 @@ namespace LogForm
                 try
                 {
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = "Select Id from Product Where Name=@name And ProductType = @type And AdditionalNotes=@notes";
+                    cmd.CommandText = "Select Id from Products Where Name=@name And ProductType = @type And AdditionalNotes=@notes";
                     cmd.Parameters.AddWithValue("@name", _productName);
 
                     TypeDeterminer();
@@ -108,7 +108,7 @@ namespace LogForm
                     }
                     else
                     {
-                        cmd.CommandText = "Insert into Product (Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
+                        cmd.CommandText = "Insert into Products (Name,ProductType,WholesalePrice,SalePrice,KeepTime,AdditionalNotes)" +
                         "Values (@name,@type,@optPrice,@salePrice,@keepTime,@notes)";
                         cmd.Parameters.AddWithValue("@optPrice", SqlDbType.Decimal).Value = nmbrOptom.Value;
                         cmd.Parameters.AddWithValue("@salePrice", SqlDbType.Decimal).Value = nmbrSale.Value;

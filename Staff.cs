@@ -22,15 +22,16 @@ namespace LogForm
         private void Staff_Load(object sender, EventArgs e)
         {
 
-            using (var connection = new SqlConnection(@"Data Source = .\SQLEXPRESS; Initial Catalog = StudentsDb; Integrated Security= True;"))
+            using (var connection = new SqlConnection(sqlConnection))
             {
 
                 connection.Open();
-                string cmd = "Select * from Staff";
+                string cmd = "Select * from WarehouseStaff";
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd, connection);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-                dataGridView1.DataSource = table; ;
+                dataGridView1.DataSource = table;
+                ColumnsNameConfigurator(dataGridView1);
             }
         }
 
@@ -67,7 +68,7 @@ namespace LogForm
                 {
                     SqlCommand cmd = connection.CreateCommand();
 
-                    cmd.CommandText = "Delete From Staff Where id = @id";
+                    cmd.CommandText = "Delete From WarehouseStaff Where id = @id";
                     cmd.Parameters.AddWithValue("@id", ColumnValues(dataGridView1, Columns.Id));
 
                     cmd.ExecuteNonQuery();

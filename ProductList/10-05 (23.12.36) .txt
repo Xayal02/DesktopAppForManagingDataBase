@@ -1,0 +1,22 @@
+Skumbriya      Dondurulmus                   6,20           7              
+
+Skumbriya      Kaptit olunmus                8,50           9              
+
+Xek            Dondurulmus                   6,80           7              
+
+Kambala        Dondurulmus                   7,00           7              
+
+Kefal          Kaptit olunmus                8,00           9              
+
+Telapiya       Dondurulmus                   7,50           8              
+
+Narsharab                     0.15           0,90           1              
+
+Narsharab                     0.3            1,70           2              
+
+Narsharab                     0.4            2,00           2              
+
+Skumbriya      Kaptit olunmus Sous ile       9,20           10             
+
+Okun           Dondurulmus                   6,50           7              
+

@@ -12,6 +12,7 @@ using static LogForm.InnerFunctions;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace LogForm
 {
@@ -30,7 +31,7 @@ namespace LogForm
             using (var connection = new SqlConnection(sqlConnection))
             {
                 connection.Open();
-                string cmd = "Select Name, WholesalePrice from Product";
+                string cmd = "Select Name, WholesalePrice from Products";
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd, connection);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
@@ -50,13 +51,13 @@ namespace LogForm
 
                 if (chOverall.Checked)
                 {
-                    cmd.CommandText = "select Product.Name,Type.Name as 'Type', Product.AdditionalNotes, Sum(Warehouse.Amount) as 'Overall', Warehouse.Measure from Product \r\nInner Join Warehouse on Warehouse.ProductId=Product.Id\r\nLeft Join Type on Product.ProductType=Type.Id\r\nGroup by Product.Name, Warehouse.Measure, Type.Name, Product.AdditionalNotes";
+                    cmd.CommandText = "select Products.Name,Types.Name as 'Type', Products.AdditionalNotes, Sum(Warehouse.Amount) as 'Overall', Warehouse.Measure from Products \r\nInner Join Warehouse on Warehouse.ProductId=Product.Id\r\nLeft Join Types on Product.ProductType=Type.Id\r\nGroup by Product.Name, Warehouse.Measure, Type.Name, Product.AdditionalNotes";
 
                 }
 
                 else
                 {
-                    cmd.CommandText = "select Product.Name, Type.Name as 'Type', Product.AdditionalNotes, Warehouse.Amount,Warehouse.Measure, Warehouse.ArrivedDate,Warehouse.ExpiredDate,Warehouse.Code from Product  \r\nInner Join Warehouse on Warehouse.ProductId=Product.Id\r\nLeft Join Type on Product.ProductType=Type.Id";
+                    cmd.CommandText = "select Products.Name, Types.Name as 'Type', Products.AdditionalNotes, Warehouse.Amount,Warehouse.Measure, Warehouse.ArrivedDate,Warehouse.ExpiredDate,Warehouse.Code from Products  \r\nInner Join Warehouse on Warehouse.ProductId=Products.Id\r\nLeft Join Types on Products.ProductType=Types.Id";
 
                 }
 
@@ -65,6 +66,7 @@ namespace LogForm
                 await Task.Run(() => adapter.Fill(table)); // Fill the data table asynchronously
                 dataGridView1.DataSource = table;
 
+                ColumnsNameConfigurator(dataGridView1);
                 ColorWarnings(chOverall.Checked);
             }
         }
@@ -120,7 +122,7 @@ namespace LogForm
             {
                 await connection.OpenAsync();
                 SqlCommand cmd = connection.CreateCommand();
-                cmd.CommandText = "select Product.Name, Type.Name as 'Type', Product.AdditionalNotes, Warehouse.Amount,Warehouse.Measure, Warehouse.ArrivedDate,Warehouse.ExpiredDate,Warehouse.Code from Product Inner Join Warehouse on Warehouse.ProductId=Product.Id Left Join Type on Product.ProductType=Type.Id Where ExpiredDate<=GETDATE()";
+                cmd.CommandText = "select Products.Name, Types.Name as 'Type', Products.AdditionalNotes, Warehouse.Amount,Warehouse.Measure, Warehouse.ArrivedDate,Warehouse.ExpiredDate,Warehouse.Code from Products Inner Join Warehouse on Warehouse.ProductId=Products.Id Left Join Types on Products.ProductType=Types.Id Where ExpiredDate<=GETDATE()";
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
@@ -197,16 +199,16 @@ namespace LogForm
         {
             this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Georgia", 11F);
 
-            try
-            {
+            //try
+            //{
                 SpeechRecognizerOn();
                 Default_SpeechRecognized(this, default);
-            }
-            catch (Exception exc)
-            {
-                File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
+            //}
+            //catch (Exception exc)
+            //{
+            //    File.AppendAllText(pathToLogs, DateTime.Now.ToString() + '\n' + $"Message: {exc.Message}" + '\n' + '\n' + $"Source:{exc.Source}" + '\n' + '\n' + $"StackTrace: {exc.StackTrace}" + '\n' + '\n' + '\n');
 
-            }
+            //}
 
 
             _workforce = await GetWorkforceAsync();
@@ -227,7 +229,7 @@ namespace LogForm
 
                 using (var command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT Name, Surname, Position, Number FROM Staff";
+                    command.CommandText = "SELECT Name, Surname, Position, Number FROM WarehouseStaff";
 
                     using (var reader = await command.ExecuteReaderAsync())
                     {
@@ -260,7 +262,7 @@ namespace LogForm
 
         private void lblProductList_Click(object sender, EventArgs e)
         {
-            SelectProducts selectProducts = new SelectProducts("ы");
+            SelectProducts selectProducts = new SelectProducts();
             this.Hide();
             selectProducts.ShowDialog();
             this.Close();
@@ -280,6 +282,26 @@ namespace LogForm
         {
             Staff staff = new Staff();
             staff.Show();
+        }
+
+        private void txtCode_TextChanged(object sender, EventArgs e)
+        {
+            string code = txtCode.Text.Trim();
+            using (var connection = new SqlConnection(sqlConnection))
+            {
+                connection.Open();
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandText = $"Select * from Warehouse Where Code Like @code";
+                cmd.Parameters.AddWithValue("@code", "%" + code + "%");
+                SqlDataAdapter adapter1 = new SqlDataAdapter(cmd);
+
+                DataTable table = new DataTable();
+                adapter1.Fill(table);
+                dataGridView1.DataSource = table;
+
+
+
+            }
         }
     }
     public class Workforce

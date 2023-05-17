@@ -81,15 +81,15 @@
     <Compile Include="AddToWarehouse.Designer.cs">
       <DependentUpon>AddToWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatapProducts.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatapProducts.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataUsers.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataUsers.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="DataClasses2.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -171,6 +171,14 @@
     <EmbeddedResource Include="UnavailableProducts.resx">
       <DependentUpon>UnavailableProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatapProducts.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DatapProducts.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatapProducts.dbml.layout">
+      <DependentUpon>DatapProducts.dbml</DependentUpon>
+    </None>
     <None Include="DataUsers.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataUsers.designer.cs</LastGenOutput>
@@ -178,14 +186,6 @@
     </None>
     <None Include="DataUsers.dbml.layout">
       <DependentUpon>DataUsers.dbml</DependentUpon>
-    </None>
-    <None Include="DataClasses2.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataClasses2.dbml.layout">
-      <DependentUpon>DataClasses2.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -236,6 +236,10 @@
     <None Include="Resources\images.jpeg" />
     <None Include="Resources\Снимок экрана 2023-05-05 205243.png" />
     <None Include="Resources\Снимок экрана 2023-05-05 213510.png" />
+    <None Include="Resources\istockphoto-1420755455-170667a.jpg" />
+    <None Include="Resources\images %281%29.jpeg" />
+    <None Include="Resources\загрузка %283%29.png" />
+    <None Include="Resources\Снимок экрана 2023-05-12 220132.png" />
     <Content Include="загрузка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

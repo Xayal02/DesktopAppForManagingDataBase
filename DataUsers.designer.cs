@@ -22,7 +22,7 @@ namespace LogForm
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="StudentsDb")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="FishMarketDB")]
 	public partial class DataUsers : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace LogForm
     #endregion
 		
 		public DataUsers() : 
-				base(global::LogForm.Properties.Settings.Default.StudentsDbConnectionString, mappingSource)
+				base(global::LogForm.Properties.Settings.Default.FishMarketDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -86,9 +86,9 @@ namespace LogForm
 		
 		private string _Password;
 		
-		private System.Data.Linq.Binary _UserPhoto;
+		private string _Name;
 		
-		private string _UserPhotoStr;
+		private System.Data.Linq.Binary _UserPhoto;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -100,10 +100,10 @@ namespace LogForm
     partial void OnLoginChanged();
     partial void OnPasswordChanging(string value);
     partial void OnPasswordChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
     partial void OnUserPhotoChanging(System.Data.Linq.Binary value);
     partial void OnUserPhotoChanged();
-    partial void OnUserPhotoStrChanging(string value);
-    partial void OnUserPhotoStrChanged();
     #endregion
 		
 		public User()
@@ -171,6 +171,26 @@ namespace LogForm
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NVarChar(50)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserPhoto", DbType="Image", UpdateCheck=UpdateCheck.Never)]
 		public System.Data.Linq.Binary UserPhoto
 		{
@@ -187,26 +207,6 @@ namespace LogForm
 					this._UserPhoto = value;
 					this.SendPropertyChanged("UserPhoto");
 					this.OnUserPhotoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserPhotoStr", DbType="NVarChar(MAX)")]
-		public string UserPhotoStr
-		{
-			get
-			{
-				return this._UserPhotoStr;
-			}
-			set
-			{
-				if ((this._UserPhotoStr != value))
-				{
-					this.OnUserPhotoStrChanging(value);
-					this.SendPropertyChanging();
-					this._UserPhotoStr = value;
-					this.SendPropertyChanged("UserPhotoStr");
-					this.OnUserPhotoStrChanged();
 				}
 			}
 		}

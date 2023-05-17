@@ -33,5 +33,26 @@ namespace LogForm.Properties {
                 return ((string)(this["StudentsDbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ROGSTRIX\\SQLEXPRESS;Integrated Security=True")]
+        public string DataSourceConnectionString {
+            get {
+                return ((string)(this["DataSourceConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ROGSTRIX\\SQLEXPRESS;Initial Catalog=FishMarketDB;Integrated Security=" +
+            "True")]
+        public string FishMarketDBConnectionString {
+            get {
+                return ((string)(this["FishMarketDBConnectionString"]));
+            }
+        }
     }
 }

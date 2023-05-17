@@ -49,9 +49,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(58, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 24);
+            this.label1.Size = new System.Drawing.Size(60, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Имя";
             // 
@@ -59,20 +60,21 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(58, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(112, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Фамилия";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(58, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 24);
+            this.label3.Size = new System.Drawing.Size(130, 27);
             this.label3.TabIndex = 2;
             this.label3.Text = "Должность";
             // 
@@ -80,26 +82,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(58, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 24);
+            this.label4.Size = new System.Drawing.Size(191, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "Номер телефона";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(243, 247);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(250, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 24);
+            this.label5.Size = new System.Drawing.Size(66, 27);
             this.label5.TabIndex = 6;
             this.label5.Text = "+994";
             // 
             // txtNumber
             // 
             this.txtNumber.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtNumber.Location = new System.Drawing.Point(322, 245);
+            this.txtNumber.Location = new System.Drawing.Point(305, 246);
             this.txtNumber.Mask = "(00)0000000";
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(196, 30);
@@ -135,6 +139,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAdd.Location = new System.Drawing.Point(629, 169);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(155, 38);
@@ -150,6 +155,7 @@
             // btnChange
             // 
             this.btnChange.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnChange.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnChange.Location = new System.Drawing.Point(629, 125);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(155, 38);
@@ -162,7 +168,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LogForm.Properties.Resources.Снимок_экрана_2023_05_05_213510;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(72)))), ((int)(((byte)(128)))));
+            this.BackgroundImage = global::LogForm.Properties.Resources.istockphoto_1420755455_170667a1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(897, 363);
             this.Controls.Add(this.btnChange);
@@ -183,7 +190,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddEmployee";
             this.Text = "ДобавитьИзменить Работника Амбара";
-            this.Load += new System.EventHandler(this.AddEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
