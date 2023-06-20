@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>2cf47rw.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\2cf47rw.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>LogForm.Program</StartupObject>
@@ -63,38 +63,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployee.cs">
+    <Compile Include="Workers\Add&amp;ChangeEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployee.Designer.cs">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="Workers\Add&amp;ChangeEmployee.Designer.cs">
+      <DependentUpon>Add&amp;ChangeEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddToProductList.cs">
+    <Compile Include="Product List\Add&amp;ChangeProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddToProductList.Designer.cs">
-      <DependentUpon>AddToProductList.cs</DependentUpon>
+    <Compile Include="Product List\Add&amp;ChangeProduct.Designer.cs">
+      <DependentUpon>Add&amp;ChangeProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddToWarehouse.cs">
+    <Compile Include="Warehouse\Add&amp;ChangeToWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddToWarehouse.Designer.cs">
-      <DependentUpon>AddToWarehouse.cs</DependentUpon>
+    <Compile Include="Warehouse\Add&amp;ChangeToWarehouse.Designer.cs">
+      <DependentUpon>Add&amp;ChangeToWarehouse.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatapProducts.designer.cs">
+    <Compile Include="Product List\DatapProducts.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatapProducts.dbml</DependentUpon>
     </Compile>
-    <Compile Include="DataUsers.designer.cs">
+    <Compile Include="Authentication\DataUsers.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataUsers.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Authentication\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Authentication\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -102,59 +102,59 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SelectFromWarehouse.cs">
+    <Compile Include="Warehouse\SelectFromWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectFromWarehouse.Designer.cs">
+    <Compile Include="Warehouse\SelectFromWarehouse.Designer.cs">
       <DependentUpon>SelectFromWarehouse.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeductFromWarehouse.cs">
+    <Compile Include="Warehouse\DeductFromWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeductFromWarehouse.Designer.cs">
+    <Compile Include="Warehouse\DeductFromWarehouse.Designer.cs">
       <DependentUpon>DeductFromWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectProducts.cs">
+    <Compile Include="Product List\SelectProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectProducts.Designer.cs">
+    <Compile Include="Product List\SelectProducts.Designer.cs">
       <DependentUpon>SelectProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="SpeechReconizer.cs" />
-    <Compile Include="Staff.cs">
+    <Compile Include="Helpers\SpeechReconizer.cs" />
+    <Compile Include="Workers\EmployeesList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff.Designer.cs">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <Compile Include="Workers\EmployeesList.Designer.cs">
+      <DependentUpon>EmployeesList.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColumDeterminer.cs" />
-    <Compile Include="UnavailableProducts.cs">
+    <Compile Include="Helpers\ColumDeterminer.cs" />
+    <Compile Include="Product List\UnavailableProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnavailableProducts.Designer.cs">
+    <Compile Include="Product List\UnavailableProducts.Designer.cs">
       <DependentUpon>UnavailableProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="InnerFunctions.cs" />
-    <EmbeddedResource Include="AddEmployee.resx">
-      <DependentUpon>AddEmployee.cs</DependentUpon>
+    <Compile Include="Helpers\InnerFunctions.cs" />
+    <EmbeddedResource Include="Workers\Add&amp;ChangeEmployee.resx">
+      <DependentUpon>Add&amp;ChangeEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddToProductList.resx">
-      <DependentUpon>AddToProductList.cs</DependentUpon>
+    <EmbeddedResource Include="Product List\Add&amp;ChangeProduct.resx">
+      <DependentUpon>Add&amp;ChangeProduct.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddToWarehouse.resx">
-      <DependentUpon>AddToWarehouse.cs</DependentUpon>
+    <EmbeddedResource Include="Warehouse\Add&amp;ChangeToWarehouse.resx">
+      <DependentUpon>Add&amp;ChangeToWarehouse.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectFromWarehouse.resx">
+    <EmbeddedResource Include="Warehouse\SelectFromWarehouse.resx">
       <DependentUpon>SelectFromWarehouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeductFromWarehouse.resx">
+    <EmbeddedResource Include="Warehouse\DeductFromWarehouse.resx">
       <DependentUpon>DeductFromWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,29 +162,29 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectProducts.resx">
+    <EmbeddedResource Include="Product List\SelectProducts.resx">
       <DependentUpon>SelectProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff.resx">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <EmbeddedResource Include="Workers\EmployeesList.resx">
+      <DependentUpon>EmployeesList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UnavailableProducts.resx">
+    <EmbeddedResource Include="Product List\UnavailableProducts.resx">
       <DependentUpon>UnavailableProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DatapProducts.dbml">
+    <None Include="Product List\DatapProducts.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DatapProducts.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DatapProducts.dbml.layout">
+    <None Include="Product List\DatapProducts.dbml.layout">
       <DependentUpon>DatapProducts.dbml</DependentUpon>
     </None>
-    <None Include="DataUsers.dbml">
+    <None Include="Authentication\DataUsers.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>DataUsers.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataUsers.dbml.layout">
+    <None Include="Authentication\DataUsers.dbml.layout">
       <DependentUpon>DataUsers.dbml</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -219,7 +219,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="2cf47rw.ico" />
+    <Content Include="Resources\2cf47rw.ico" />
     <None Include="Resources\загрузка.png" />
     <None Include="Resources\pngtree-vector-back-icon-png-image_1009850.jpg" />
     <None Include="Resources\images.png" />
@@ -240,7 +240,7 @@
     <None Include="Resources\images %281%29.jpeg" />
     <None Include="Resources\загрузка %283%29.png" />
     <None Include="Resources\Снимок экрана 2023-05-12 220132.png" />
-    <Content Include="загрузка.ico" />
+    <Content Include="Resources\загрузка.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,8 +35,6 @@ namespace LogForm
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
             MessageBox.Show($"Произошла ошибка");
-
-            
             LogException(e.Exception);
         }
 
